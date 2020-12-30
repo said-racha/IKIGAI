@@ -20,6 +20,7 @@ public class Main extends Application {
 		primaryStage.show();
 			
 		System.out.println("test3 Racha");
+		System.out.println("test5 Racha");
 	}
 	
 	public static void main(String[] args) {
