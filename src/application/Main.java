@@ -25,6 +25,17 @@ public class Main extends Application {
 	System.out.println("test4 Racha");
 		System.out.println("test5 Racha");
 	System.out.println("test7 Racha");
+		System.out.println("test6 Racha");
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		System.out.println("test8 Racha");
 	}
 	
 	public static void main(String[] args) {
