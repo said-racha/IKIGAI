@@ -18,24 +18,7 @@ public class Main extends Application {
 		
 		primaryStage.setScene(scene);
 		primaryStage.show();
-			
-		System.out.println("test3 Racha");
-		System.out.println("Balkis");
-	System.out.println("2 nouveau sys out balkis");
-	System.out.println("test4 Racha");
-		System.out.println("test5 Racha");
-	System.out.println("test7 Racha");
-		System.out.println("test6 Racha");
 		
-		
-		
-		
-		
-		
-		
-		
-		
-		System.out.println("test8 Racha");
 	}
 	
 	public static void main(String[] args) {
