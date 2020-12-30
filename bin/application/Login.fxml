@@ -26,8 +26,7 @@
                   <Pane prefHeight="395.0" prefWidth="355.0" style="-fx-background-color: white;">
                      <children>
                         <TextField layoutX="49.0" layoutY="136.0" prefHeight="35.0" prefWidth="245.0" promptText="Username" />
-                        <TextField layoutX="50.0" layoutY="199.0" prefHeight="35.0" prefWidth="245.0" promptText="Password" />
-                        <Button layoutX="50.0" layoutY="261.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="246.0" styleClass="LogButton" text="Connexion">
+                        <Button layoutX="50.0" layoutY="261.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="246.0" styleClass="LogButton" text="LOGIN">
                            <font>
                               <Font name="Arial" size="14.0" />
                            </font>
@@ -37,12 +36,12 @@
                               <Font size="22.0" />
                            </font>
                         </Label>
-                        <Button layoutX="168.0" layoutY="307.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="90.0" style="-fx-background-color: fff;" text="Inscrivez vous" textFill="#7f00ff">
+                        <Button layoutX="179.0" layoutY="307.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="90.0" style="-fx-background-color: fff;" styleClass="SIGNUPBUT" text="SIGN UP" textFill="#7f00ff">
                            <font>
                               <Font name="Arial" size="9.0" />
                            </font>
                         </Button>
-                        <Label layoutX="102.0" layoutY="311.0" prefHeight="16.0" prefWidth="104.0" style="-fx-background-color: ;" text="Pas encore inscris? " textFill="#9496a8">
+                        <Label layoutX="91.0" layoutY="311.0" prefHeight="16.0" prefWidth="115.0" style="-fx-background-color: ;" text="Don't have an account  yet? " textFill="#9496a8">
                            <font>
                               <Font name="Arial" size="9.0" />
                            </font>
@@ -97,11 +96,12 @@
                               <Image url="@../corona/2.png" />
                            </image>
                         </ImageView>
-                        <ImageView fitHeight="28.0" fitWidth="66.0" layoutX="195.0" layoutY="76.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="32.0" fitWidth="75.0" layoutX="195.0" layoutY="75.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../img/SkiaFontIkigai.png" />
                            </image>
                         </ImageView>
+                        <PasswordField layoutX="49.0" layoutY="200.0" prefHeight="35.0" prefWidth="245.0" promptText="Password" />
                      </children>
                   </Pane>
                </children>
@@ -113,16 +113,6 @@
                   <ImageView fitHeight="242.0" fitWidth="324.0" layoutX="11.0" layoutY="85.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../img/walkingG.png" />
-                     </image>
-                  </ImageView>
-                  <Label layoutX="24.0" layoutY="18.0" prefHeight="22.0" prefWidth="53.0" style="-fx-background-color: ;" styleClass="mauveLabel" text=" IKIGAI" textFill="#010734">
-                     <font>
-                        <Font name="Skia" size="14.0" />
-                     </font>
-                  </Label>
-                  <ImageView fitHeight="52.0" fitWidth="95.0" layoutX="26.0" layoutY="18.0" opacity="0.4" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../img/Logo%20IKIGAI.png" />
                      </image>
                   </ImageView>
                   <ImageView fitHeight="12.0" fitWidth="11.0" layoutX="106.0" layoutY="8.0" opacity="0.4" pickOnBounds="true" preserveRatio="true">
@@ -170,7 +160,17 @@
                         <Image url="@../corona/4.png" />
                      </image>
                   </ImageView>
-                  <Label layoutX="281.0" layoutY="367.0" prefHeight="21.0" prefWidth="178.0" style="-fx-background-color: ;" text="Stay safe, Enjoy your quarantine." textFill="#010734">
+                  <ImageView fitHeight="30.0" fitWidth="32.0" layoutX="199.0" layoutY="35.0" opacity="0.4" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../corona/5.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="23.0" fitWidth="49.0" layoutX="18.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/SkiaFontIkigai.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="286.0" layoutY="375.0" prefHeight="21.0" prefWidth="178.0" style="-fx-background-color: ;" text="Stay safe, Enjoy your quarantine." textFill="#010734">
                      <font>
                         <Font name="Arial" size="10.0" />
                      </font>
@@ -182,11 +182,6 @@
                         </ImageView>
                      </graphic>
                   </Label>
-                  <ImageView fitHeight="30.0" fitWidth="32.0" layoutX="199.0" layoutY="35.0" opacity="0.4" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../corona/5.png" />
-                     </image>
-                  </ImageView>
                </children>
             </Pane>
          </left>
