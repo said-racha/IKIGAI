@@ -1,0 +1,22 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+.linear_grad{
+/* -fx-background-color:linear-gradient(to bottom left,#da22ff, #9733ee);*/
+	-fx-background-color:linear-gradient(to bottom left,#e100FF, #7F00FF);
+	/*linear-gradient(to bottom left, #371097,#6F4CBB); */
+	
+}
+.LogButton{
+	-fx-background-color:#7f00ff;
+	/*#7F00FF; */
+	-fx-text-fill: #ffffff;
+}
+
+.LogButton :hover{
+	-fx-text-fill: #e100FF;
+	
+}
+
+.mauveLabel{
+	/*#7F00FF; */
+	-fx-text-fill: #7f00ff;
+}
