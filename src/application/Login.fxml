@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="405.0" prefWidth="697.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="405.0" prefWidth="697.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.LoginController">
    <children>
       <BorderPane layoutX="-7.0" prefHeight="406.0" prefWidth="704.0" style="-fx-background-color: ;" stylesheets="@application.css">
          <center>
@@ -21,8 +21,8 @@
                   <Pane prefHeight="200.0" prefWidth="200.0" />
                   <Pane prefHeight="395.0" prefWidth="355.0" style="-fx-background-color: white;">
                      <children>
-                        <TextField layoutX="49.0" layoutY="136.0" prefHeight="35.0" prefWidth="245.0" promptText="Email" />
-                        <Button layoutX="50.0" layoutY="261.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="246.0" styleClass="LogButton" text="LOGIN">
+                        <TextField fx:id="emailTextF" layoutX="49.0" layoutY="136.0" prefHeight="35.0" prefWidth="245.0" promptText="Email" />
+                        <Button fx:id="loginBtn" layoutX="50.0" layoutY="261.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="246.0" styleClass="LogButton" text="LOGIN">
                            <font>
                               <Font name="Arial" size="14.0" />
                            </font>
@@ -32,7 +32,7 @@
                               <Font size="22.0" />
                            </font>
                         </Label>
-                        <Button layoutX="179.0" layoutY="307.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="90.0" style="-fx-background-color: fff;" styleClass="SIGNUPBUT" text="SIGN UP" textFill="#7f00ff">
+                        <Button fx:id="signUpBtn" layoutX="179.0" layoutY="307.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="90.0" style="-fx-background-color: fff;" styleClass="SIGNUPBUT" text="SIGN UP" textFill="#7f00ff">
                            <font>
                               <Font name="Arial" size="9.0" />
                            </font>
@@ -97,7 +97,7 @@
                               <Image url="@../img/SkiaFontIkigai.png" />
                            </image>
                         </ImageView>
-                        <PasswordField layoutX="49.0" layoutY="200.0" prefHeight="35.0" prefWidth="245.0" promptText="Password" />
+                        <PasswordField fx:id="passwordTextF" layoutX="49.0" layoutY="200.0" prefHeight="35.0" prefWidth="245.0" promptText="Password" />
                      </children>
                   </Pane>
                </children>
