@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="405.0" prefWidth="697.0" style="-fx-background-color: white;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171">
+   <children>
+      <Label layoutX="331.0" layoutY="27.0" prefHeight="70.0" prefWidth="126.0" text="To Do List" textFill="#7f00ff">
+         <font>
+            <Font name="Javanese Text" size="25.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="243.0" fitWidth="440.0" layoutX="-11.0" layoutY="119.0" opacity="0.35" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/undraw_To_do_list_re_9nt7.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="25.0" fitWidth="62.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/SkiaFontIkigai.png" />
+         </image>
+      </ImageView>
+      <TableView layoutX="170.0" layoutY="122.0" prefHeight="209.0" prefWidth="488.0">
+         <columns>
+            <TableColumn prefWidth="396.0" text="To Do" />
+            <TableColumn prefWidth="91.0" text="Done" />
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>

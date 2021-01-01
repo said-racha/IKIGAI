@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="405.0" prefWidth="697.0" style="-fx-background-color: white;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171">
+   <children>
+      <ImageView fitHeight="25.0" fitWidth="62.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/SkiaFontIkigai.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="156.0" layoutY="39.0" prefHeight="70.0" prefWidth="386.0" text="Write down what you have learned" textFill="#7f00ff">
+         <font>
+            <Font name="Javanese Text" size="25.0" />
+         </font>
+      </Label>
+      <ListView layoutX="215.0" layoutY="117.0" prefHeight="241.0" prefWidth="267.0" />
+   </children>
+</AnchorPane>
