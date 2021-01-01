@@ -12,175 +12,180 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="405.0" prefWidth="697.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.LoginController">
+
+<StackPane fx:id="parentContainer" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="405.0" prefWidth="697.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.LoginController">
    <children>
-      <BorderPane layoutX="-7.0" prefHeight="406.0" prefWidth="704.0" style="-fx-background-color: ;" stylesheets="@application.css">
-         <center>
-            <StackPane prefHeight="150.0" prefWidth="200.0" BorderPane.alignment="CENTER">
-               <children>
-                  <Pane prefHeight="200.0" prefWidth="200.0" />
-                  <Pane prefHeight="395.0" prefWidth="355.0" style="-fx-background-color: white;">
+      <AnchorPane fx:id="anchorRoot" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="405.0" prefWidth="697.0">
+         <children>
+            <BorderPane layoutX="-7.0" prefHeight="406.0" prefWidth="704.0" style="-fx-background-color: ;" stylesheets="@application.css">
+               <center>
+                  <StackPane prefHeight="150.0" prefWidth="200.0" BorderPane.alignment="CENTER">
                      <children>
-                        <TextField fx:id="emailTextF" layoutX="49.0" layoutY="136.0" prefHeight="35.0" prefWidth="245.0" promptText="Email" />
-                        <Button fx:id="loginBtn" layoutX="50.0" layoutY="261.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="246.0" styleClass="LogButton" text="LOGIN">
-                           <font>
-                              <Font name="Arial" size="14.0" />
-                           </font>
-                        </Button>
-                        <Label layoutX="74.0" layoutY="67.0" prefHeight="40.0" prefWidth="134.0" style="-fx-background-color: ;" text="Welcome to" textFill="#010734">
-                           <font>
-                              <Font size="22.0" />
-                           </font>
-                        </Label>
-                        <Button fx:id="signUpBtn" layoutX="179.0" layoutY="307.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="90.0" style="-fx-background-color: fff;" styleClass="SIGNUPBUT" text="SIGN UP" textFill="#7f00ff">
-                           <font>
-                              <Font name="Arial" size="9.0" />
-                           </font>
-                        </Button>
-                        <Label layoutX="102.0" layoutY="311.0" prefHeight="16.0" prefWidth="102.0" style="-fx-background-color: ;" text="Don't have an account ? " textFill="#9496a8">
-                           <font>
-                              <Font name="Arial" size="9.0" />
-                           </font>
-                        </Label>
-                        <ImageView fitHeight="18.0" fitWidth="21.0" layoutX="324.0" layoutY="374.0" opacity="0.4" pickOnBounds="true" preserveRatio="true">
+                        <Pane prefHeight="200.0" prefWidth="200.0" />
+                        <Pane prefHeight="395.0" prefWidth="355.0" style="-fx-background-color: white;">
+                           <children>
+                              <TextField fx:id="emailTextF" layoutX="49.0" layoutY="136.0" prefHeight="35.0" prefWidth="245.0" promptText="Email" />
+                              <Button fx:id="loginBtn" layoutX="50.0" layoutY="261.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="246.0" styleClass="LogButton" text="LOGIN">
+                                 <font>
+                                    <Font name="Arial" size="14.0" />
+                                 </font>
+                              </Button>
+                              <Label layoutX="74.0" layoutY="67.0" prefHeight="40.0" prefWidth="134.0" style="-fx-background-color: ;" text="Welcome to" textFill="#010734">
+                                 <font>
+                                    <Font size="22.0" />
+                                 </font>
+                              </Label>
+                              <Button fx:id="signUpBtn" layoutX="179.0" layoutY="307.0" mnemonicParsing="false" onAction="#SignUp" prefHeight="24.0" prefWidth="90.0" style="-fx-background-color: fff;" styleClass="SIGNUPBUT" text="SIGN UP" textFill="#7f00ff">
+                                 <font>
+                                    <Font name="Arial" size="9.0" />
+                                 </font>
+                              </Button>
+                              <Label layoutX="102.0" layoutY="311.0" prefHeight="16.0" prefWidth="102.0" style="-fx-background-color: ;" text="Don't have an account ? " textFill="#9496a8">
+                                 <font>
+                                    <Font name="Arial" size="9.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fitHeight="18.0" fitWidth="21.0" layoutX="324.0" layoutY="374.0" opacity="0.4" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../corona/5.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="16.0" fitWidth="15.0" layoutX="228.0" layoutY="330.0" opacity="0.4" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../corona/4.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="13.0" fitWidth="14.0" layoutX="246.0" layoutY="47.0" opacity="0.4" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../corona/3.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="18.0" fitWidth="14.0" layoutX="321.0" layoutY="8.0" opacity="0.4" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../corona/2.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="32.0" fitWidth="31.0" layoutX="320.0" layoutY="123.0" opacity="0.4" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../corona/4.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="26.0" fitWidth="24.0" layoutX="132.0" layoutY="22.0" opacity="0.4" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../corona/2.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="31.0" fitWidth="34.0" layoutX="121.0" layoutY="359.0" opacity="0.4" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../corona/3.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="13.0" fitWidth="15.0" layoutX="314.0" layoutY="242.0" opacity="0.4" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../corona/1.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="24.0" fitWidth="24.0" layoutX="4.0" layoutY="114.0" opacity="0.4" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../corona/1.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="21.0" fitWidth="21.0" layoutX="3.0" layoutY="322.0" opacity="0.4" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../corona/2.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="32.0" fitWidth="78.0" layoutX="196.0" layoutY="75.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/SkiaFontIkigai.png" />
+                                 </image>
+                              </ImageView>
+                              <PasswordField fx:id="passwordTextF" layoutX="49.0" layoutY="200.0" prefHeight="35.0" prefWidth="245.0" promptText="Password" />
+                           </children>
+                        </Pane>
+                     </children>
+                  </StackPane>
+               </center>
+               <left>
+                  <Pane prefHeight="406.0" prefWidth="349.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+                     <children>
+                        <ImageView fitHeight="242.0" fitWidth="324.0" layoutX="11.0" layoutY="85.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/walkingG.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="12.0" fitWidth="11.0" layoutX="106.0" layoutY="8.0" opacity="0.4" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../corona/2.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="14.0" fitWidth="12.0" layoutX="13.0" layoutY="378.0" opacity="0.4" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../corona/3.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="12.0" fitWidth="14.0" layoutX="214.0" layoutY="351.0" opacity="0.4" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../corona/5.png" />
                            </image>
                         </ImageView>
-                        <ImageView fitHeight="16.0" fitWidth="15.0" layoutX="228.0" layoutY="330.0" opacity="0.4" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../corona/4.png" />
-                           </image>
-                        </ImageView>
-                        <ImageView fitHeight="13.0" fitWidth="14.0" layoutX="246.0" layoutY="47.0" opacity="0.4" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="23.0" fitWidth="24.0" layoutX="130.0" layoutY="99.0" opacity="0.4" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../corona/3.png" />
                            </image>
                         </ImageView>
-                        <ImageView fitHeight="18.0" fitWidth="14.0" layoutX="321.0" layoutY="8.0" opacity="0.4" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../corona/2.png" />
-                           </image>
-                        </ImageView>
-                        <ImageView fitHeight="32.0" fitWidth="31.0" layoutX="320.0" layoutY="123.0" opacity="0.4" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="22.0" fitWidth="20.0" layoutX="15.0" layoutY="68.0" opacity="0.4" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../corona/4.png" />
                            </image>
                         </ImageView>
-                        <ImageView fitHeight="26.0" fitWidth="24.0" layoutX="132.0" layoutY="22.0" opacity="0.4" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="17.0" fitWidth="19.0" layoutX="27.0" layoutY="152.0" opacity="0.4" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../corona/2.png" />
+                              <Image url="@../corona/5.png" />
                            </image>
                         </ImageView>
-                        <ImageView fitHeight="31.0" fitWidth="34.0" layoutX="121.0" layoutY="359.0" opacity="0.4" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../corona/3.png" />
-                           </image>
-                        </ImageView>
-                        <ImageView fitHeight="13.0" fitWidth="15.0" layoutX="314.0" layoutY="242.0" opacity="0.4" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="21.0" fitWidth="31.0" layoutX="77.0" layoutY="336.0" opacity="0.4" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../corona/1.png" />
                            </image>
                         </ImageView>
-                        <ImageView fitHeight="24.0" fitWidth="24.0" layoutX="4.0" layoutY="114.0" opacity="0.4" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="21.0" fitWidth="28.0" layoutX="293.0" layoutY="235.0" opacity="0.4" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../corona/1.png" />
+                              <Image url="@../corona/4.png" />
                            </image>
                         </ImageView>
-                        <ImageView fitHeight="21.0" fitWidth="21.0" layoutX="3.0" layoutY="322.0" opacity="0.4" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="21.0" fitWidth="17.0" layoutX="327.0" layoutY="10.0" opacity="0.4" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../corona/2.png" />
+                              <Image url="@../corona/4.png" />
                            </image>
                         </ImageView>
-                        <ImageView fitHeight="32.0" fitWidth="78.0" layoutX="196.0" layoutY="75.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="30.0" fitWidth="32.0" layoutX="199.0" layoutY="35.0" opacity="0.4" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../corona/5.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="23.0" fitWidth="49.0" layoutX="18.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../img/SkiaFontIkigai.png" />
                            </image>
                         </ImageView>
-                        <PasswordField fx:id="passwordTextF" layoutX="49.0" layoutY="200.0" prefHeight="35.0" prefWidth="245.0" promptText="Password" />
+                        <Label layoutX="286.0" layoutY="375.0" prefHeight="21.0" prefWidth="178.0" style="-fx-background-color: ;" text="Stay safe, Enjoy your quarantine." textFill="#010734">
+                           <font>
+                              <Font name="Arial" size="10.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/pcovod.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Label>
                      </children>
                   </Pane>
-               </children>
-            </StackPane>
-         </center>
-         <left>
-            <Pane prefHeight="406.0" prefWidth="349.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
-               <children>
-                  <ImageView fitHeight="242.0" fitWidth="324.0" layoutX="11.0" layoutY="85.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../img/walkingG.png" />
-                     </image>
-                  </ImageView>
-                  <ImageView fitHeight="12.0" fitWidth="11.0" layoutX="106.0" layoutY="8.0" opacity="0.4" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../corona/2.png" />
-                     </image>
-                  </ImageView>
-                  <ImageView fitHeight="14.0" fitWidth="12.0" layoutX="13.0" layoutY="378.0" opacity="0.4" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../corona/3.png" />
-                     </image>
-                  </ImageView>
-                  <ImageView fitHeight="12.0" fitWidth="14.0" layoutX="214.0" layoutY="351.0" opacity="0.4" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../corona/5.png" />
-                     </image>
-                  </ImageView>
-                  <ImageView fitHeight="23.0" fitWidth="24.0" layoutX="130.0" layoutY="99.0" opacity="0.4" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../corona/3.png" />
-                     </image>
-                  </ImageView>
-                  <ImageView fitHeight="22.0" fitWidth="20.0" layoutX="15.0" layoutY="68.0" opacity="0.4" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../corona/4.png" />
-                     </image>
-                  </ImageView>
-                  <ImageView fitHeight="17.0" fitWidth="19.0" layoutX="27.0" layoutY="152.0" opacity="0.4" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../corona/5.png" />
-                     </image>
-                  </ImageView>
-                  <ImageView fitHeight="21.0" fitWidth="31.0" layoutX="77.0" layoutY="336.0" opacity="0.4" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../corona/1.png" />
-                     </image>
-                  </ImageView>
-                  <ImageView fitHeight="21.0" fitWidth="28.0" layoutX="293.0" layoutY="235.0" opacity="0.4" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../corona/4.png" />
-                     </image>
-                  </ImageView>
-                  <ImageView fitHeight="21.0" fitWidth="17.0" layoutX="327.0" layoutY="10.0" opacity="0.4" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../corona/4.png" />
-                     </image>
-                  </ImageView>
-                  <ImageView fitHeight="30.0" fitWidth="32.0" layoutX="199.0" layoutY="35.0" opacity="0.4" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../corona/5.png" />
-                     </image>
-                  </ImageView>
-                  <ImageView fitHeight="23.0" fitWidth="49.0" layoutX="18.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../img/SkiaFontIkigai.png" />
-                     </image>
-                  </ImageView>
-                  <Label layoutX="286.0" layoutY="375.0" prefHeight="21.0" prefWidth="178.0" style="-fx-background-color: ;" text="Stay safe, Enjoy your quarantine." textFill="#010734">
-                     <font>
-                        <Font name="Arial" size="10.0" />
-                     </font>
-                     <graphic>
-                        <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../img/pcovod.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                  </Label>
-               </children>
-            </Pane>
-         </left>
-      </BorderPane>
+               </left>
+            </BorderPane>
+         </children>
+      </AnchorPane>
    </children>
-</AnchorPane>
+</StackPane>

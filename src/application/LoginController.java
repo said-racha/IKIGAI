@@ -1,7 +1,12 @@
 package application;
 
-import javafx.fxml.FXML;
+import java.io.IOException;
 
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 
 import javafx.scene.control.TextField;
@@ -18,5 +23,13 @@ public class LoginController {
 	private Button signUpBtn;
 	@FXML
 	private PasswordField passwordTextF;
+	
+	@FXML
+	public void SignUp(ActionEvent event) throws IOException{
+		
+		Parent root2 =FXMLLoader.load(getClass().getResource("Inscription.fxml"));
+		Scene scene= signUpBtn.getScene();
+		root2.translateYProperty().set(scene.getHeight());
+	}
 
 }
