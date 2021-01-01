@@ -24,7 +24,7 @@ public class LoginController {
     private StackPane parentContainer; //StackPane
 
     @FXML
-    private AnchorPane anchorRoot; //AnchorPane
+    private AnchorPane container; //AnchorPane
 
     @FXML
     private TextField emailTextF;
@@ -49,12 +49,40 @@ public class LoginController {
 		
 		Timeline timeline=new Timeline();
 		KeyValue kv=new KeyValue(root2.translateYProperty(), 0, Interpolator.EASE_IN);
-		KeyFrame kf =new KeyFrame(Duration.seconds(0.5), kv);
+		KeyFrame kf =new KeyFrame(Duration.seconds(1), kv);
 		timeline.getKeyFrames().add(kf);
 		timeline.setOnFinished(event2 ->{
-			parentContainer.getChildren().remove(anchorRoot);
+			parentContainer.getChildren().remove(container);
 		});
 		timeline.play();
+		
+    	/*ta7bet
+    	Parent root2 =FXMLLoader.load(getClass().getResource("Inscription.fxml"));
+		Scene scene= signUpBtn.getScene();
+		
+		
+		root2.translateYProperty().set(-scene.getHeight());
+		parentContainer.getChildren().add(root2);
+		
+		Timeline timeline=new Timeline();
+		KeyValue kv=new KeyValue(root2.translateYProperty(), 0, Interpolator.EASE_IN);
+		KeyFrame kf =new KeyFrame(Duration.seconds(5), kv);
+		timeline.getKeyFrames().add(kf);
+		timeline.setOnFinished(event2 ->{
+			parentContainer.getChildren().remove(container);
+		});
+		timeline.play();*/
+    	
+    	/* sans effets
+		Parent root2 =FXMLLoader.load(getClass().getResource("Inscription.fxml"));
+		Scene scene= signUpBtn.getScene();
+		
+		root2.translateYProperty().set(0);
+		parentContainer.getChildren().add(root2);
+		
+		KeyValue kv=new KeyValue(root2.translateYProperty(), 0, Interpolator.EASE_IN);*/
+		
+		
     }
 
 }
