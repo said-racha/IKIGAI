@@ -13,15 +13,32 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.StackPane;
 import javafx.util.Duration;
 
 public class PointPosController {
 	  @FXML
 	    private Button home;
+	  @FXML
+	  private AnchorPane container;
 
 	    @FXML
 	    void home(ActionEvent event) throws IOException {
-	    	Parent root =FXMLLoader.load(getClass().getResource("Home.fxml"));
+	 
+	    
+	    	
+	    	
+	    	
+	    	
+	    	
+	    	
+	    	
+	    	
+	    	
+	    	
+	    	
+	    	
+	    		Parent root =FXMLLoader.load(getClass().getResource("Home.fxml"));
 	        
 	   	   Scene scene = home.getScene();
 	          root.translateYProperty().set(scene.getHeight());
@@ -31,13 +48,13 @@ public class PointPosController {
 	          parentcontainer.getChildren().add(root);
 
 	          Timeline timeline = new Timeline();
-	          KeyValue kv = new KeyValue(root.translateYProperty(), 0, Interpolator.EASE_IN);
+	          KeyValue kv = new KeyValue(root.translateYProperty(), 0, Interpolator.EASE_BOTH);
 	          KeyFrame kf = new KeyFrame(Duration.seconds(1), kv);
 	          timeline.getKeyFrames().add(kf);
 	          timeline.setOnFinished(t -> {
 	              parentcontainer.getChildren().remove(parentcontainer);
 	          });
-	          timeline.play();
+	          timeline.play(); 
 
 	    }
 
