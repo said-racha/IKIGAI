@@ -20,6 +20,7 @@ public class Main extends Application {
 		//Parent root4 =FXMLLoader.load(getClass().getResource("ConsulterDevPerso.fxml"));
 		//Parent root5 =FXMLLoader.load(getClass().getResource("InfoApprises.fxml"));
 		
+		//Parent root =FXMLLoader.load(getClass().getResource("Home.fxml"));
 		Scene scene = new Scene(root);
 		//Scene scene = new Scene(root2);
 		//Scene scene = new Scene(root3);

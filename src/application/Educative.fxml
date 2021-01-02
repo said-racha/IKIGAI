@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="679.0" prefWidth="1128.0" style="-fx-background-color: #7f00ff;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.EducativeController">
+   <children>
+      <Pane layoutX="178.0" layoutY="22.0" prefHeight="636.0" prefWidth="926.0" style="-fx-background-color: #fff; -fx-background-radius: 20;">
+         <children>
+            <Button fx:id="home" layoutX="644.0" layoutY="551.0" mnemonicParsing="false" onAction="#home" text="Home" />
+            <TextArea layoutX="172.0" layoutY="154.0" prefHeight="313.0" prefWidth="630.0" />
+            <Label layoutX="210.0" layoutY="104.0" text="LE SAVIEZ VOUS" textFill="#7f00ff">
+               <font>
+                  <Font name="Arial" size="23.0" />
+               </font>
+            </Label>
+         </children></Pane>
+   </children>
+</AnchorPane>
