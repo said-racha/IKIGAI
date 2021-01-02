@@ -1,11 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.*?>
+<?import javafx.scene.chart.*?>
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
 <AnchorPane prefHeight="679.0" prefWidth="1128.0" style="-fx-background-color: #7f00ff;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Pane layoutX="178.0" layoutY="22.0" prefHeight="636.0" prefWidth="926.0" style="-fx-background-color: #fff; -fx-background-radius: 20;" />
+      <Pane layoutX="39.0" layoutY="21.0" prefHeight="632.0" prefWidth="1053.0" style="-fx-background-color: #fff; -fx-background-radius: 20;">
+         <children>
+            <LineChart layoutX="130.0" layoutY="92.0">
+              <xAxis>
+                <CategoryAxis side="BOTTOM" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis side="LEFT" />
+              </yAxis>
+            </LineChart>
+         </children></Pane>
+      <Button fx:id="home" layoutX="748.0" layoutY="567.0" mnemonicParsing="false" onAction="#home" text="Home" />
    </children>
 </AnchorPane>
