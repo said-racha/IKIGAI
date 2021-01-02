@@ -9,10 +9,13 @@ import javafx.animation.Timeline;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.Pane;
+import javafx.stage.Stage;
 import javafx.util.Duration;
 
 public class HomeController {
@@ -40,7 +43,10 @@ public class HomeController {
     @FXML
     private Button appris;
     
-    
+
+    @FXML
+    private Button signout;
+
    //TO CHANGE 
     @FXML
     void sport(ActionEvent event) throws IOException  {
@@ -211,5 +217,17 @@ public class HomeController {
          });
          timeline.play();
 
+    }
+    
+    
+    @FXML
+    void signout(ActionEvent event) throws IOException {
+    
+    	Parent root =FXMLLoader.load(getClass().getResource("Login.fxml"));
+        
+   	   Scene scene = sport.getScene();
+   	   Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
+   	   window.show();
+		
     }
 }

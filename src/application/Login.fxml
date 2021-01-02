@@ -30,7 +30,7 @@
                         <Label layoutX="82.0" layoutY="67.0" prefHeight="40.0" prefWidth="126.0" style="-fx-background-color: ;" text="Welcome to" textFill="#010734">
                            <font>
                               <Font size="22.0" />
-                           </font>
+                      </font>
                         </Label>
                         <Button layoutX="179.0" layoutY="307.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="90.0" style="-fx-background-color: fff;" styleClass="SIGNUPBUT" text="SIGN UP" textFill="#7f00ff">
                            <font>

@@ -32,7 +32,7 @@
             <Button fx:id="ed" layoutX="10.0" layoutY="25.0" mnemonicParsing="false" onAction="#ed" text="Educ" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
             <Button fx:id="pp" layoutX="10.0" layoutY="25.0" mnemonicParsing="false" onAction="#pp" text="PointsPos" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
             <Button fx:id="appris" layoutX="10.0" layoutY="25.0" mnemonicParsing="false" onAction="#appris" text="wshT3al" GridPane.halignment="CENTER" GridPane.rowIndex="7" />
-            <Button fx:id="appris1" layoutX="55.0" layoutY="424.0" mnemonicParsing="false" onAction="#appris" text="Sign out" GridPane.halignment="CENTER" GridPane.rowIndex="8" />
+            <Button fx:id="signout" layoutX="55.0" layoutY="424.0" mnemonicParsing="false" onAction="#signout" text="Sign out" GridPane.halignment="CENTER" GridPane.rowIndex="8" />
          </children>
       </GridPane>
    </children>
