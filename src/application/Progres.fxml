@@ -10,9 +10,9 @@
 
 <AnchorPane prefHeight="679.0" prefWidth="1128.0" style="-fx-background-color: #7f00ff;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ProgresController">
    <children>
-      <Pane layoutX="208.0" layoutY="14.0" prefHeight="650.0" prefWidth="764.0" style="-fx-background-color: #fff; -fx-background-radius: 20; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.4), 10, 0.1, 0.0, 0.0);">
+      <Pane layoutX="115.0" layoutY="20.0" prefHeight="636.0" prefWidth="906.0" style="-fx-background-color: #fff; -fx-background-radius: 20; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.4), 10, 0.1, 0.0, 0.0);">
          <children>
-            <LineChart layoutX="134.0" layoutY="265.0" prefHeight="349.0" prefWidth="506.0" style="-fx-border-radius: 30; -fx-background-radius: 30;">
+            <LineChart layoutX="169.0" layoutY="265.0" prefHeight="349.0" prefWidth="506.0" style="-fx-border-radius: 30; -fx-background-radius: 30;">
               <xAxis>
                 <CategoryAxis side="BOTTOM" />
               </xAxis>
@@ -20,18 +20,18 @@
                 <NumberAxis side="LEFT" />
               </yAxis>
             </LineChart>
-            <Label layoutX="239.0" layoutY="199.0" prefHeight="63.0" prefWidth="282.0" style="-fx-font-size: 22;" styleClass="TextFont" text="Check out your progress ! " textFill="#7f00ff">
+            <Label layoutX="286.0" layoutY="197.0" prefHeight="63.0" prefWidth="282.0" style="-fx-font-size: 22;" styleClass="TextFont" text="Check out your progress ! " textFill="#7f00ff">
                <font>
                   <Font name="Brush Script MT Italic" size="25.0" />
                </font>
             </Label>
-            <ImageView fitHeight="200.0" fitWidth="328.0" layoutX="224.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="200.0" fitWidth="369.0" layoutX="270.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../img/undraw_visual_data_b1wx.png" />
                </image>
             </ImageView>
          </children></Pane>
-      <Button fx:id="home" layoutX="1004.0" layoutY="30.0" mnemonicParsing="false" onAction="#home" prefHeight="60.0" prefWidth="113.0" style="-fx-background-color: #7f00ff; -fx-font-size: 20;" styleClass="TextFont" text="Home" textFill="WHITE">
+      <Button fx:id="home" layoutX="1023.0" layoutY="30.0" mnemonicParsing="false" onAction="#home" prefHeight="57.0" prefWidth="94.0" style="-fx-background-color: #7f00ff; -fx-font-size: 20;" styleClass="TextFont" text="Home" textFill="WHITE">
          <font>
             <Font name="Comic Sans MS" size="24.0" />
          </font>

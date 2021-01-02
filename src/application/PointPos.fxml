@@ -9,21 +9,21 @@
 
 <AnchorPane fx:id="container" prefHeight="679.0" prefWidth="1128.0" style="-fx-background-color: #7f00ff;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.PointPosController">
    <children>
-      <Pane layoutX="206.0" layoutY="19.0" prefHeight="643.0" prefWidth="740.0" style="-fx-background-color: #fff; -fx-background-radius: 20; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.4), 10, 0.1, 0.0, 0.0);">
+      <Pane layoutX="115.0" layoutY="20.0" prefHeight="636.0" prefWidth="906.0" style="-fx-background-color: #fff; -fx-background-radius: 20; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.4), 10, 0.1, 0.0, 0.0);">
          <children>
-            <ListView layoutX="139.0" layoutY="243.0" prefHeight="333.0" prefWidth="479.0" style="-fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.4), 10, 0.1, 0.0, 0.0);" />
-            <Label layoutX="234.0" layoutY="178.0" prefHeight="63.0" prefWidth="259.0" styleClass="TextFont" text="Positive Thoughts " textFill="#7f00ff">
+            <ListView layoutX="184.0" layoutY="245.0" prefHeight="333.0" prefWidth="479.0" style="-fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.4), 10, 0.1, 0.0, 0.0);" />
+            <Label layoutX="283.0" layoutY="195.0" prefHeight="36.0" prefWidth="259.0" styleClass="TextFont" text="Positive Thoughts " textFill="#7f00ff">
                <font>
                   <Font name="Brush Script MT Italic" size="31.0" />
                </font>
             </Label>
-            <ImageView fitHeight="169.0" fitWidth="270.0" layoutX="240.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="207.0" fitWidth="253.0" layoutX="280.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../img/undraw_chasing_love_3v98.png" />
                </image>
             </ImageView>
          </children></Pane>
-      <Button fx:id="home" layoutX="994.0" layoutY="20.0" mnemonicParsing="false" onAction="#home" prefHeight="60.0" prefWidth="113.0" style="-fx-background-color: #7f00ff;" styleClass="TextFont" text="Home" textFill="WHITE">
+      <Button fx:id="home" layoutX="1037.0" layoutY="13.0" mnemonicParsing="false" onAction="#home" prefHeight="53.0" prefWidth="85.0" style="-fx-background-color: #7f00ff;" styleClass="TextFont" text="Home" textFill="WHITE">
          <font>
             <Font name="Comic Sans MS" size="26.0" />
          </font>
