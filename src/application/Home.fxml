@@ -8,7 +8,7 @@
 
 <AnchorPane prefHeight="679.0" prefWidth="1128.0" style="-fx-background-color: #7f00ff;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.HomeController">
    <children>
-      <Pane layoutX="204.0" layoutY="9.0" prefHeight="660.0" prefWidth="911.0" style="-fx-background-color: #fff; -fx-background-radius: 40;">
+      <Pane layoutX="136.0" layoutY="9.0" prefHeight="660.0" prefWidth="979.0" style="-fx-background-color: #fff; -fx-background-radius: 40; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.4), 10, 0.1, 0.0, 0.0);">
          <children>
             <Label layoutX="806.0" layoutY="45.0" prefHeight="42.0" prefWidth="132.0" text="Cagnotte" />
             <Label layoutX="93.0" layoutY="38.0" prefHeight="41.0" prefWidth="195.0" text="Hello, Racha" textFill="#7f00ff">
