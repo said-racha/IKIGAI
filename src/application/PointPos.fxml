@@ -17,9 +17,9 @@
                   <Font name="Brush Script MT Italic" size="31.0" />
                </font>
             </Label>
-            <ImageView fitHeight="200.0" fitWidth="240.0" layoutX="240.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="169.0" fitWidth="270.0" layoutX="240.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../img/plus.png" />
+                  <Image url="@../img/undraw_chasing_love_3v98.png" />
                </image>
             </ImageView>
          </children></Pane>
