@@ -12,3 +12,9 @@
 	
 	-fx-text-fill: #7f00ff;
 }
+
+.TextFont{
+	-fx-font-family:  "Georgia";
+	
+	
+}

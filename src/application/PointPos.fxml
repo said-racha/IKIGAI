@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.image.*?>
 <?import javafx.scene.text.*?>
 <?import javafx.scene.control.*?>
 <?import java.lang.*?>
@@ -8,15 +9,29 @@
 
 <AnchorPane fx:id="container" prefHeight="679.0" prefWidth="1128.0" style="-fx-background-color: #7f00ff;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.PointPosController">
    <children>
-      <Pane layoutX="51.0" layoutY="24.0" prefHeight="632.0" prefWidth="1053.0" style="-fx-background-color: #fff; -fx-background-radius: 20;">
+      <Pane layoutX="206.0" layoutY="19.0" prefHeight="643.0" prefWidth="740.0" style="-fx-background-color: #fff; -fx-background-radius: 20; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.4), 10, 0.1, 0.0, 0.0);">
          <children>
-            <ListView layoutX="72.0" layoutY="138.0" prefHeight="377.0" prefWidth="511.0" />
-            <Label layoutX="90.0" layoutY="36.0" text="Point Positif">
+            <ListView layoutX="139.0" layoutY="243.0" prefHeight="333.0" prefWidth="479.0" style="-fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.4), 10, 0.1, 0.0, 0.0);" />
+            <Label layoutX="234.0" layoutY="178.0" prefHeight="63.0" prefWidth="259.0" styleClass="TextFont" text="Positive Thoughts " textFill="#7f00ff">
                <font>
-                  <Font name="Arial" size="32.0" />
+                  <Font name="Brush Script MT Italic" size="31.0" />
                </font>
             </Label>
-            <Button fx:id="home" layoutX="738.0" layoutY="557.0" mnemonicParsing="false" onAction="#home" text="Home" />
+            <ImageView fitHeight="169.0" fitWidth="270.0" layoutX="240.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/undraw_chasing_love_3v98.png" />
+               </image>
+            </ImageView>
          </children></Pane>
+      <Button fx:id="home" layoutX="994.0" layoutY="20.0" mnemonicParsing="false" onAction="#home" prefHeight="60.0" prefWidth="113.0" style="-fx-background-color: #7f00ff;" styleClass="TextFont" text="Home" textFill="WHITE">
+         <font>
+            <Font name="Comic Sans MS" size="26.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="25.0" fitWidth="78.0" layoutX="10.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/skiawhitefont.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>
