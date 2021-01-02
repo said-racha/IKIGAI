@@ -14,17 +14,15 @@ public class Main extends Application {
 	@Override
 	public void start(Stage primaryStage) throws IOException {
 		
-		Parent root =FXMLLoader.load(getClass().getResource("Login.fxml"));
-		//Parent root2 =FXMLLoader.load(getClass().getResource("Inscription.fxml"));
-		//Parent root3 =FXMLLoader.load(getClass().getResource("ActiviteesDuJour.fxml"));
-		//Parent root4 =FXMLLoader.load(getClass().getResource("ConsulterDevPerso.fxml"));
-		//Parent root5 =FXMLLoader.load(getClass().getResource("InfoApprises.fxml"));
+		//Parent root =FXMLLoader.load(getClass().getResource("Login.fxml"));
+		//Parent root =FXMLLoader.load(getClass().getResource("Inscription.fxml"));
+		//Parent root =FXMLLoader.load(getClass().getResource("ActiviteesDuJour.fxml"));
+		//Parent root =FXMLLoader.load(getClass().getResource("ConsulterDevPerso.fxml"));
+		//Parent root =FXMLLoader.load(getClass().getResource("InfoApprises.fxml"));
 		
+		Parent root =FXMLLoader.load(getClass().getResource("Home.fxml"));
 		Scene scene = new Scene(root);
-		//Scene scene = new Scene(root2);
-		//Scene scene = new Scene(root3);
-		//Scene scene = new Scene(root4);
-		//Scene scene = new Scene(root5);
+		
 		
 		primaryStage.setScene(scene);
 		

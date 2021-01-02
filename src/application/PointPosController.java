@@ -9,34 +9,37 @@ import javafx.animation.Timeline;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.ListView;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.StackPane;
+import javafx.stage.Stage;
 import javafx.util.Duration;
 
-public class InfoApprisesController {
+public class PointPosController {
+	  @FXML
+	    private Button home;
+	  @FXML
+	  private AnchorPane container;
 
-    @FXML
-    private AnchorPane container;
-
-    @FXML
-    private Button backBtn;
-
-    @FXML
-    private Button validerBtn;
-
-    @FXML
-    private ListView<String> InfoApprisesListV;
-
-    @FXML
-    void Back(ActionEvent event) throws IOException {
-    	
-    	Parent root =FXMLLoader.load(getClass().getResource("Home.fxml"));
+	    @FXML
+	    void home(ActionEvent event) throws IOException {
+	 
+	    
+	    	
+	    	
+	    	
+	    	
+	    	
+	    	
+	    	
+	    	
+	 	Parent root =FXMLLoader.load(getClass().getResource("Home.fxml"));
 
         
-	  	   Scene scene = backBtn.getScene();
+	  	   Scene scene = home.getScene();
 	         root.translateYProperty().set(-scene.getHeight());
 
 	         AnchorPane parentcontainer = (AnchorPane) scene.getRoot();
@@ -52,6 +55,7 @@ public class InfoApprisesController {
 	         });
 	         timeline.play();
 
-    }
+	    }
+
 
 }

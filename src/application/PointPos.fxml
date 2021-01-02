@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="container" prefHeight="679.0" prefWidth="1128.0" style="-fx-background-color: #7f00ff;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.PointPosController">
+   <children>
+      <Pane layoutX="51.0" layoutY="24.0" prefHeight="632.0" prefWidth="1053.0" style="-fx-background-color: #fff; -fx-background-radius: 20;">
+         <children>
+            <ListView layoutX="72.0" layoutY="138.0" prefHeight="377.0" prefWidth="511.0" />
+            <Label layoutX="90.0" layoutY="36.0" text="Point Positif">
+               <font>
+                  <Font name="Arial" size="32.0" />
+               </font>
+            </Label>
+            <Button fx:id="home" layoutX="738.0" layoutY="557.0" mnemonicParsing="false" onAction="#home" text="Home" />
+         </children></Pane>
+   </children>
+</AnchorPane>
