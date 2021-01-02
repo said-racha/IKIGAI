@@ -13,7 +13,7 @@ import javafx.scene.layout.BorderPane;
 public class Main extends Application {
 	@Override
 	public void start(Stage primaryStage) throws IOException {
-		Parent root =FXMLLoader.load(getClass().getResource("Login.fxml"));
+		Parent root =FXMLLoader.load(getClass().getResource("Home.fxml"));
 		Scene scene = new Scene(root);
 		
 		primaryStage.setScene(scene);

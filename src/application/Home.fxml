@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 
 
-<AnchorPane prefHeight="679.0" prefWidth="1128.0" style="-fx-background-color: #7f00ff;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8">
+<AnchorPane prefHeight="679.0" prefWidth="1128.0" style="-fx-background-color: #7f00ff;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="application.HomeController">
    <children>
       <Pane layoutX="178.0" layoutY="22.0" prefHeight="636.0" prefWidth="926.0" style="-fx-background-color: #fff; -fx-background-radius: 20;" />
       <GridPane layoutX="-8.0" layoutY="126.0" prefHeight="513.0" prefWidth="155.0">
@@ -24,14 +24,14 @@
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Button fx:id="sport" mnemonicParsing="false" text="Sport" GridPane.halignment="CENTER" />
-            <Button fx:id="sh" layoutX="60.0" layoutY="25.0" mnemonicParsing="false" text="stressh" GridPane.halignment="CENTER" GridPane.rowIndex="6" />
-            <Button fx:id="aj" layoutX="10.0" layoutY="25.0" mnemonicParsing="false" text="actj" GridPane.halignment="CENTER" GridPane.rowIndex="5" />
-            <Button fx:id="dev" layoutX="10.0" layoutY="25.0" mnemonicParsing="false" text="DevPers" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
-            <Button fx:id="progres" layoutX="10.0" layoutY="25.0" mnemonicParsing="false" text="Progres" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
-            <Button fx:id="ed" layoutX="10.0" layoutY="25.0" mnemonicParsing="false" text="Educ" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
-            <Button fx:id="pp" layoutX="10.0" layoutY="25.0" mnemonicParsing="false" text="PointsPos" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
-            <Button fx:id="appris" layoutX="10.0" layoutY="25.0" mnemonicParsing="false" text="wshT3al" GridPane.halignment="CENTER" GridPane.rowIndex="7" />
+            <Button fx:id="sport" mnemonicParsing="false" onAction="#sport" text="Sport" GridPane.halignment="CENTER" />
+            <Button fx:id="sh" layoutX="60.0" layoutY="25.0" mnemonicParsing="false" onAction="#sh" text="stressh" GridPane.halignment="CENTER" GridPane.rowIndex="6" />
+            <Button fx:id="aj" layoutX="10.0" layoutY="25.0" mnemonicParsing="false" onAction="#aj" text="actj" GridPane.halignment="CENTER" GridPane.rowIndex="5" />
+            <Button fx:id="dev" layoutX="10.0" layoutY="25.0" mnemonicParsing="false" onAction="#dev" text="DevPers" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
+            <Button fx:id="progres" layoutX="10.0" layoutY="25.0" mnemonicParsing="false" onAction="#progres" text="Progres" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+            <Button fx:id="ed" layoutX="10.0" layoutY="25.0" mnemonicParsing="false" onAction="#ed" text="Educ" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+            <Button fx:id="pp" layoutX="10.0" layoutY="25.0" mnemonicParsing="false" onAction="#pp" text="PointsPos" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+            <Button fx:id="appris" layoutX="10.0" layoutY="25.0" mnemonicParsing="false" onAction="#appris" text="wshT3al" GridPane.halignment="CENTER" GridPane.rowIndex="7" />
          </children>
       </GridPane>
    </children>
