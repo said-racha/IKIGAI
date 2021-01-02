@@ -225,8 +225,9 @@ public class HomeController {
     
     	Parent root =FXMLLoader.load(getClass().getResource("Login.fxml"));
         
-   	   Scene scene = sport.getScene();
+   	   Scene scene = new Scene(root);
    	   Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
+   	  window.setScene(scene);
    	   window.show();
 		
     }
