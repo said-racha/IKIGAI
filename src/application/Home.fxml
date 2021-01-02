@@ -5,8 +5,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
-<AnchorPane prefHeight="679.0" prefWidth="1128.0" style="-fx-background-color: #7f00ff;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="application.HomeController">
+<AnchorPane prefHeight="679.0" prefWidth="1128.0" style="-fx-background-color: #7f00ff;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.HomeController">
    <children>
       <Pane layoutX="178.0" layoutY="22.0" prefHeight="636.0" prefWidth="926.0" style="-fx-background-color: #fff; -fx-background-radius: 20;" />
       <GridPane layoutX="-8.0" layoutY="126.0" prefHeight="513.0" prefWidth="155.0">
@@ -22,6 +21,7 @@
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
             <Button fx:id="sport" mnemonicParsing="false" onAction="#sport" text="Sport" GridPane.halignment="CENTER" />
@@ -32,6 +32,7 @@
             <Button fx:id="ed" layoutX="10.0" layoutY="25.0" mnemonicParsing="false" onAction="#ed" text="Educ" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
             <Button fx:id="pp" layoutX="10.0" layoutY="25.0" mnemonicParsing="false" onAction="#pp" text="PointsPos" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
             <Button fx:id="appris" layoutX="10.0" layoutY="25.0" mnemonicParsing="false" onAction="#appris" text="wshT3al" GridPane.halignment="CENTER" GridPane.rowIndex="7" />
+            <Button fx:id="appris1" layoutX="55.0" layoutY="424.0" mnemonicParsing="false" onAction="#appris" text="Sign out" GridPane.halignment="CENTER" GridPane.rowIndex="8" />
          </children>
       </GridPane>
    </children>
