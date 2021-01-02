@@ -40,7 +40,7 @@ public class PointPosController {
 
         
 	  	   Scene scene = home.getScene();
-	         root.translateYProperty().set(scene.getHeight());
+	         root.translateYProperty().set(-scene.getHeight());
 
 	         AnchorPane parentcontainer = (AnchorPane) scene.getRoot();
 
