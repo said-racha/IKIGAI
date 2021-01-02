@@ -9,11 +9,13 @@ import javafx.animation.Timeline;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.StackPane;
+import javafx.stage.Stage;
 import javafx.util.Duration;
 
 public class PointPosController {
@@ -34,27 +36,24 @@ public class PointPosController {
 	    	
 	    	
 	    	
-	    	
-	    	
-	    	
-	    	
-	    		Parent root =FXMLLoader.load(getClass().getResource("Home.fxml"));
-	        
-	   	   Scene scene = home.getScene();
-	          root.translateYProperty().set(scene.getHeight());
+	 	Parent root =FXMLLoader.load(getClass().getResource("Home.fxml"));
 
-	          AnchorPane parentcontainer = (AnchorPane) scene.getRoot();
+        
+	  	   Scene scene = home.getScene();
+	         root.translateYProperty().set(scene.getHeight());
 
-	          parentcontainer.getChildren().add(root);
+	         AnchorPane parentcontainer = (AnchorPane) scene.getRoot();
 
-	          Timeline timeline = new Timeline();
-	          KeyValue kv = new KeyValue(root.translateYProperty(), 0, Interpolator.EASE_BOTH);
-	          KeyFrame kf = new KeyFrame(Duration.seconds(1), kv);
-	          timeline.getKeyFrames().add(kf);
-	          timeline.setOnFinished(t -> {
-	              parentcontainer.getChildren().remove(parentcontainer);
-	          });
-	          timeline.play(); 
+	         parentcontainer.getChildren().add(root);
+
+	         Timeline timeline = new Timeline();
+	         KeyValue kv = new KeyValue(root.translateYProperty(), 0, Interpolator.EASE_IN);
+	         KeyFrame kf = new KeyFrame(Duration.seconds(1), kv);
+	         timeline.getKeyFrames().add(kf);
+	         timeline.setOnFinished(t -> {
+	             parentcontainer.getChildren().remove(parentcontainer);
+	         });
+	         timeline.play();
 
 	    }
 
