@@ -11,17 +11,17 @@
       <Pane layoutX="136.0" layoutY="9.0" prefHeight="660.0" prefWidth="979.0" style="-fx-background-color: #fff; -fx-background-radius: 40; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.4), 10, 0.1, 0.0, 0.0);">
          <children>
             <Label layoutX="806.0" layoutY="45.0" prefHeight="42.0" prefWidth="132.0" text="Cagnotte" />
-            <Label layoutX="93.0" layoutY="38.0" prefHeight="41.0" prefWidth="195.0" text="Hello, Racha" textFill="#7f00ff">
+            <Label layoutX="93.0" layoutY="38.0" prefHeight="41.0" prefWidth="195.0" styleClass="TextFont" text="Hello, Racha" textFill="#7f00ff">
                <font>
                   <Font name="Arial" size="20.0" />
                </font>
             </Label>
             <Label layoutX="726.0" layoutY="187.0" prefHeight="42.0" prefWidth="132.0" text="INFOS3LACOVID" />
             <Label layoutX="88.0" layoutY="183.0" prefHeight="42.0" prefWidth="132.0" text="TO DO LIST" />
-            <Label layoutX="407.0" layoutY="614.0" prefHeight="12.0" prefWidth="505.0" text="QUOTE" />
-            <Label layoutX="355.0" layoutY="99.0" prefHeight="41.0" prefWidth="266.0" text="GOAL  OF THE week" />
-            <Label layoutX="347.0" layoutY="71.0" prefHeight="41.0" prefWidth="266.0" text="GOAL  OF THE session" />
-            <Label layoutX="361.0" layoutY="37.0" prefHeight="41.0" prefWidth="166.0" text="GOAL  OF THE DAY" />
+            <Label layoutX="407.0" layoutY="614.0" prefHeight="12.0" prefWidth="505.0" styleClass="TextFont" text="QUOTE" />
+            <Label layoutX="355.0" layoutY="99.0" prefHeight="41.0" prefWidth="266.0" styleClass="TextFont" text="GOAL  OF THE week" />
+            <Label layoutX="347.0" layoutY="71.0" prefHeight="41.0" prefWidth="266.0" styleClass="TextFont" text="GOAL  OF THE session" />
+            <Label layoutX="361.0" layoutY="37.0" prefHeight="41.0" prefWidth="166.0" styleClass="TextFont" text="GOAL  OF THE DAY" />
          </children></Pane>
       <GridPane layoutX="-9.0" layoutY="101.0" prefHeight="411.0" prefWidth="155.0">
         <columnConstraints>
