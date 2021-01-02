@@ -41,21 +41,21 @@ public class HomeController {
     private Button appris;
     
     
-    
+   //TO CHANGE 
     @FXML
     void sport(ActionEvent event) throws IOException  {
     	
     	Parent root =FXMLLoader.load(getClass().getResource("PointPos.fxml"));
            
     	   Scene scene = sport.getScene();
-           root.translateXProperty().set(scene.getWidth());
+           root.translateYProperty().set(scene.getHeight());
 
            AnchorPane parentcontainer = (AnchorPane) scene.getRoot();
 
            parentcontainer.getChildren().add(root);
 
            Timeline timeline = new Timeline();
-           KeyValue kv = new KeyValue(root.translateXProperty(), 0, Interpolator.EASE_IN);
+           KeyValue kv = new KeyValue(root.translateYProperty(), 0, Interpolator.EASE_IN);
            KeyFrame kf = new KeyFrame(Duration.seconds(1), kv);
            timeline.getKeyFrames().add(kf);
            timeline.setOnFinished(t -> {
@@ -65,37 +65,151 @@ public class HomeController {
     }
 
     @FXML
-    void sh(ActionEvent event) {
+    void sh(ActionEvent event) throws IOException {
+    	Parent root =FXMLLoader.load(getClass().getResource("PointPos.fxml"));
+        
+  	   Scene scene = sport.getScene();
+         root.translateYProperty().set(scene.getHeight());
+
+         AnchorPane parentcontainer = (AnchorPane) scene.getRoot();
+
+         parentcontainer.getChildren().add(root);
+
+         Timeline timeline = new Timeline();
+         KeyValue kv = new KeyValue(root.translateYProperty(), 0, Interpolator.EASE_IN);
+         KeyFrame kf = new KeyFrame(Duration.seconds(1), kv);
+         timeline.getKeyFrames().add(kf);
+         timeline.setOnFinished(t -> {
+             parentcontainer.getChildren().remove(parentcontainer);
+         });
+         timeline.play();
+    }
+
+    @FXML
+    void aj(ActionEvent event) throws IOException {
+    	Parent root =FXMLLoader.load(getClass().getResource("PointPos.fxml"));
+        
+  	   Scene scene = sport.getScene();
+         root.translateYProperty().set(scene.getHeight());
+
+         AnchorPane parentcontainer = (AnchorPane) scene.getRoot();
+
+         parentcontainer.getChildren().add(root);
+
+         Timeline timeline = new Timeline();
+         KeyValue kv = new KeyValue(root.translateYProperty(), 0, Interpolator.EASE_IN);
+         KeyFrame kf = new KeyFrame(Duration.seconds(1), kv);
+         timeline.getKeyFrames().add(kf);
+         timeline.setOnFinished(t -> {
+             parentcontainer.getChildren().remove(parentcontainer);
+         });
+         timeline.play();
+    }
+
+    @FXML
+    void dev(ActionEvent event) throws IOException {
+    	Parent root =FXMLLoader.load(getClass().getResource("PointPos.fxml"));
+        
+  	   Scene scene = sport.getScene();
+         root.translateYProperty().set(scene.getHeight());
+
+         AnchorPane parentcontainer = (AnchorPane) scene.getRoot();
+
+         parentcontainer.getChildren().add(root);
+
+         Timeline timeline = new Timeline();
+         KeyValue kv = new KeyValue(root.translateYProperty(), 0, Interpolator.EASE_IN);
+         KeyFrame kf = new KeyFrame(Duration.seconds(1), kv);
+         timeline.getKeyFrames().add(kf);
+         timeline.setOnFinished(t -> {
+             parentcontainer.getChildren().remove(parentcontainer);
+         });
+         timeline.play();
+    }
+
+    @FXML
+    void progres(ActionEvent event) throws IOException {
+    	Parent root =FXMLLoader.load(getClass().getResource("Progres.fxml"));
+        
+  	   Scene scene = sport.getScene();
+         root.translateYProperty().set(scene.getHeight());
+
+         AnchorPane parentcontainer = (AnchorPane) scene.getRoot();
+
+         parentcontainer.getChildren().add(root);
+
+         Timeline timeline = new Timeline();
+         KeyValue kv = new KeyValue(root.translateYProperty(), 0, Interpolator.EASE_IN);
+         KeyFrame kf = new KeyFrame(Duration.seconds(1), kv);
+         timeline.getKeyFrames().add(kf);
+         timeline.setOnFinished(t -> {
+             parentcontainer.getChildren().remove(parentcontainer);
+         });
+         timeline.play();
 
     }
 
     @FXML
-    void aj(ActionEvent event) {
+    void ed(ActionEvent event) throws IOException {
+    	Parent root =FXMLLoader.load(getClass().getResource("Educative.fxml"));
+        
+  	   Scene scene = sport.getScene();
+         root.translateYProperty().set(scene.getHeight());
 
+         AnchorPane parentcontainer = (AnchorPane) scene.getRoot();
+
+         parentcontainer.getChildren().add(root);
+
+         Timeline timeline = new Timeline();
+         KeyValue kv = new KeyValue(root.translateYProperty(), 0, Interpolator.EASE_IN);
+         KeyFrame kf = new KeyFrame(Duration.seconds(1), kv);
+         timeline.getKeyFrames().add(kf);
+         timeline.setOnFinished(t -> {
+             parentcontainer.getChildren().remove(parentcontainer);
+         });
+         timeline.play();
     }
 
     @FXML
-    void dev(ActionEvent event) {
+    void pp(ActionEvent event) throws IOException {
+    	Parent root =FXMLLoader.load(getClass().getResource("PointPos.fxml"));
+        
+ 	   Scene scene = sport.getScene();
+        root.translateYProperty().set(scene.getHeight());
 
+        AnchorPane parentcontainer = (AnchorPane) scene.getRoot();
+
+        parentcontainer.getChildren().add(root);
+
+        Timeline timeline = new Timeline();
+        KeyValue kv = new KeyValue(root.translateYProperty(), 0, Interpolator.EASE_IN);
+        KeyFrame kf = new KeyFrame(Duration.seconds(1), kv);
+        timeline.getKeyFrames().add(kf);
+        timeline.setOnFinished(t -> {
+            parentcontainer.getChildren().remove(parentcontainer);
+        });
+        timeline.play();
     }
 
     @FXML
-    void progres(ActionEvent event) {
+    void appris(ActionEvent event) throws IOException {
+    	Parent root =FXMLLoader.load(getClass().getResource("PointPos.fxml"));
+        
+  	   Scene scene = sport.getScene();
+         root.translateYProperty().set(scene.getHeight());
 
-    }
+         AnchorPane parentcontainer = (AnchorPane) scene.getRoot();
 
-    @FXML
-    void ed(ActionEvent event) {
+         parentcontainer.getChildren().add(root);
 
-    }
-
-    @FXML
-    void pp(ActionEvent event) {
-
-    }
-
-    @FXML
-    void appris(ActionEvent event) {
+         Timeline timeline = new Timeline();
+         KeyValue kv = new KeyValue(root.translateYProperty(), 0, Interpolator.EASE_IN);
+         KeyFrame kf = new KeyFrame(Duration.seconds(1), kv);
+         timeline.getKeyFrames().add(kf);
+         timeline.setOnFinished(t -> {
+             parentcontainer.getChildren().remove(parentcontainer);
+         });
+         timeline.play();
 
     }
 }
