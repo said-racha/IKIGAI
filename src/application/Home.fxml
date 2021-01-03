@@ -20,11 +20,14 @@
                </font>
             </Label>
             <Label layoutX="726.0" layoutY="187.0" prefHeight="42.0" prefWidth="132.0" text="INFOS3LACOVID" />
-            <Label layoutX="149.0" layoutY="118.0" prefHeight="42.0" prefWidth="132.0" text="TO DO LIST" />
+            <Label layoutX="107.0" layoutY="71.0" prefHeight="22.0" prefWidth="87.0" text="You are on day 1." textFill="#9496a8">
+               <font>
+                  <Font size="11.0" />
+               </font></Label>
             <Label layoutX="132.0" layoutY="623.0" prefHeight="14.0" prefWidth="737.0" styleClass="TextFont" text="“It is more important to know where you are going than to get there quickly. Do not mistake activity for achievement.”Isocrates" />
             <Label layoutX="389.0" layoutY="72.0" prefHeight="41.0" prefWidth="142.0" styleClass="TextFont" text="GOAL  OF THE week" />
             <Label layoutX="400.0" layoutY="41.0" prefHeight="41.0" prefWidth="161.0" styleClass="TextFont" text="GOAL  OF THE session" />
-            <Label layoutX="401.0" layoutY="20.0" prefHeight="41.0" prefWidth="132.0" styleClass="TextFont" text="GOAL  OF THE DAY" />
+            <Label layoutX="401.0" layoutY="20.0" prefHeight="41.0" prefWidth="132.0" styleClass="TextFont" text="Goal of the day" />
          </children></Pane>
       <GridPane layoutX="-16.0" layoutY="88.0" prefHeight="425.0" prefWidth="207.0">
         <columnConstraints>
@@ -42,14 +45,14 @@
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Button fx:id="sport" mnemonicParsing="false" onAction="#sport" style="-fx-background-color: #7f00ff; -fx-font-size: 14;" text="Sport" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="1" />
-            <Button fx:id="sh" layoutX="60.0" layoutY="25.0" mnemonicParsing="false" onAction="#sh" prefHeight="32.0" prefWidth="113.0" style="-fx-background-color: #7f00ff; -fx-font-size: 13;" text="Stress  Remedies" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="2" />
-            <Button fx:id="aj" layoutX="10.0" layoutY="25.0" mnemonicParsing="false" onAction="#aj" style="-fx-background-color: #7f00ff; -fx-font-size: 14;" text="Settings" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="7" />
-            <Button fx:id="dev" layoutX="10.0" layoutY="25.0" mnemonicParsing="false" onAction="#dev" style="-fx-background-color: #7f00ff; -fx-font-size: 14;" text="DevPers" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="3" />
-            <Button fx:id="progres" layoutX="10.0" layoutY="25.0" mnemonicParsing="false" onAction="#progres" style="-fx-background-color: #7f00ff; -fx-font-size: 14;" text="Progress" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="6" />
-            <Button fx:id="ed" layoutX="10.0" layoutY="25.0" mnemonicParsing="false" onAction="#ed" prefHeight="28.0" prefWidth="115.0" style="-fx-background-color: #7f00ff; -fx-font-size: 14;" styleClass="TextFont" text="Educational" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="LEFT" />
-            <Button fx:id="pp" layoutX="10.0" layoutY="25.0" mnemonicParsing="false" onAction="#pp" style="-fx-background-color: #7f00ff; -fx-font-size: 14;" text="PointsPos" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="5" />
-            <Button fx:id="appris" layoutX="10.0" layoutY="25.0" mnemonicParsing="false" onAction="#appris" style="-fx-background-color: #7f00ff; -fx-font-size: 14;" text="wshT3al" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="4" />
+            <Button fx:id="sport" mnemonicParsing="false" onAction="#sport" style="-fx-background-color: #7F00FF; -fx-font-size: 12;" text="Work out" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="1" />
+            <Button fx:id="sh" mnemonicParsing="false" onAction="#sh" style="-fx-background-color: #7F00FF; -fx-font-size: 12;" text="Stress  Remedies" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="2" />
+            <Button fx:id="aj" layoutX="10.0" layoutY="25.0" mnemonicParsing="false" onAction="#aj" style="-fx-background-color: #7F00FF; -fx-font-size: 12;" text="Settings" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="7" />
+            <Button fx:id="dev" layoutX="10.0" layoutY="25.0" mnemonicParsing="false" onAction="#dev" style="-fx-background-color: #7F00FF; -fx-font-size: 12;" text="Challenge" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="3" />
+            <Button fx:id="progres" layoutX="10.0" layoutY="25.0" mnemonicParsing="false" onAction="#progres" style="-fx-background-color: #7F00FF; -fx-font-size: 12;" text="Progress" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="6" />
+            <Button fx:id="ed" layoutX="10.0" layoutY="25.0" mnemonicParsing="false" onAction="#ed" style="-fx-background-color: #7F00FF; -fx-font-size: 12;" styleClass="TextFont" text="Educational" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="LEFT" />
+            <Button fx:id="pp" layoutX="10.0" layoutY="25.0" mnemonicParsing="false" onAction="#pp" style="-fx-background-color: #7F00FF; -fx-font-size: 12;" text="PointsPos" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="5" />
+            <Button fx:id="appris" layoutX="10.0" layoutY="25.0" mnemonicParsing="false" onAction="#appris" style="-fx-background-color: #7F00FF; -fx-font-size: 12;" text="Learned" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="4" />
             <ImageView fitHeight="17.0" fitWidth="17.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true" GridPane.halignment="RIGHT" GridPane.rowIndex="2">
                <image>
                   <Image url="@../img/icons8-sun-24.png" />
@@ -77,12 +80,12 @@
             </ImageView>
             <ImageView fitHeight="17.0" fitWidth="17.0" layoutX="10.0" layoutY="28.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true" GridPane.halignment="RIGHT" GridPane.rowIndex="5">
                <image>
-                  <Image url="@../img/icons8-ball-point-pen-24.png" />
+                  <Image url="@../img/icons8-love-26.png" />
                </image>
             </ImageView>
             <ImageView fitHeight="17.0" fitWidth="17.0" layoutX="10.0" layoutY="28.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true" GridPane.halignment="RIGHT" GridPane.rowIndex="4">
                <image>
-                  <Image url="@../img/icons8-sun-24.png" />
+                  <Image url="@../img/icons8-ball-point-pen-24.png" />
                </image>
             </ImageView>
             <ImageView fitHeight="17.0" fitWidth="17.0" layoutX="10.0" layoutY="28.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true" GridPane.halignment="RIGHT" GridPane.rowIndex="7">
@@ -92,15 +95,17 @@
             </ImageView>
          </children>
       </GridPane>
-      <Button fx:id="signout" layoutX="53.0" layoutY="612.0" mnemonicParsing="false" onAction="#signout" style="-fx-background-color: #7f00ff;" />
+      <Button fx:id="signout" layoutX="53.0" layoutY="612.0" mnemonicParsing="false" onAction="#signout" style="-fx-background-color: #7f00ff;">
+         <graphic>
+            <ImageView fitHeight="25.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/icons8-exit-50.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
       <ImageView fitHeight="25.0" fitWidth="78.0" layoutX="32.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../img/skiawhitefont.png" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="25.0" fitWidth="37.0" layoutX="54.0" layoutY="618.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../img/icons8-exit-50.png" />
          </image>
       </ImageView>
    </children>
