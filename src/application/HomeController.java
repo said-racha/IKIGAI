@@ -51,7 +51,7 @@ public class HomeController {
     @FXML
     void sport(ActionEvent event) throws IOException  {
     	
-    	Parent root =FXMLLoader.load(getClass().getResource("PointPos.fxml"));
+    	Parent root =FXMLLoader.load(getClass().getResource("Sport.fxml"));
            
     	   Scene scene = sport.getScene();
            root.translateYProperty().set(scene.getHeight());

@@ -32,8 +32,6 @@ public class InscriptionController {
     @FXML
     private TextField emailTextF;
 
-    @FXML
-    private TextField phoneTextF;
 
     @FXML
     private TextField sexeTextF;
@@ -50,6 +48,8 @@ public class InscriptionController {
     @FXML
     private PasswordField mdpTextF;
     
+    @FXML
+    private PasswordField confirmMdpTextF;
 
     @FXML
     void Back(ActionEvent event) throws IOException {
