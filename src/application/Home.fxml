@@ -57,11 +57,11 @@
                         <Image url="@../img/money_jar.png" />
                      </image>
                   </ImageView>
-                  <Label layoutX="39.0" layoutY="53.0" prefHeight="50.0" prefWidth="174.0" style="-fx-font-size: 17;" styleClass="TextFont" text="COINS COLLECTED" textFill="#f4b43c">
+                  <Label alignment="CENTER" layoutX="39.0" layoutY="53.0" prefHeight="50.0" prefWidth="174.0" style="-fx-font-size: 17;" styleClass="TextFont" text="COINS COLLECTED" textFill="#f4b43c">
                      <font>
                         <Font size="17.0" />
                      </font></Label>
-                  <Label layoutX="97.0" layoutY="15.0" prefHeight="58.0" prefWidth="58.0" style="-fx-font-size: 22;" styleClass="TextFont" text="1000" textFill="#f4b43c">
+                  <Label alignment="CENTER" layoutX="94.0" layoutY="17.0" prefHeight="58.0" prefWidth="58.0" style="-fx-font-size: 24;" styleClass="TextFont" text="1000" textFill="#f4b43c">
                      <font>
                         <Font size="17.0" />
                      </font>
