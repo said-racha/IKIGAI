@@ -9,9 +9,9 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="container" prefHeight="697.0" prefWidth="1128.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ConsulterDevPersoController">
+<AnchorPane fx:id="container" prefHeight="679.0" prefWidth="1128.0" style="-fx-background-color: #7f00ff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ConsulterDevPersoController">
    <children>
-      <Pane layoutY="-2.0" prefHeight="703.0" prefWidth="1128.0" style="-fx-background-color: #7f00ff;">
+      <Pane prefHeight="679.0" prefWidth="1128.0" style="-fx-background-color: #7f00ff;">
          <children>
             <Button fx:id="backBtn" alignment="CENTER" contentDisplay="TOP" layoutX="1058.0" layoutY="22.0" mnemonicParsing="false" onAction="#Back" prefHeight="18.0" prefWidth="26.0" style="-fx-background-color: #7f00ff;" text="Back" textFill="WHITE">
                <font>
@@ -25,39 +25,38 @@
                   </ImageView>
                </graphic>
             </Button>
-            <ImageView fitHeight="25.0" fitWidth="58.0" layoutX="14.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../img/skiawhitefont.png" />
-               </image>
-            </ImageView>
-            <Pane layoutX="155.0" layoutY="16.0" prefHeight="672.0" prefWidth="818.0" style="-fx-background-color: white; -fx-background-radius: 30; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.4), 10, 0.1, 0.0, 0.0);">
+            <Pane layoutX="115.0" layoutY="20.0" prefHeight="636.0" prefWidth="906.0" style="-fx-background-color: white; -fx-background-radius: 30; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.4), 10, 0.1, 0.0, 0.0);">
                <children>
-                  <TextArea fx:id="consulterDevPersoTextA" layoutX="149.0" layoutY="274.0" prefHeight="311.0" prefWidth="521.0">
+                  <TextArea fx:id="consulterDevPersoTextA" editable="false" layoutX="181.0" layoutY="305.0" prefHeight="192.0" prefWidth="521.0" style="-fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.4), 10, 0.1, 0.0, 0.0);">
                      <font>
                         <Font name="Courier New" size="12.0" />
                      </font>
                   </TextArea>
-                  <Label layoutX="248.0" layoutY="163.0" prefHeight="106.0" prefWidth="324.0" text="The challenge of the day" textFill="#7f00ff">
+                  <Label layoutX="270.0" layoutY="199.0" prefHeight="72.0" prefWidth="324.0" text="The challenge of the day" textFill="#7f00ff">
                      <font>
                         <Font name="Georgia" size="28.0" />
                      </font>
                   </Label>
-                  <ImageView fitHeight="185.0" fitWidth="246.0" layoutX="269.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="213.0" fitWidth="336.0" layoutX="261.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../img/undraw_Booked_re_vtod.png" />
+                        <Image url="@../img/undraw_target_kriv.png" />
                      </image>
                   </ImageView>
-                  <Button fx:id="validerBtn" layoutX="378.0" layoutY="603.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="64.0" style="-fx-background-color: white;" textFill="WHITE">
+                  <Button fx:id="validerBtn" layoutX="414.0" layoutY="538.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="49.0" style="-fx-background-color: white;" textFill="WHITE">
                      <graphic>
-                        <ImageView fitHeight="47.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="43.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../img/verified.png" />
                            </image>
                         </ImageView>
-                     </graphic>
-                  </Button>
+                     </graphic></Button>
                </children>
             </Pane>
+            <ImageView fitHeight="25.0" fitWidth="78.0" layoutX="14.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/skiawhitefont.png" />
+               </image>
+            </ImageView>
          </children>
       </Pane>
    </children>

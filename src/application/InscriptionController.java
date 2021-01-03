@@ -12,6 +12,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.StackPane;
@@ -45,6 +46,10 @@ public class InscriptionController {
 
     @FXML
     private Button backBtn;
+    
+    @FXML
+    private PasswordField mdpTextF;
+    
 
     @FXML
     void Back(ActionEvent event) throws IOException {
