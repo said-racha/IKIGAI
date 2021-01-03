@@ -73,8 +73,8 @@ public class HomeController {
     //stressHelp
     @FXML
     void sh(ActionEvent event) throws IOException {
-    	Parent root =FXMLLoader.load(getClass().getResource("PointPos.fxml"));
-        
+    	//Parent root =FXMLLoader.load(getClass().getResource("StressHelpTemoignage.fxml"));
+    	Parent root =FXMLLoader.load(getClass().getResource("StressHelpRelaxation.fxml"));
   	   Scene scene = sport.getScene();
          root.translateYProperty().set(scene.getHeight());
 

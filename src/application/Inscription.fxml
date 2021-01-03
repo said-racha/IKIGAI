@@ -14,7 +14,7 @@
    <children>
       <Pane layoutX="167.0" layoutY="8.0" prefHeight="389.0" prefWidth="364.0" style="-fx-background-color: white; -fx-background-radius: 20; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.4), 10, 0.1, 0.0, 0.0);">
          <children>
-            <Label alignment="CENTER" layoutX="51.0" layoutY="10.0" prefHeight="70.0" prefWidth="252.0" text="Create an account" textFill="#7f00ff">
+            <Label alignment="CENTER" layoutX="50.0" layoutY="10.0" prefHeight="70.0" prefWidth="252.0" text="Create an account" textFill="#7f00ff">
                <font>
                   <Font name="Georgia" size="22.0" />
                </font>
