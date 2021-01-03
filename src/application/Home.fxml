@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.shape.*?>
 <?import org.controlsfx.control.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.text.*?>
@@ -14,39 +15,89 @@
       <Pane layoutX="167.0" layoutY="9.0" prefHeight="660.0" prefWidth="948.0" style="-fx-background-color: #fff; -fx-background-radius: 40; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.4), 10, 0.1, 0.0, 0.0);">
          <children>
             <Label layoutX="132.0" layoutY="623.0" prefHeight="14.0" prefWidth="737.0" styleClass="TextFont" text="“It is more important to know where you are going than to get there quickly. Do not mistake activity for achievement.”Isocrates" />
-            <TableView layoutX="40.0" layoutY="258.0" prefHeight="306.0" prefWidth="342.0">
-              <columns>
-                <TableColumn prefWidth="340.99993896484375" text="To do" />
-              </columns>
-            </TableView>
-            <Pane layoutX="20.0" layoutY="44.0" prefHeight="159.0" prefWidth="910.0" style="-fx-background-color: #FFF; -fx-background-radius: 10; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.4), 10, 0.1, 0.0, 0.0);">
+            <Pane layoutX="20.0" layoutY="44.0" prefHeight="159.0" prefWidth="910.0" style="-fx-background-color: #C2BDF9; -fx-background-radius: 5; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.4), 10, 0.1, 0.0, 0.0);">
                <children>
-                  <Label layoutX="756.0" layoutY="93.0" prefHeight="47.0" prefWidth="99.0" styleClass="TextFont" text="100 Collected !" textFill="#7f00ff" />
-                  <ImageView fitHeight="87.0" fitWidth="110.0" layoutX="747.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../img/money_jar.png" />
-                     </image>
-                  </ImageView>
-                  <Label layoutX="351.0" layoutY="82.0" prefHeight="41.0" prefWidth="142.0" styleClass="TextFont" text="GOAL  OF THE week" />
-                  <Label layoutX="362.0" layoutY="51.0" prefHeight="49.0" prefWidth="152.0" styleClass="TextFont" text="GOAL  OF THE session" />
-                  <Label layoutX="342.0" layoutY="26.0" prefHeight="41.0" prefWidth="161.0" styleClass="TextFont" text="GOAL  OF THE session" />
-                  <Label layoutX="25.0" layoutY="65.0" prefHeight="41.0" prefWidth="195.0" styleClass="TextFont" text="Hello, Racha" textFill="#7f00ff">
+                  <Label layoutX="151.0" layoutY="40.0" prefHeight="41.0" prefWidth="273.0" style="-fx-font-size: 30;" styleClass="TextFont" text="Welcome, Racha." textFill="#010734">
                      <font>
                         <Font name="Arial" size="20.0" />
                      </font>
                   </Label>
-                  <Label layoutX="39.0" layoutY="98.0" prefHeight="22.0" prefWidth="87.0" text="You are on day 1." textFill="#9496a8">
+                  <Label layoutX="195.0" layoutY="78.0" prefHeight="22.0" prefWidth="135.0" text="You are on day 1." textFill="#9496a8">
                      <font>
-                        <Font size="11.0" />
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="190.0" fitWidth="307.0" layoutX="562.0" layoutY="-29.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/undraw_welcoming_xvuq%202.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <ListView layoutX="60.0" layoutY="300.0" prefHeight="272.0" prefWidth="270.0" style="-fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.4), 10, 0.1, 0.0, 0.0);" />
+            <Label layoutX="68.0" layoutY="237.0" prefHeight="41.0" prefWidth="145.0" style="-fx-font-size: 20;" styleClass="TextFont" text="Today's Tasks" textFill="#010734">
+               <font>
+                  <Font name="Arial" size="20.0" />
+               </font>
+            </Label>
+            <Line endX="40.0" layoutX="152.0" layoutY="280.0" opacity="0.46" startX="-90.0" stroke="#010734" />
+            <Button fx:id="addtask" layoutX="257.0" layoutY="246.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="33.0" style="-fx-background-color: #fff;">
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/add.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Pane layoutX="387.0" layoutY="258.0" prefHeight="320.0" prefWidth="239.0" style="-fx-background-color: #FFEFFF; -fx-background-radius: 40; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.4), 10, 0.1, 0.0, 0.0);">
+               <children>
+                  <ImageView fitHeight="153.0" fitWidth="194.0" layoutX="28.0" layoutY="131.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/money_jar.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="39.0" layoutY="53.0" prefHeight="50.0" prefWidth="174.0" style="-fx-font-size: 17;" styleClass="TextFont" text="COINS COLLECTED" textFill="#f4b43c">
+                     <font>
+                        <Font size="17.0" />
+                     </font></Label>
+                  <Label layoutX="97.0" layoutY="15.0" prefHeight="58.0" prefWidth="58.0" style="-fx-font-size: 22;" styleClass="TextFont" text="1000" textFill="#f4b43c">
+                     <font>
+                        <Font size="17.0" />
                      </font>
                   </Label>
                </children>
             </Pane>
-            <ImageView fitHeight="354.0" fitWidth="486.0" layoutX="441.0" layoutY="231.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../img/washing_hands.png" />
-               </image>
-            </ImageView>
+            <Pane layoutX="671.0" layoutY="482.0" prefHeight="90.0" prefWidth="216.0" style="-fx-background-color: #F47676; -fx-background-radius: 40; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.4), 10, 0.1, 0.0, 0.0);">
+               <children>
+                  <Label alignment="CENTER" layoutX="18.0" layoutY="8.0" prefHeight="75.0" prefWidth="167.0" style="-fx-font-size: 15;" styleClass="TextFont" text="Drink 3 litters of water" textFill="WHITE" />
+                  <ImageView fitHeight="21.0" fitWidth="21.0" layoutX="97.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/50317022_2208528536141808_8297950350007074816_n.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane layoutX="671.0" layoutY="373.0" opacity="0.8" prefHeight="90.0" prefWidth="216.0" style="-fx-background-color: #F4B43C; -fx-background-radius: 40; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.4), 10, 0.1, 0.0, 0.0);">
+               <children>
+                  <Label alignment="CENTER" layoutX="24.0" layoutY="8.0" prefHeight="75.0" prefWidth="167.0" style="-fx-font-size: 15;" styleClass="TextFont" text="Read a book" textFill="WHITE" />
+                  <ImageView fitHeight="21.0" fitWidth="21.0" layoutX="97.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/135283043_327404838385737_4076522549348236847_n.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane layoutX="671.0" layoutY="265.0" prefHeight="90.0" prefWidth="216.0" style="-fx-background-color: #7F00FF; -fx-background-radius: 40; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.4), 10, 0.1, 0.0, 0.0);">
+               <children>
+                  <Label alignment="CENTER" layoutX="30.0" layoutY="9.0" prefHeight="75.0" prefWidth="167.0" style="-fx-font-size: 15;" styleClass="TextFont" text="&quot;Learn Python basics&quot;" textFill="WHITE" />
+                  <ImageView fitHeight="24.0" fitWidth="31.0" layoutX="99.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/136043689_158359309053062_4131697032843154427_n.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
          </children></Pane>
       <GridPane layoutX="-16.0" layoutY="88.0" prefHeight="351.0" prefWidth="207.0">
         <columnConstraints>
@@ -125,11 +176,6 @@
       <ImageView fitHeight="25.0" fitWidth="78.0" layoutX="32.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../img/skiawhitefont.png" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="130.0" fitWidth="132.0" layoutX="19.0" layoutY="484.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../img/washing_hands.png" />
          </image>
       </ImageView>
    </children>

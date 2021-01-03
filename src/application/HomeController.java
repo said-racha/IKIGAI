@@ -19,6 +19,9 @@ import javafx.stage.Stage;
 import javafx.util.Duration;
 
 public class HomeController {
+	
+    @FXML
+    private Button addtask;
 	@FXML
     private Button pp;
 
