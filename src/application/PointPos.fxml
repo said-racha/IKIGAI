@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.image.*?>
 <?import javafx.scene.text.*?>
 <?import javafx.scene.control.*?>
 <?import java.lang.*?>
@@ -8,15 +9,47 @@
 
 <AnchorPane fx:id="container" prefHeight="679.0" prefWidth="1128.0" style="-fx-background-color: #7f00ff;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.PointPosController">
    <children>
-      <Pane layoutX="51.0" layoutY="24.0" prefHeight="632.0" prefWidth="1053.0" style="-fx-background-color: #fff; -fx-background-radius: 20;">
+      <Pane layoutX="115.0" layoutY="20.0" prefHeight="636.0" prefWidth="906.0" style="-fx-background-color: #fff; -fx-background-radius: 20; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.4), 10, 0.1, 0.0, 0.0);">
          <children>
-            <ListView layoutX="72.0" layoutY="138.0" prefHeight="377.0" prefWidth="511.0" />
-            <Label layoutX="90.0" layoutY="36.0" text="Point Positif">
+            <ListView layoutX="151.0" layoutY="275.0" prefHeight="291.0" prefWidth="588.0" style="-fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.4), 10, 0.1, 0.0, 0.0);" />
+            <Label layoutX="342.0" layoutY="222.0" prefHeight="41.0" prefWidth="190.0" styleClass="TextFont" text="Positive Thoughts " textFill="#7f00ff">
                <font>
-                  <Font name="Arial" size="32.0" />
+                  <Font name="Brush Script MT Italic" size="21.0" />
                </font>
             </Label>
-            <Button fx:id="home" layoutX="738.0" layoutY="557.0" mnemonicParsing="false" onAction="#home" text="Home" />
+            <ImageView fitHeight="213.0" fitWidth="279.0" layoutX="283.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/positive.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="54.0" fitWidth="56.0" layoutX="398.0" layoutY="578.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/undraw_processing_thoughts_d8ha.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="confirm" layoutX="414.0" layoutY="586.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="29.0" style="-fx-background-color: #fff;" text="Button" textFill="WHITE" />
+            <ImageView fitHeight="43.0" fitWidth="39.0" layoutX="407.0" layoutY="583.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/verified.png" />
+               </image>
+            </ImageView>
          </children></Pane>
+      <Button fx:id="home" alignment="CENTER" contentDisplay="TOP" layoutX="1058.0" layoutY="21.0" mnemonicParsing="false" onAction="#home" prefHeight="18.0" prefWidth="26.0" style="-fx-background-color: #7f00ff;" text="Back" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="10.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="25.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/undo.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <ImageView fitHeight="25.0" fitWidth="78.0" layoutX="14.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/skiawhitefont.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>

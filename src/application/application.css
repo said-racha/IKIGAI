@@ -47,4 +47,8 @@
 .table-view .column-header .label {
 	-fx-text-fill: white;
 }
-
+.TextFont{
+	-fx-font-family:  "Georgia";
+	
+	
+}
