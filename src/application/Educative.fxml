@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.effect.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.text.*?>
 <?import javafx.scene.control.*?>
@@ -9,20 +10,20 @@
 
 <AnchorPane prefHeight="679.0" prefWidth="1128.0" style="-fx-background-color: #7f00ff;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.EducativeController">
    <children>
-      <Pane layoutX="115.0" layoutY="20.0" prefHeight="636.0" prefWidth="862.0" style="-fx-background-color: #fff; -fx-background-radius: 20; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.4), 10, 0.1, 0.0, 0.0);">
+      <Pane layoutX="115.0" layoutY="20.0" prefHeight="636.0" prefWidth="906.0" style="-fx-background-color: #fff; -fx-background-radius: 20; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.4), 10, 0.1, 0.0, 0.0);">
          <children>
-            <ImageView fitHeight="178.0" fitWidth="280.0" layoutX="302.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="213.0" fitWidth="336.0" layoutX="261.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../img/undraw_book_reading_kx9s.png" />
                </image>
             </ImageView>
-            <Label layoutX="326.0" layoutY="177.0" prefHeight="63.0" prefWidth="219.0" style="-fx-font-size: 30;" styleClass="TextFont" text="Did you know ?" textFill="#7f00ff">
+            <Label layoutX="350.0" layoutY="200.0" prefHeight="63.0" prefWidth="167.0" style="-fx-font-size: 22;" styleClass="TextFont" text="Did you know ?" textFill="#7f00ff">
                <font>
-                  <Font name="Brush Script MT Italic" size="31.0" />
+                  <Font name="Brush Script MT Italic" size="27.0" />
                </font>
             </Label>
-            <TextArea layoutX="124.0" layoutY="285.0" prefHeight="200.0" prefWidth="622.0" style="-fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.4), 10, 0.1, 0.0, 0.0);" />
-            <ImageView fitHeight="63.0" fitWidth="46.0" layoutX="153.0" layoutY="298.0" pickOnBounds="true" preserveRatio="true">
+            <TextArea layoutX="130.0" layoutY="285.0" prefHeight="200.0" prefWidth="622.0" style="-fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.4), 10, 0.1, 0.0, 0.0);" />
+            <ImageView fitHeight="51.0" fitWidth="46.0" layoutX="152.0" layoutY="296.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../img/lightbulb.png" />
                </image>
@@ -33,10 +34,17 @@
             <Image url="@../img/skiawhitefont.png" />
          </image>
       </ImageView>
-      <Button fx:id="home" layoutX="993.0" layoutY="21.0" mnemonicParsing="false" onAction="#home" prefHeight="60.0" prefWidth="113.0" style="-fx-background-color: #7f00ff;" styleClass="TextFont" text="Home" textFill="WHITE">
+      <Button fx:id="home" alignment="CENTER" contentDisplay="TOP" layoutX="1068.0" layoutY="31.0" mnemonicParsing="false" onAction="#home" prefHeight="18.0" prefWidth="26.0" style="-fx-background-color: #7f00ff;" text="Back" textFill="WHITE">
          <font>
-            <Font name="Comic Sans MS" size="26.0" />
+            <Font name="System Bold" size="10.0" />
          </font>
+         <graphic>
+            <ImageView fitHeight="25.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/undo.png" />
+               </image>
+            </ImageView>
+         </graphic>
       </Button>
    </children>
 </AnchorPane>
