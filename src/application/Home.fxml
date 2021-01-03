@@ -13,21 +13,31 @@
       <ImageView fitHeight="48.0" fitWidth="51.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true" />
       <Pane layoutX="167.0" layoutY="9.0" prefHeight="660.0" prefWidth="948.0" style="-fx-background-color: #fff; -fx-background-radius: 40; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.4), 10, 0.1, 0.0, 0.0);">
          <children>
-            <Label layoutX="806.0" layoutY="45.0" prefHeight="42.0" prefWidth="132.0" text="Cagnotte" />
-            <Label layoutX="93.0" layoutY="38.0" prefHeight="41.0" prefWidth="195.0" styleClass="TextFont" text="Hello, Racha" textFill="#7f00ff">
+            <Label layoutX="779.0" layoutY="99.0" prefHeight="47.0" prefWidth="99.0" styleClass="TextFont" text="100 Collected !" textFill="#7f00ff" />
+            <Label layoutX="90.0" layoutY="19.0" prefHeight="41.0" prefWidth="195.0" styleClass="TextFont" text="Hello, Racha" textFill="#7f00ff">
                <font>
                   <Font name="Arial" size="20.0" />
                </font>
             </Label>
             <Label layoutX="726.0" layoutY="187.0" prefHeight="42.0" prefWidth="132.0" text="INFOS3LACOVID" />
-            <Label layoutX="107.0" layoutY="71.0" prefHeight="22.0" prefWidth="87.0" text="You are on day 1." textFill="#9496a8">
+            <Label layoutX="104.0" layoutY="52.0" prefHeight="22.0" prefWidth="87.0" text="You are on day 1." textFill="#9496a8">
                <font>
                   <Font size="11.0" />
                </font></Label>
             <Label layoutX="132.0" layoutY="623.0" prefHeight="14.0" prefWidth="737.0" styleClass="TextFont" text="“It is more important to know where you are going than to get there quickly. Do not mistake activity for achievement.”Isocrates" />
-            <Label layoutX="389.0" layoutY="72.0" prefHeight="41.0" prefWidth="142.0" styleClass="TextFont" text="GOAL  OF THE week" />
-            <Label layoutX="400.0" layoutY="41.0" prefHeight="41.0" prefWidth="161.0" styleClass="TextFont" text="GOAL  OF THE session" />
-            <Label layoutX="401.0" layoutY="20.0" prefHeight="41.0" prefWidth="132.0" styleClass="TextFont" text="Goal of the day" />
+            <Label layoutX="380.0" layoutY="56.0" prefHeight="41.0" prefWidth="142.0" styleClass="TextFont" text="GOAL  OF THE week" />
+            <Label layoutX="391.0" layoutY="25.0" prefHeight="49.0" prefWidth="152.0" styleClass="TextFont" text="GOAL  OF THE session" />
+            <Label layoutX="371.0" prefHeight="41.0" prefWidth="161.0" styleClass="TextFont" text="GOAL  OF THE session" />
+            <ImageView fitHeight="87.0" fitWidth="110.0" layoutX="770.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/money_jar.png" />
+               </image>
+            </ImageView>
+            <TableView layoutX="43.0" layoutY="132.0" prefHeight="306.0" prefWidth="342.0">
+              <columns>
+                <TableColumn prefWidth="340.99993896484375" text="To do" />
+              </columns>
+            </TableView>
          </children></Pane>
       <GridPane layoutX="-16.0" layoutY="88.0" prefHeight="425.0" prefWidth="207.0">
         <columnConstraints>
@@ -51,7 +61,7 @@
             <Button fx:id="dev" layoutX="10.0" layoutY="25.0" mnemonicParsing="false" onAction="#dev" style="-fx-background-color: #7F00FF; -fx-font-size: 12;" text="Challenge" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="3" />
             <Button fx:id="progres" layoutX="10.0" layoutY="25.0" mnemonicParsing="false" onAction="#progres" style="-fx-background-color: #7F00FF; -fx-font-size: 12;" text="Progress" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="6" />
             <Button fx:id="ed" layoutX="10.0" layoutY="25.0" mnemonicParsing="false" onAction="#ed" style="-fx-background-color: #7F00FF; -fx-font-size: 12;" styleClass="TextFont" text="Educational" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="LEFT" />
-            <Button fx:id="pp" layoutX="10.0" layoutY="25.0" mnemonicParsing="false" onAction="#pp" style="-fx-background-color: #7F00FF; -fx-font-size: 12;" text="PointsPos" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="5" />
+            <Button fx:id="pp" layoutX="10.0" layoutY="25.0" mnemonicParsing="false" onAction="#pp" style="-fx-background-color: #7F00FF; -fx-font-size: 12;" text="Positive " textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="5" />
             <Button fx:id="appris" layoutX="10.0" layoutY="25.0" mnemonicParsing="false" onAction="#appris" style="-fx-background-color: #7F00FF; -fx-font-size: 12;" text="Learned" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="4" />
             <ImageView fitHeight="17.0" fitWidth="17.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true" GridPane.halignment="RIGHT" GridPane.rowIndex="2">
                <image>
