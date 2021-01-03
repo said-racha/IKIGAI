@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="697.0" prefWidth="1128.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ActiviteesDuJourController">
+   <children>
+      <Label layoutX="449.0" layoutY="39.0" prefHeight="97.0" prefWidth="177.0" text="To Do List" textFill="#7f00ff">
+         <font>
+            <Font name="Javanese Text" size="35.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="305.0" fitWidth="520.0" layoutX="13.0" layoutY="295.0" opacity="0.35" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/undraw_To_do_list_re_9nt7.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="25.0" fitWidth="62.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/SkiaFontIkigai.png" />
+         </image>
+      </ImageView>
+      <TableView fx:id="toDolistTableV" layoutX="250.0" layoutY="199.0" prefHeight="358.0" prefWidth="657.0" stylesheets="@application.css">
+         <columns>
+            <TableColumn prefWidth="554.0" text="To Do" />
+            <TableColumn prefWidth="102.0" text="Done" />
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>

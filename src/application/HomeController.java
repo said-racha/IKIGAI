@@ -70,6 +70,7 @@ public class HomeController {
            timeline.play();
     }
 
+    //stressHelp
     @FXML
     void sh(ActionEvent event) throws IOException {
     	Parent root =FXMLLoader.load(getClass().getResource("PointPos.fxml"));
@@ -91,6 +92,7 @@ public class HomeController {
          timeline.play();
     }
 
+    //activitéesDuJour
     @FXML
     void aj(ActionEvent event) throws IOException {
     	Parent root =FXMLLoader.load(getClass().getResource("PointPos.fxml"));
@@ -112,9 +114,10 @@ public class HomeController {
          timeline.play();
     }
 
+    //devPerso
     @FXML
     void dev(ActionEvent event) throws IOException {
-    	Parent root =FXMLLoader.load(getClass().getResource("PointPos.fxml"));
+    	Parent root =FXMLLoader.load(getClass().getResource("ConsulterDevPerso.fxml"));
         
   	   Scene scene = sport.getScene();
          root.translateYProperty().set(scene.getHeight());
@@ -155,6 +158,7 @@ public class HomeController {
 
     }
 
+    //educatiton
     @FXML
     void ed(ActionEvent event) throws IOException {
     	Parent root =FXMLLoader.load(getClass().getResource("Educative.fxml"));
@@ -176,6 +180,7 @@ public class HomeController {
          timeline.play();
     }
 
+    //PointsPositifs
     @FXML
     void pp(ActionEvent event) throws IOException {
     	Parent root =FXMLLoader.load(getClass().getResource("PointPos.fxml"));
@@ -199,7 +204,7 @@ public class HomeController {
 
     @FXML
     void appris(ActionEvent event) throws IOException {
-    	Parent root =FXMLLoader.load(getClass().getResource("PointPos.fxml"));
+    	Parent root =FXMLLoader.load(getClass().getResource("InfoApprises.fxml"));
         
   	   Scene scene = sport.getScene();
          root.translateYProperty().set(scene.getHeight());

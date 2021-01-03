@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="container" prefHeight="697.0" prefWidth="1128.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.InfoApprisesController">
+   <children>
+      <Pane prefHeight="703.0" prefWidth="1128.0" style="-fx-background-color: #7f00ff;">
+         <children>
+            <Button fx:id="backBtn" alignment="CENTER" contentDisplay="TOP" layoutX="1058.0" layoutY="21.0" mnemonicParsing="false" onAction="#Back" prefHeight="18.0" prefWidth="26.0" style="-fx-background-color: #7f00ff;" text="Back" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="10.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/undo.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Pane layoutX="155.0" layoutY="16.0" prefHeight="672.0" prefWidth="818.0" style="-fx-background-color: white; -fx-background-radius: 30; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.4), 10, 0.1, 0.0, 0.0);">
+               <children>
+                  <Label layoutX="173.0" layoutY="163.0" prefHeight="92.0" prefWidth="453.0" text="Write down what you have learned" textFill="#7f00ff">
+                     <font>
+                        <Font name="Georgia" size="28.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="185.0" fitWidth="246.0" layoutX="269.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/undraw_book_lover_mkck.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="validerBtn" layoutX="378.0" layoutY="603.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="64.0" style="-fx-background-color: white;" textFill="WHITE" />
+                  <ListView fx:id="InfoApprisesListV" layoutX="220.0" layoutY="255.0" prefHeight="339.0" prefWidth="344.0" />
+                  <ImageView fitHeight="47.0" fitWidth="50.0" layoutX="376.0" layoutY="607.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/verified.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <ImageView fitHeight="25.0" fitWidth="58.0" layoutX="14.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/skiawhitefont.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
