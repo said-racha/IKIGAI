@@ -92,26 +92,17 @@ public class HomeController {
          timeline.play();
     }
 
-    //activitéesDuJour
+    //SETTINGS
     @FXML
     void aj(ActionEvent event) throws IOException {
-    	Parent root =FXMLLoader.load(getClass().getResource("PointPos.fxml"));
+    	Parent root =FXMLLoader.load(getClass().getResource("Modif.fxml"));
+
         
-  	   Scene scene = sport.getScene();
-         root.translateYProperty().set(scene.getHeight());
-
-         AnchorPane parentcontainer = (AnchorPane) scene.getRoot();
-
-         parentcontainer.getChildren().add(root);
-
-         Timeline timeline = new Timeline();
-         KeyValue kv = new KeyValue(root.translateYProperty(), 0, Interpolator.EASE_IN);
-         KeyFrame kf = new KeyFrame(Duration.seconds(1), kv);
-         timeline.getKeyFrames().add(kf);
-         timeline.setOnFinished(t -> {
-             parentcontainer.getChildren().remove(parentcontainer);
-         });
-         timeline.play();
+    	   Scene scene = new Scene(root);
+    	   Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
+    	  window.setScene(scene);
+    	   window.show();
+ 		
     }
 
     //devPerso
