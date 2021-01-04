@@ -24,13 +24,9 @@ public class StressHelpTemoignageController {
 	private AnchorPane container;
 	@FXML
 	private Button backBtn;
-	  @FXML
-	    private MenuButton MenuButton;
-
-	    @FXML
-	    private MenuItem temoignage;
-	    @FXML
-	    private MenuItem relaxion;
+	@FXML
+    private Button relaxion;
+	
 	// Event Listener on Button[#backBtn].onAction
 	@FXML
 	public void Back(ActionEvent event)throws IOException {
@@ -82,27 +78,6 @@ public class StressHelpTemoignageController {
 
     }
 
-    
-    @FXML
-    void temoignage(ActionEvent event) throws IOException {
-    	Parent root =FXMLLoader.load(getClass().getResource("StressHelpTemoignage.fxml"));
-
-        
-	  	   Scene scene = backBtn.getScene();
-	         root.translateYProperty().set(-scene.getHeight());
-
-	         AnchorPane parentcontainer = (AnchorPane) scene.getRoot();
-
-	         parentcontainer.getChildren().add(root);
-
-	         Timeline timeline = new Timeline();
-	         KeyValue kv = new KeyValue(root.translateYProperty(), 0, Interpolator.EASE_IN);
-	         KeyFrame kf = new KeyFrame(Duration.seconds(1), kv);
-	         timeline.getKeyFrames().add(kf);
-	         timeline.setOnFinished(t -> {
-	             parentcontainer.getChildren().remove(parentcontainer);
-	         });
-	         timeline.play();
-    }
+   
     
 }

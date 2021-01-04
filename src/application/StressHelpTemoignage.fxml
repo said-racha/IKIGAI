@@ -43,6 +43,18 @@
                   <Image url="@../img/skiawhitefont.png" />
                </image>
             </ImageView>
+            <Button fx:id="relaxion" alignment="CENTER" contentDisplay="TOP" layoutX="1044.0" layoutY="85.0" mnemonicParsing="false" onAction="#relaxion" prefHeight="57.0" prefWidth="66.0" style="-fx-background-color: #7f00ff;" text="Relaxation" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="10.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="37.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/meditation.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
          </children>
       </Pane>
    </children>

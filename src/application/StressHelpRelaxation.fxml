@@ -26,7 +26,7 @@
             </Button>
             <Pane layoutX="115.0" layoutY="20.0" prefHeight="636.0" prefWidth="906.0" style="-fx-background-color: white; -fx-background-radius: 30; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.4), 10, 0.1, 0.0, 0.0);">
                <children>
-                  <Label alignment="CENTER" layoutX="270.0" layoutY="203.0" prefHeight="72.0" prefWidth="324.0" text="Relaxtion &amp; Meditation" textFill="#7f00ff">
+                  <Label alignment="CENTER" layoutX="270.0" layoutY="203.0" prefHeight="72.0" prefWidth="324.0" text="Relaxation &amp; Meditation" textFill="#7f00ff">
                      <font>
                         <Font name="Georgia" size="28.0" />
                      </font>
@@ -43,6 +43,18 @@
                   <Image url="@../img/skiawhitefont.png" />
                </image>
             </ImageView>
+            <Button fx:id="temoignage" alignment="CENTER" contentDisplay="TOP" layoutX="1044.0" layoutY="88.0" mnemonicParsing="false" onAction="#temoignage" prefHeight="57.0" prefWidth="66.0" style="-fx-background-color: #7f00ff;" text="Testimony" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="10.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="33.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/testimonial.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
          </children>
       </Pane>
    </children>
