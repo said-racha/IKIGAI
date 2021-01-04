@@ -84,6 +84,7 @@
 	-fx-font-size :12;
 }
 
+	
  .bouttonFondMauve:hover { 
  		-fx-background-color: #7F00FF;
  	-fx-text-fill :  #F4B43C;
