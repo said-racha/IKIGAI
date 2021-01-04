@@ -13,6 +13,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.MenuButton;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
@@ -29,7 +30,7 @@ public class HomeController {
     private Button dev;
 
     @FXML
-    private Button sh;
+    private MenuButton sh;
 
     @FXML
     private Button aj;
@@ -75,26 +76,49 @@ public class HomeController {
 
     //stressHelp
     @FXML
-    void sh(ActionEvent event) throws IOException {
-    	//Parent root =FXMLLoader.load(getClass().getResource("StressHelpTemoignage.fxml"));
+    void relaxion(ActionEvent event) throws IOException {
     	Parent root =FXMLLoader.load(getClass().getResource("StressHelpRelaxation.fxml"));
-  	   Scene scene = sport.getScene();
-         root.translateYProperty().set(scene.getHeight());
 
-         AnchorPane parentcontainer = (AnchorPane) scene.getRoot();
+        
+	  	   Scene scene = sport.getScene();
+	         root.translateYProperty().set(-scene.getHeight());
 
-         parentcontainer.getChildren().add(root);
+	         AnchorPane parentcontainer = (AnchorPane) scene.getRoot();
 
-         Timeline timeline = new Timeline();
-         KeyValue kv = new KeyValue(root.translateYProperty(), 0, Interpolator.EASE_IN);
-         KeyFrame kf = new KeyFrame(Duration.seconds(1), kv);
-         timeline.getKeyFrames().add(kf);
-         timeline.setOnFinished(t -> {
-             parentcontainer.getChildren().remove(parentcontainer);
-         });
-         timeline.play();
+	         parentcontainer.getChildren().add(root);
+
+	         Timeline timeline = new Timeline();
+	         KeyValue kv = new KeyValue(root.translateYProperty(), 0, Interpolator.EASE_IN);
+	         KeyFrame kf = new KeyFrame(Duration.seconds(1), kv);
+	         timeline.getKeyFrames().add(kf);
+	         timeline.setOnFinished(t -> {
+	             parentcontainer.getChildren().remove(parentcontainer);
+	         });
+	         timeline.play();
+
     }
 
+    @FXML
+    void temoignage(ActionEvent event) throws IOException {
+    	Parent root =FXMLLoader.load(getClass().getResource("StressHelpTemoignage.fxml"));
+
+        
+	  	   Scene scene = sport.getScene();
+	         root.translateYProperty().set(-scene.getHeight());
+
+	         AnchorPane parentcontainer = (AnchorPane) scene.getRoot();
+
+	         parentcontainer.getChildren().add(root);
+
+	         Timeline timeline = new Timeline();
+	         KeyValue kv = new KeyValue(root.translateYProperty(), 0, Interpolator.EASE_IN);
+	         KeyFrame kf = new KeyFrame(Duration.seconds(1), kv);
+	         timeline.getKeyFrames().add(kf);
+	         timeline.setOnFinished(t -> {
+	             parentcontainer.getChildren().remove(parentcontainer);
+	         });
+	         timeline.play();
+    }
     //SETTINGS
     @FXML
     void aj(ActionEvent event) throws IOException {

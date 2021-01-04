@@ -3,6 +3,8 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -140,7 +142,6 @@
         </rowConstraints>
          <children>
             <Button fx:id="sport" mnemonicParsing="false" onAction="#sport" styleClass="bouttonFondMauve" text="Work out" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="1" />
-            <Button fx:id="sh" mnemonicParsing="false" onAction="#sh" styleClass="bouttonFondMauve" text="Stress  Remedies" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="2" />
             <Button fx:id="aj" layoutX="10.0" layoutY="25.0" mnemonicParsing="false" onAction="#aj" styleClass="bouttonFondMauve" text="Settings" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="7" />
             <Button fx:id="dev" layoutX="10.0" layoutY="25.0" mnemonicParsing="false" onAction="#dev" styleClass="bouttonFondMauve" text="Challenge" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="3" />
             <Button fx:id="progres" layoutX="10.0" layoutY="25.0" mnemonicParsing="false" onAction="#progres" styleClass="bouttonFondMauve" text="Progress" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="6" />
@@ -187,6 +188,15 @@
                   <Image url="@../img/icons8-settings-50.png" />
                </image>
             </ImageView>
+            <MenuButton fx:id="sh" mnemonicParsing="false" prefHeight="37.0" prefWidth="120.0" styleClass="bouttonFondMauve" text="Stress Remedies" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <items>
+                  <MenuItem fx:id="relaxion" mnemonicParsing="false" onAction="#relaxion" text="Relaxion" />
+                  <MenuItem fx:id="temoignage" mnemonicParsing="false" onAction="#temoignage" text="Temoignage" />
+               </items>
+               <font>
+                  <Font name="Georgia" size="13.0" />
+               </font>
+            </MenuButton>
          </children>
       </GridPane>
       <Button fx:id="signout" layoutX="34.0" layoutY="623.0" mnemonicParsing="false" onAction="#signout" style="-fx-background-color: #7f00ff;">
