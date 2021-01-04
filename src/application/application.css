@@ -97,5 +97,19 @@
 	-fx-font-size :12;
 }
 
+.TextFieldGoal{
+	-fx-background-color : #F47676;
+	-fx-prompt-text-fill : #FFF;
+	-fx-text-fill : #FFF;
+	
+}
+
+.TextFieldGoalYellow{
+	-fx-background-color :  #FFB513;
+	-fx-prompt-text-fill : #FFF;
+	-fx-text-fill : #FFF;
+	
+}
+	
 	
 

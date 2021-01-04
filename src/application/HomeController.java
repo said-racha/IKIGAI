@@ -13,6 +13,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
@@ -50,6 +51,11 @@ public class HomeController {
     @FXML
     private Button signout;
 
+    @FXML
+    private TextField week;
+
+    @FXML
+    private TextField day;
    //TO CHANGE 
     @FXML
     void sport(ActionEvent event) throws IOException  {
