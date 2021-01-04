@@ -115,14 +115,14 @@
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Button fx:id="sport" mnemonicParsing="false" onAction="#sport" style="-fx-background-color: #7F00FF; -fx-font-size: 12;" text="Work out" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="1" />
-            <Button fx:id="sh" mnemonicParsing="false" onAction="#sh" style="-fx-background-color: #7F00FF; -fx-font-size: 12;" text="Stress  Remedies" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="2" />
-            <Button fx:id="aj" layoutX="10.0" layoutY="25.0" mnemonicParsing="false" onAction="#aj" style="-fx-background-color: #7F00FF; -fx-font-size: 12;" text="Settings" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="7" />
-            <Button fx:id="dev" layoutX="10.0" layoutY="25.0" mnemonicParsing="false" onAction="#dev" style="-fx-background-color: #7F00FF; -fx-font-size: 12;" text="Challenge" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="3" />
-            <Button fx:id="progres" layoutX="10.0" layoutY="25.0" mnemonicParsing="false" onAction="#progres" style="-fx-background-color: #7F00FF; -fx-font-size: 12;" text="Progress" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="6" />
-            <Button fx:id="ed" layoutX="10.0" layoutY="25.0" mnemonicParsing="false" onAction="#ed" style="-fx-background-color: #7F00FF; -fx-font-size: 12;" styleClass="TextFont" text="Educational" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="LEFT" />
-            <Button fx:id="pp" layoutX="10.0" layoutY="25.0" mnemonicParsing="false" onAction="#pp" style="-fx-background-color: #7F00FF; -fx-font-size: 12;" text="Positive " textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="5" />
-            <Button fx:id="appris" layoutX="10.0" layoutY="25.0" mnemonicParsing="false" onAction="#appris" style="-fx-background-color: #7F00FF; -fx-font-size: 12;" text="Learned" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="4" />
+            <Button fx:id="sport" mnemonicParsing="false" onAction="#sport" styleClass="bouttonFondMauve" text="Work out" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="1" />
+            <Button fx:id="sh" mnemonicParsing="false" onAction="#sh" styleClass="bouttonFondMauve" text="Stress  Remedies" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="2" />
+            <Button fx:id="aj" layoutX="10.0" layoutY="25.0" mnemonicParsing="false" onAction="#aj" styleClass="bouttonFondMauve" text="Settings" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="7" />
+            <Button fx:id="dev" layoutX="10.0" layoutY="25.0" mnemonicParsing="false" onAction="#dev" styleClass="bouttonFondMauve" text="Challenge" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="3" />
+            <Button fx:id="progres" layoutX="10.0" layoutY="25.0" mnemonicParsing="false" onAction="#progres" styleClass="bouttonFondMauve" text="Progress" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="6" />
+            <Button fx:id="ed" layoutX="10.0" layoutY="25.0" mnemonicParsing="false" onAction="#ed" styleClass="bouttonFondMauve" text="Educational" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="LEFT" />
+            <Button fx:id="pp" layoutX="10.0" layoutY="25.0" mnemonicParsing="false" onAction="#pp" styleClass="bouttonFondMauve" text="Positive " textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="5" />
+            <Button fx:id="appris" layoutX="10.0" layoutY="25.0" mnemonicParsing="false" onAction="#appris" styleClass="bouttonFondMauve" text="Learned" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="4" />
             <ImageView fitHeight="17.0" fitWidth="17.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true" GridPane.halignment="RIGHT" GridPane.rowIndex="2">
                <image>
                   <Image url="@../img/icons8-sun-24.png" />

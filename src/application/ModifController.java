@@ -56,6 +56,8 @@ public class ModifController {
 	    	Parent root =FXMLLoader.load(getClass().getResource("Home.fxml"));
 	        
 	   	   Scene scene = new Scene(root);
+			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+
 	   	   Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
 	   	  window.setScene(scene);
 	   	   window.show();

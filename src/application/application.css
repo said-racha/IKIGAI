@@ -64,16 +64,38 @@
 
 
 .button{
-	-fx-background-color: #D3D3D3;
+	-fx-background-color: #7F00FF;
 }
 
  .button:hover { 
- 	-fx-background-color: #A9A9A9
+ 	-fx-background-color: #935FE2;
     
 }
 
 .button:pressed{
-	-fx-background-color: #A9A9A9
+	-fx-background-color: #DA22FF;
 }
+
+
+.bouttonFondMauve{
+	
+	-fx-background-color: #7F00FF;
+	
+	-fx-font-size :12;
+}
+
+ .bouttonFondMauve:hover { 
+ 		-fx-background-color: #7F00FF;
+ 	-fx-text-fill :  #F4B43C;
+ 	-fx-font-size :12;
+    
+}
+
+.bouttonFondMauve:pressed{
+		-fx-background-color: #7F00FF;
+	-fx-text-fill : #FFD384;
+	-fx-font-size :12;
+}
+
 	
 
