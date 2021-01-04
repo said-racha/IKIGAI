@@ -13,7 +13,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.MenuButton;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
@@ -30,7 +30,7 @@ public class HomeController {
     private Button dev;
 
     @FXML
-    private MenuButton sh;
+    private Button sh;
 
     @FXML
     private Button aj;
@@ -51,6 +51,11 @@ public class HomeController {
     @FXML
     private Button signout;
 
+    @FXML
+    private TextField week;
+
+    @FXML
+    private TextField day;
    //TO CHANGE 
     @FXML
     void sport(ActionEvent event) throws IOException  {
@@ -76,49 +81,26 @@ public class HomeController {
 
     //stressHelp
     @FXML
-    void relaxion(ActionEvent event) throws IOException {
+    void sh(ActionEvent event) throws IOException {
+    	//Parent root =FXMLLoader.load(getClass().getResource("StressHelpTemoignage.fxml"));
     	Parent root =FXMLLoader.load(getClass().getResource("StressHelpRelaxation.fxml"));
+  	   Scene scene = sport.getScene();
+         root.translateYProperty().set(scene.getHeight());
 
-        
-	  	   Scene scene = sport.getScene();
-	         root.translateYProperty().set(-scene.getHeight());
+         AnchorPane parentcontainer = (AnchorPane) scene.getRoot();
 
-	         AnchorPane parentcontainer = (AnchorPane) scene.getRoot();
+         parentcontainer.getChildren().add(root);
 
-	         parentcontainer.getChildren().add(root);
-
-	         Timeline timeline = new Timeline();
-	         KeyValue kv = new KeyValue(root.translateYProperty(), 0, Interpolator.EASE_IN);
-	         KeyFrame kf = new KeyFrame(Duration.seconds(1), kv);
-	         timeline.getKeyFrames().add(kf);
-	         timeline.setOnFinished(t -> {
-	             parentcontainer.getChildren().remove(parentcontainer);
-	         });
-	         timeline.play();
-
+         Timeline timeline = new Timeline();
+         KeyValue kv = new KeyValue(root.translateYProperty(), 0, Interpolator.EASE_IN);
+         KeyFrame kf = new KeyFrame(Duration.seconds(1), kv);
+         timeline.getKeyFrames().add(kf);
+         timeline.setOnFinished(t -> {
+             parentcontainer.getChildren().remove(parentcontainer);
+         });
+         timeline.play();
     }
 
-    @FXML
-    void temoignage(ActionEvent event) throws IOException {
-    	Parent root =FXMLLoader.load(getClass().getResource("StressHelpTemoignage.fxml"));
-
-        
-	  	   Scene scene = sport.getScene();
-	         root.translateYProperty().set(-scene.getHeight());
-
-	         AnchorPane parentcontainer = (AnchorPane) scene.getRoot();
-
-	         parentcontainer.getChildren().add(root);
-
-	         Timeline timeline = new Timeline();
-	         KeyValue kv = new KeyValue(root.translateYProperty(), 0, Interpolator.EASE_IN);
-	         KeyFrame kf = new KeyFrame(Duration.seconds(1), kv);
-	         timeline.getKeyFrames().add(kf);
-	         timeline.setOnFinished(t -> {
-	             parentcontainer.getChildren().remove(parentcontainer);
-	         });
-	         timeline.play();
-    }
     //SETTINGS
     @FXML
     void aj(ActionEvent event) throws IOException {
