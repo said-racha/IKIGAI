@@ -19,6 +19,9 @@ import javafx.stage.Stage;
 import javafx.util.Duration;
 
 public class HomeController {
+	
+    @FXML
+    private Button addtask;
 	@FXML
     private Button pp;
 
@@ -92,26 +95,17 @@ public class HomeController {
          timeline.play();
     }
 
-    //activitéesDuJour
+    //SETTINGS
     @FXML
     void aj(ActionEvent event) throws IOException {
-    	Parent root =FXMLLoader.load(getClass().getResource("PointPos.fxml"));
+    	Parent root =FXMLLoader.load(getClass().getResource("Modif.fxml"));
+
         
-  	   Scene scene = sport.getScene();
-         root.translateYProperty().set(scene.getHeight());
-
-         AnchorPane parentcontainer = (AnchorPane) scene.getRoot();
-
-         parentcontainer.getChildren().add(root);
-
-         Timeline timeline = new Timeline();
-         KeyValue kv = new KeyValue(root.translateYProperty(), 0, Interpolator.EASE_IN);
-         KeyFrame kf = new KeyFrame(Duration.seconds(1), kv);
-         timeline.getKeyFrames().add(kf);
-         timeline.setOnFinished(t -> {
-             parentcontainer.getChildren().remove(parentcontainer);
-         });
-         timeline.play();
+    	   Scene scene = new Scene(root);
+    	   Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
+    	  window.setScene(scene);
+    	   window.show();
+ 		
     }
 
     //devPerso
@@ -236,4 +230,38 @@ public class HomeController {
    	   window.show();
 		
     }
+    
+    
+    
+    @FXML
+    void addtask(ActionEvent event) throws IOException 	{
+		try {
+			
+		
+			
+			
+			Stage primaryStage = new Stage();
+			FXMLLoader loader = new FXMLLoader();
+			//pour ouvrir la fenetre 
+			Pane root =  loader.load(getClass().getResource("AddTAsk.fxml").openStream());
+			
+			
+			Scene scene = new Scene(root);
+			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+			//css file
+			
+		
+			primaryStage.setScene(scene);
+			primaryStage.show();
+			
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+				
+				
+			}
+	
+    
+    
 }
+
