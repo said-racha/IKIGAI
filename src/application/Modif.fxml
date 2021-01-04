@@ -16,42 +16,52 @@
 
 <AnchorPane prefHeight="405.0" prefWidth="697.0" style="-fx-background-color: #7f00ff;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ModifController">
    <children>
-      <Pane layoutX="167.0" layoutY="8.0" prefHeight="389.0" prefWidth="364.0" style="-fx-background-color: white; -fx-background-radius: 20; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.4), 10, 0.1, 0.0, 0.0);">
+      <Pane layoutX="11.0" layoutY="8.0" prefHeight="389.0" prefWidth="627.0" style="-fx-background-color: white; -fx-background-radius: 20; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.4), 10, 0.1, 0.0, 0.0);">
          <children>
-            <Label alignment="CENTER" layoutX="53.0" layoutY="14.0" prefHeight="70.0" prefWidth="252.0" text="Settings" textFill="#7f00ff">
-               <font>
-                  <Font name="Georgia" size="22.0" />
-               </font>
-            </Label>
-            <TextField fx:id="nameTextF" layoutX="68.0" layoutY="102.0" prefHeight="25.0" prefWidth="229.0" promptText="Full Name" />
-            <TextField fx:id="skillTextF" layoutX="68.0" layoutY="262.0" prefHeight="25.0" prefWidth="229.0" promptText="Skill You Want To Learn" />
-            <TextField fx:id="emailTextF" layoutX="68.0" layoutY="183.0" prefHeight="25.0" prefWidth="229.0" promptText="Email" />
-            <TextField fx:id="phoneTextF" layoutX="68.0" layoutY="143.0" prefHeight="25.0" prefWidth="229.0" promptText="Phone Number" />
-            <TextField fx:id="sexeTextF" layoutX="68.0" layoutY="223.0" prefHeight="25.0" prefWidth="229.0" promptText="Sexe" />
-            <Button fx:id="signUpBtn" layoutX="67.0" layoutY="347.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="229.0" style="-fx-background-color: #7f00ff;" text="Confirm" textFill="WHITE">
+            <TextField fx:id="nameTextF" layoutX="69.0" layoutY="102.0" prefHeight="25.0" prefWidth="229.0" promptText="Full Name" style="-fx-background-color: #FFEFFF; -fx-background-radius: 40; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.4), 10, 0.1, 0.0, 0.0);" styleClass="textfield" />
+            <TextField fx:id="skillTextF" layoutX="69.0" layoutY="296.0" prefHeight="25.0" prefWidth="229.0" promptText="Skill You Want To Learn" style="-fx-background-color: #FFEFFF; -fx-background-radius: 20; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.4), 10, 0.1, 0.0, 0.0);" styleClass="textfield" />
+            <TextField fx:id="emailTextF" layoutX="69.0" layoutY="217.0" prefHeight="25.0" prefWidth="229.0" promptText="Email" style="-fx-background-color: #FFEFFF; -fx-background-radius: 20; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.4), 10, 0.1, 0.0, 0.0);" styleClass="textfield" />
+            <TextField fx:id="password" layoutX="69.0" layoutY="143.0" prefHeight="25.0" prefWidth="229.0" promptText="Password" style="-fx-background-color: #FFEFFF; -fx-background-radius: 20; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.4), 10, 0.1, 0.0, 0.0);" styleClass="textfield" />
+            <TextField fx:id="sexeTextF" layoutX="69.0" layoutY="257.0" prefHeight="25.0" prefWidth="229.0" promptText="Sexe" style="-fx-background-color: #FFEFFF; -fx-background-radius: 20; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.4), 10, 0.1, 0.0, 0.0);" styleClass="textfield" />
+            <Button fx:id="signUpBtn" layoutX="99.0" layoutY="339.0" mnemonicParsing="false" opacity="0.57" prefHeight="28.0" prefWidth="154.0" style="-fx-background-color: #7F00FF; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.4), 10, 0.1, 0.0, 0.0); -fx-background-radius: 20;" text="Confirm" textFill="WHITE">
                <font>
                   <Font size="14.0" />
                </font>
             </Button>
-            <TextField fx:id="skillTextF1" layoutX="68.0" layoutY="303.0" prefHeight="25.0" prefWidth="229.0" promptText="Password" />
+            <TextField fx:id="confpass" layoutX="69.0" layoutY="180.0" prefHeight="25.0" prefWidth="229.0" promptText="Confirm Password" style="-fx-background-color: #FFEFFF; -fx-background-radius: 20; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.4), 10, 0.1, 0.0, 0.0);" styleClass="textfield" />
+            <ImageView fitHeight="256.0" fitWidth="342.0" layoutX="312.0" layoutY="86.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/designer_.png" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" layoutX="75.0" layoutY="17.0" prefHeight="56.0" prefWidth="180.0" text="Welcome to Settings" textFill="#010734">
+               <font>
+                  <Font name="Georgia" size="19.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="29.0" fitWidth="55.0" layoutX="551.0" layoutY="354.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/SkiaFontIkigai.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="100.0" layoutY="54.0" prefHeight="22.0" prefWidth="139.0" text="Update your information" textFill="#9496a8">
+               <font>
+                  <Font name="Georgia" size="12.0" />
+               </font>
+            </Label>
          </children>
       </Pane>
-      <Button fx:id="backBtn" alignment="CENTER" contentDisplay="TOP" layoutX="640.0" layoutY="11.0" mnemonicParsing="false" onAction="#Back" prefHeight="18.0" prefWidth="26.0" style="-fx-background-color: #7f00ff;" text="Back" textFill="WHITE">
+      <Button fx:id="backBtn" alignment="CENTER" contentDisplay="TOP" layoutX="647.0" layoutY="16.0" mnemonicParsing="false" onAction="#Back" prefHeight="18.0" prefWidth="26.0" style="-fx-background-color: #7f00ff;" text="Back" textFill="WHITE">
          <font>
             <Font name="System Bold" size="10.0" />
          </font>
          <graphic>
-            <ImageView fitHeight="25.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="25.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true" styleClass="boutton">
                <image>
                   <Image url="@../img/undo.png" />
                </image>
             </ImageView>
          </graphic>
       </Button>
-      <ImageView fitHeight="29.0" fitWidth="55.0" layoutX="9.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../img/skiawhitefont.png" />
-         </image>
-      </ImageView>
    </children>
 </AnchorPane>

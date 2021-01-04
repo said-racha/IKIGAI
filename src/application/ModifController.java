@@ -33,10 +33,13 @@ public class ModifController {
 	    private TextField emailTextF;
 
 	    @FXML
-	    private TextField phoneTextF;
+	    private TextField password;
+
 
 	    @FXML
 	    private TextField sexeTextF;
+	    @FXML
+	    private TextField confpass;
 
 	    @FXML
 	    private Button signUpBtn;

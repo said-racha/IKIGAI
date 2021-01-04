@@ -230,4 +230,38 @@ public class HomeController {
    	   window.show();
 		
     }
+    
+    
+    
+    @FXML
+    void addtask(ActionEvent event) throws IOException 	{
+		try {
+			
+		
+			
+			
+			Stage primaryStage = new Stage();
+			FXMLLoader loader = new FXMLLoader();
+			//pour ouvrir la fenetre 
+			Pane root =  loader.load(getClass().getResource("AddTAsk.fxml").openStream());
+			
+			
+			Scene scene = new Scene(root);
+			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+			//css file
+			
+		
+			primaryStage.setScene(scene);
+			primaryStage.show();
+			
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+				
+				
+			}
+	
+    
+    
 }
+
