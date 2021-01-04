@@ -13,38 +13,8 @@
 	-fx-text-fill: #7f00ff;
 }
 
-
-.table-view{
-	
-	-fx-background-radius: 10;
-	-fx-background-color :white;
-	-fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 10, 0.4, 0.0, 0.0);
+.TextFont{
+	-fx-font-family:  "Georgia";
 	
 	
 }
-
-
-/*table view*/
-.table-view .column-header-background{
-	-fx-background-radius: 45;
-	-fx-background-color :  rgb(214,214,214)  ;
-	-fx-background-insets: 0 0 10 0;
-	-fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 10, 0.3, 0.0, 0.0);
-	-fx-padding: 0 0 10 0;
-	
-}
-
-
-
-.table-view .column-header, .table-view .filler{
-	
-	-fx-size :30;
-	-fx-background-color: #7f00ff ;
-	-fx-background-radius: 10;
-	
-}
-
-.table-view .column-header .label {
-	-fx-text-fill: white;
-}
-

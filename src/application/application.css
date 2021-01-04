@@ -13,6 +13,7 @@
 	-fx-text-fill: #7f00ff;
 }
 
+<<<<<<< HEAD
 
 .table-view{
 	
@@ -48,3 +49,10 @@
 	-fx-text-fill: white;
 }
 
+=======
+.TextFont{
+	-fx-font-family:  "Georgia";
+	
+	
+}
+>>>>>>> Test-Balkis

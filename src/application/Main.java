@@ -22,8 +22,12 @@ public class Main extends Application {
 		
 		Parent root =FXMLLoader.load(getClass().getResource("Home.fxml"));
 		Scene scene = new Scene(root);
+<<<<<<< HEAD
 		
 		
+=======
+		scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+>>>>>>> Test-Balkis
 		primaryStage.setScene(scene);
 		
 		primaryStage.show();
