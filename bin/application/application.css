@@ -77,6 +77,24 @@
 }
 
 
+.SignUpbutton{
+	-fx-background-color: #FFF;
+	-fx-text-fill: #7F00FF;
+}
+
+ .SignUpbutton:hover { 
+ 	-fx-background-color: #fff;
+ 	-fx-text-fill: #DA22FF;
+    
+}
+
+.SignUpbutton:pressed{
+	-fx-background-color: #fff;
+	-fx-text-fill:  #DA22FF;
+}
+
+
+
 .bouttonFondMauve{
 	
 	-fx-background-color: #7F00FF;

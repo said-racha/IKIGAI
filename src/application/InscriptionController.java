@@ -60,7 +60,7 @@ public class InscriptionController {
 		root2.translateYProperty().set(-scene.getHeight());
 		StackPane parentContainer=(StackPane) scene.getRoot();
 		parentContainer.getChildren().add(root2);
-		
+		scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 		Timeline timeline=new Timeline();
 		KeyValue kv=new KeyValue(root2.translateYProperty(), 0, Interpolator.EASE_IN);
 		KeyFrame kf =new KeyFrame(Duration.seconds(1), kv);
