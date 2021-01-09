@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.chart.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="679.0" prefWidth="1128.0" style="-fx-background-color: #7f00ff;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ProgresController">
+   <children>
+      <Pane layoutX="115.0" layoutY="20.0" prefHeight="636.0" prefWidth="906.0" style="-fx-background-color: #fff; -fx-background-radius: 20; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.4), 10, 0.1, 0.0, 0.0);">
+         <children>
+            <LineChart layoutX="184.0" layoutY="265.0" prefHeight="349.0" prefWidth="506.0" style="-fx-border-radius: 30; -fx-background-radius: 30;">
+              <xAxis>
+                <CategoryAxis side="BOTTOM" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis side="LEFT" />
+              </yAxis>
+            </LineChart>
+            <Label layoutX="291.0" layoutY="200.0" prefHeight="63.0" prefWidth="282.0" style="-fx-font-size: 22;" styleClass="TextFont" text="Check out your progress ! " textFill="#7f00ff">
+               <font>
+                  <Font name="Brush Script MT Italic" size="25.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="213.0" fitWidth="336.0" layoutX="261.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/undraw_visual_data_b1wx.png" />
+               </image>
+            </ImageView>
+         </children></Pane>
+      <ImageView fitHeight="25.0" fitWidth="78.0" layoutX="30.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/skiawhitefont.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="home" alignment="CENTER" contentDisplay="TOP" layoutX="1068.0" layoutY="31.0" mnemonicParsing="false" onAction="#home" prefHeight="18.0" prefWidth="26.0" style="-fx-background-color: #7f00ff;" text="Back" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="10.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="25.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/undo.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>
