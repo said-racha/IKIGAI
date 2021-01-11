@@ -1,7 +1,14 @@
 package application;
 
 import java.io.IOException;
+import java.sql.Date;
+import java.text.SimpleDateFormat;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.util.Locale;
 
+import classes.Inscription;
+import classes.User;
 import javafx.animation.Interpolator;
 import javafx.animation.KeyFrame;
 import javafx.animation.KeyValue;
@@ -12,11 +19,13 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.StackPane;
 import javafx.util.Duration;
+
 
 public class InscriptionController {
 
@@ -50,6 +59,9 @@ public class InscriptionController {
     
     @FXML
     private PasswordField confirmMdpTextF;
+    
+    @FXML
+    private Label Confirmation;
 
     @FXML
     void Back(ActionEvent event) throws IOException {
@@ -70,5 +82,42 @@ public class InscriptionController {
 		});
 		timeline.play();
     }
+    
+    
+	
+	public void AjouterUserBtn() throws Exception {
+		Inscription i = new Inscription();
+
+		if(i.isDataBaseConnected())/*verifie que le logiciel est bien cooennecter a la BDD*/ {
+	
+			
+			try {
+		
+					
+					 DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd ");  
+					   LocalDateTime now = LocalDateTime.now();  
+					   String dateDeb= dtf.format(now); 	
+					System.out.println(dateDeb);
+					//si le user n'existe pas on l'ajoute
+					if(i.chercherUser(emailTextF.getText())==0){
+					
+						i.AjouterInformations(1, nameTextF.getText(), emailTextF.getText(), mdpTextF.getText(),  confirmMdpTextF.getText(),dateDeb, skillTextF.getText());
+					
+					}else {
+						//sinon on affiche une erreur
+						Confirmation.setText("Cet utilisateur existe deja");
+					}
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}else
+		{
+
+			Confirmation.setText("Echec de l'ajout");
+		}
+		
+		
+		
+	}
 
 }
