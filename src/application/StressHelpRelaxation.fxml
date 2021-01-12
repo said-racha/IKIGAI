@@ -7,6 +7,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.web.WebView?>
 
 <AnchorPane fx:id="container" prefHeight="679.0" prefWidth="1128.0" style="-fx-background-color: #7f00ff;" stylesheets="@application.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.StressHelpRelaxationController">
    <children>
@@ -26,16 +27,25 @@
             </Button>
             <Pane layoutX="115.0" layoutY="20.0" prefHeight="636.0" prefWidth="906.0" style="-fx-background-color: white; -fx-background-radius: 30; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.4), 10, 0.1, 0.0, 0.0);">
                <children>
-                  <Label alignment="CENTER" layoutX="270.0" layoutY="203.0" prefHeight="72.0" prefWidth="324.0" text="Relaxation &amp; Meditation" textFill="#7f00ff">
+                  <Label alignment="CENTER" layoutX="270.0" layoutY="197.0" prefHeight="72.0" prefWidth="324.0" text="Relaxation &amp; Meditation" textFill="#7f00ff">
                      <font>
                         <Font name="Georgia" size="28.0" />
                      </font>
                   </Label>
-                  <ImageView fitHeight="213.0" fitWidth="336.0" layoutX="270.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="207.0" fitWidth="306.0" layoutX="280.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../img/undraw_mindfulness_scgo.png" />
                      </image>
                   </ImageView>
+                  <WebView fx:id="webView" layoutX="127.0" layoutY="266.0" prefHeight="360.0" prefWidth="645.0" />
+                  <Button contentDisplay="CENTER" layoutX="793.0" layoutY="285.0" mnemonicParsing="false" onAction="#btn5" prefHeight="72.0" prefWidth="96.0" style="-fx-background-color: #ffb513; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 10, 0.4, 0.0, 0.0); -fx-background-radius: 25;" text="Calm Down" textAlignment="CENTER" textFill="WHITE" wrapText="true" />
+                  <Button contentDisplay="CENTER" layoutX="793.0" layoutY="372.0" mnemonicParsing="false" onAction="#btn6" prefHeight="72.0" prefWidth="96.0" style="-fx-background-color: #ffb513; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 10, 0.4, 0.0, 0.0); -fx-background-radius: 25;" text="Guided Meditation" textAlignment="CENTER" textFill="WHITE" wrapText="true" />
+                  <Button contentDisplay="CENTER" layoutX="793.0" layoutY="458.0" mnemonicParsing="false" onAction="#btn7" prefHeight="72.0" prefWidth="96.0" style="-fx-background-color: #ffb513; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 10, 0.4, 0.0, 0.0); -fx-background-radius: 25;" text="Affirmations For Anxiety" textAlignment="CENTER" textFill="WHITE" wrapText="true" />
+                  <Button contentDisplay="CENTER" layoutX="793.0" layoutY="543.0" mnemonicParsing="false" onAction="#btn8" prefHeight="72.0" prefWidth="96.0" style="-fx-background-color: #ffb513; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 10, 0.4, 0.0, 0.0); -fx-background-radius: 25;" text="Motivational Affirmations" textAlignment="CENTER" textFill="WHITE" wrapText="true" />
+                  <Button alignment="CENTER" layoutX="14.0" layoutY="458.0" mnemonicParsing="false" onAction="#btn3" prefHeight="72.0" prefWidth="96.0" style="-fx-background-color: #ffb513; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 10, 0.4, 0.0, 0.0); -fx-background-radius: 25;" text="Exercises To Calm Anxiety" textAlignment="CENTER" textFill="WHITE" wrapText="true" />
+                  <Button contentDisplay="CENTER" layoutX="14.0" layoutY="372.0" mnemonicParsing="false" onAction="#btn2" prefHeight="72.0" prefWidth="96.0" style="-fx-background-color: #ffb513; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 10, 0.4, 0.0, 0.0); -fx-background-radius: 25;" text="Tips To Stop Panic Attacks" textAlignment="CENTER" textFill="WHITE" wrapText="true" />
+                  <Button contentDisplay="CENTER" layoutX="14.0" layoutY="285.0" mnemonicParsing="false" onAction="#btn1" prefHeight="72.0" prefWidth="96.0" style="-fx-background-color: #ffb513; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 10, 0.4, 0.0, 0.0); -fx-background-radius: 25;" text="Learn How Panic Attacks Happens" textAlignment="CENTER" textFill="WHITE" wrapText="true" />
+                  <Button contentDisplay="CENTER" layoutX="14.0" layoutY="543.0" mnemonicParsing="false" onAction="#btn4" prefHeight="72.0" prefWidth="96.0" style="-fx-background-color: #ffb513; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 10, 0.4, 0.0, 0.0); -fx-background-radius: 25;" text="Guided Breathing Excercices" textAlignment="CENTER" textFill="WHITE" wrapText="true" />
                </children>
             </Pane>
             <ImageView fitHeight="25.0" fitWidth="78.0" layoutX="14.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
