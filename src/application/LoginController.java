@@ -100,7 +100,8 @@ public class LoginController implements Initializable{
 			{
 				System.out.println("user et mdp correct");
 				isConnected.setText("Nom d'utilisateur et Mot de passe correct");
-		nom = loginModel.GetName(emailTextF.getText(), passwordTextF.getText());
+	//avoir le nom de l'utilistauer
+				nom = loginModel.GetName(emailTextF.getText(), passwordTextF.getText());
 				Parent root =FXMLLoader.load(getClass().getResource("Home.fxml"));
 		        
 			   	   Scene scene = new Scene(root);

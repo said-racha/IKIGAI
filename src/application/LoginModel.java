@@ -41,7 +41,7 @@ public class LoginModel {
 		return this.connection != null;
 	}
 	
-	//Methode qui nous permet de savoir si la connexionest russie ou pas
+	//Methode qui nous permet d'avoir le nom de l'utilistauer
 	public String GetName(String user, String pass) throws SQLException {
 		
 	PreparedStatement preparedStatement=null;

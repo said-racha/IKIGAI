@@ -65,6 +65,7 @@ public class HomeController implements Initializable{
 	LoginModel LoginModel= new LoginModel();
 	LoginController LoginController = new LoginController();
 		if(LoginModel.isDataBaseConnected()) {
+			//initialiser le nom de l'utilisateur
 			nom.setText(LoginController.nom);
 		}
 		
