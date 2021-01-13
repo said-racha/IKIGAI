@@ -14,13 +14,17 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.Pane;
 import javafx.scene.layout.StackPane;
+import javafx.stage.Stage;
 import javafx.util.Duration;
 
 public class LoginController implements Initializable{
@@ -42,9 +46,12 @@ public class LoginController implements Initializable{
 
     @FXML
     private PasswordField passwordTextF;
+    
+    @FXML
+    private Label isConnected;
 
-    LoginModel loginModel=new LoginModel();// creer un obj loginModel revient a connectée notre controller a la bdd puisque la connexion se fait dans le constructeur de loginModel 
-											//(ainsi nous obtenons une connexion a la bdd a chaque fois qu'on ouvre l'application (etant donnée que Login est la premiere interface qu'on rencontre))
+    LoginModel loginModel=new LoginModel();// creer un obj loginModel revient a connectï¿½e notre controller a la bdd puisque la connexion se fait dans le constructeur de loginModel 
+											//(ainsi nous obtenons une connexion a la bdd a chaque fois qu'on ouvre l'application (etant donnï¿½e que Login est la premiere interface qu'on rencontre))
 
     
     @Override
@@ -79,6 +86,58 @@ public class LoginController implements Initializable{
     	
     	
     }
+    static String nom=" ";
+
+	//qui verifie le mdp et le user name 
+	public void Login(ActionEvent event) {
+		try {
+			
+			
+			//si le username ET le password sont correct on ouvre la session hadi 
+			if(loginModel.isLogin(emailTextF.getText(),passwordTextF.getText()))
+			
+			
+			{
+				System.out.println("user et mdp correct");
+				isConnected.setText("Nom d'utilisateur et Mot de passe correct");
+		nom = loginModel.GetName(emailTextF.getText(), passwordTextF.getText());
+				Parent root =FXMLLoader.load(getClass().getResource("Home.fxml"));
+		        
+			   	   Scene scene = new Scene(root);
+			   	   Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
+			   	  window.setScene(scene);
+			   	   window.show();
+			
+				
+				
+			
+			}//fin if de si connectÃ© 
+			
+			
+			
+			
+			
+			else {
+				isConnected.setText("Username and pass word not correct");
+				
+				
+				
+				
+		}
+		} catch (SQLException e) 
+		{
+			System.out.println("erreur dans login methode");
+			isConnected.setText("Username and pass word not correct");
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			
+		} 
+		//ta3 la fenetre 
+		catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
 
 	
 }
