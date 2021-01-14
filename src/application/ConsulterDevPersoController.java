@@ -43,7 +43,7 @@ public class ConsulterDevPersoController implements Initializable{
 	public void initialize(URL location, ResourceBundle resources) {
     	
     	nbrJour=3; //a remplacer par user.getNbrJour();
-    	consulterDevPersoTextA.setText(DevPerso.getContenuChallenge(nbrJour));
+    	consulterDevPersoTextA.appendText(DevPerso.getContenuChallenge(nbrJour));
 	}
     
     
