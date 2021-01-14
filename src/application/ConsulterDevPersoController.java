@@ -1,7 +1,11 @@
 package application;
 
 import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
 
+import classes.DevPerso;
+import classes.Educative;
 import javafx.animation.Interpolator;
 import javafx.animation.KeyFrame;
 import javafx.animation.KeyValue;
@@ -9,6 +13,7 @@ import javafx.animation.Timeline;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -17,7 +22,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.StackPane;
 import javafx.util.Duration;
 
-public class ConsulterDevPersoController {
+public class ConsulterDevPersoController implements Initializable{
 
     @FXML
     private AnchorPane container;
@@ -31,7 +36,17 @@ public class ConsulterDevPersoController {
     @FXML
     private Button validerBtn;
     
+    private int nbrJour;
 
+    
+    @Override
+	public void initialize(URL location, ResourceBundle resources) {
+    	
+    	nbrJour=3; //a remplacer par user.getNbrJour();
+    	consulterDevPersoTextA.setText(DevPerso.getContenuChallenge(nbrJour));
+	}
+    
+    
     @FXML
     void Back(ActionEvent event) throws IOException {
     	
@@ -56,5 +71,6 @@ public class ConsulterDevPersoController {
 		
 		
     }
+
 
 }
