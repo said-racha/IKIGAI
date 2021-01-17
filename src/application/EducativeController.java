@@ -33,7 +33,7 @@ public class EducativeController implements Initializable{
 	public void initialize(URL location, ResourceBundle resources) {
 		
     	nbrJour=3; //a remplacer par user.getNbrJour();
-    	consulterEducative.setText("\n\n"+Educative.getContenuEducatif(nbrJour));
+    	consulterEducative.setText("\n\t\t"+Educative.getContenuEducatif(nbrJour));
 		
 	}
     

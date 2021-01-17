@@ -42,8 +42,8 @@ public class ConsulterDevPersoController implements Initializable{
     @Override
 	public void initialize(URL location, ResourceBundle resources) {
     	
-    	nbrJour=3; //a remplacer par user.getNbrJour();
-    	consulterDevPersoTextA.appendText(DevPerso.getContenuChallenge(nbrJour));
+    	nbrJour=15; //a remplacer par user.getNbrJour(); "   " "    "  "       "
+    	consulterDevPersoTextA.appendText("\n\n\n\n\t"+DevPerso.getContenuChallenge(nbrJour));
 	}
     
     

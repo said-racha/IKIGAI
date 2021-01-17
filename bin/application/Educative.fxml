@@ -23,13 +23,13 @@
                   <Font name="Brush Script MT Italic" size="27.0" />
                </font>
             </Label>
-            <TextArea fx:id="consulterEducative" editable="false" layoutX="130.0" layoutY="285.0" prefHeight="200.0" prefWidth="622.0" style="-fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.4), 10, 0.1, 0.0, 0.0);">
+            <TextArea fx:id="consulterEducative" editable="false" layoutX="138.0" layoutY="285.0" prefHeight="246.0" prefWidth="621.0" style="-fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.4), 10, 0.1, 0.0, 0.0);">
                <font>
-                  <Font size="20.0" />
+                  <Font name="Bell MT Bold" size="17.0" />
                </font></TextArea>
-            <ImageView fitHeight="51.0" fitWidth="46.0" layoutX="152.0" layoutY="296.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="51.0" fitWidth="46.0" layoutX="149.0" layoutY="298.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../img/lightbulb.png" />
+                  <Image url="@../img/problem-solving.png" />
                </image>
             </ImageView>
          </children></Pane>
