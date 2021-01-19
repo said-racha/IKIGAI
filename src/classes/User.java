@@ -159,7 +159,7 @@ public class User {
     public  int getNbCoins(int idUser,int jour) throws Exception{
         PreparedStatement pr=null;
         ResultSet rs=null;
-        String sql="select nbrCoinsJour from DateCoins where  idfU  = ? and idfDate =? ";
+        String sql="select nbrCoinsJour from DateCoins where  idfU  = ? and nbrJour  =? ";
         int nbcoins =0;
 
         try{
@@ -199,7 +199,7 @@ public class User {
 			ResultSet rst=null;
 			
 		
-			String query="SELECT  nbrCoinsJour FROM  DateCoins  where idfU=? and idfDate=?";
+			String query="SELECT  nbrCoinsJour FROM  DateCoins  where idfU=? and nbrJour =?";
 			
 				try {
 					
