@@ -1,6 +1,8 @@
 package application;
 
 import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
 
 import javafx.animation.Interpolator;
 import javafx.animation.KeyFrame;
@@ -9,17 +11,22 @@ import javafx.animation.Timeline;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.MenuButton;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 
-public class HomeController {
+public class HomeController implements Initializable{
+
+    @FXML
+    private Label nom;
 	
     @FXML
     private Button addtask;
@@ -50,6 +57,20 @@ public class HomeController {
 
     @FXML
     private Button signout;
+    
+    
+    
+    public void initialize(URL location, ResourceBundle resources) {
+		//si la base de données est connectéé
+	LoginModel LoginModel= new LoginModel();
+	LoginController LoginController = new LoginController();
+		if(LoginModel.isDataBaseConnected()) {
+			//initialiser le nom de l'utilisateur
+			nom.setText(LoginController.nom);
+		}
+		
+		
+	}
 
    //TO CHANGE 
     @FXML
