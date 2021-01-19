@@ -49,7 +49,7 @@
                         <Font name="Arial" size="20.0" />
                      </font>
                   </Label>
-                  <Label layoutX="282.0" layoutY="25.0" prefHeight="41.0" prefWidth="317.0" style="-fx-font-size: 30;" styleClass="TextFont" text="Racha," textFill="#010734">
+                  <Label fx:id="nom" layoutX="282.0" layoutY="25.0" prefHeight="41.0" prefWidth="317.0" style="-fx-font-size: 30;" styleClass="TextFont" textFill="#010734">
                      <font>
                         <Font name="Arial" size="20.0" />
                      </font>

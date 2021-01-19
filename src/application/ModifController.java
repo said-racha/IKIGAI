@@ -1,7 +1,11 @@
 package application;
 
 import java.io.IOException;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
+import classes.Inscription;
+import classes.User;
 import javafx.animation.Interpolator;
 import javafx.animation.KeyFrame;
 import javafx.animation.KeyValue;
@@ -13,6 +17,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
@@ -30,7 +35,9 @@ public class ModifController {
 	    private TextField skillTextF;
 
 	    @FXML
-	    private TextField emailTextF;
+	    private TextField nouveauemail;
+	    @FXML
+	    private TextField email;
 
 	    @FXML
 	    private TextField password;
@@ -49,7 +56,8 @@ public class ModifController {
 
 	    @FXML
 	    private Button backBtn;
-
+	    @FXML
+	    private Label Confirmation;
 	    @FXML
 	    void Back(ActionEvent event) throws IOException {
 
@@ -62,5 +70,27 @@ public class ModifController {
 	   	  window.setScene(scene);
 	   	   window.show();
 	    }
+	    
+	    
+	    
+	    public void ModifUserBtn() throws Exception {
+			User u = new User();
 
+			if(u.isDataBaseConnected())/*verifie que le logiciel est bien cooennecter a la BDD*/ {
+		
+				
+				try {
+					u.ModifierUSR(nameTextF.getText(), email.getText(), nouveauemail.getText(), password.getText(), skillTextF.getText());
+	
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+			else
+			{
+
+				Confirmation.setText("Echec de l'ajout");
+			}
+
+}
 }
