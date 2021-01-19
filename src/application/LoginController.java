@@ -5,6 +5,7 @@ import java.net.URL;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
 
+import classes.User;
 import javafx.animation.Interpolator;
 import javafx.animation.KeyFrame;
 import javafx.animation.KeyValue;
@@ -86,7 +87,11 @@ public class LoginController implements Initializable{
     	
     	
     }
+    
+    //Objets Statiques pour pouvoir les passer a la classe LoginModel
     static String nom=" ";
+    static String email=" ";
+    static String password=" ";
 
 	//qui verifie le mdp et le user name 
 	public void Login(ActionEvent event) {
@@ -98,42 +103,32 @@ public class LoginController implements Initializable{
 			
 			
 			{
-				System.out.println("user et mdp correct");
+				//On crée un nouveau user
+				User user = new User();
+				//on remplis les informations user
+				loginModel.getInfoUser(emailTextF.getText(), passwordTextF.getText(), user);
+				//On informe le user que c'est correct 
 				isConnected.setText("Nom d'utilisateur et Mot de passe correct");
-	//avoir le nom de l'utilistauer
+	//avoir le nom, mot de passe, email de l'utilistauer pour pouvoir le passer a la classe Home
+				password =passwordTextF.getText();
+				email =emailTextF.getText();
 				nom = loginModel.GetName(emailTextF.getText(), passwordTextF.getText());
+				
+				//Ouvrir le Menu Principal
 				Parent root =FXMLLoader.load(getClass().getResource("Home.fxml"));
-		        
-			   	   Scene scene = new Scene(root);
-			   	   Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
-			   	  window.setScene(scene);
-			   	   window.show();
+			    Scene scene = new Scene(root);
+			    Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
+			    window.setScene(scene);
+			    window.show();	}
 			
-				
-				
-			
-			}//fin if de si connecté 
-			
-			
-			
-			
-			
-			else {
-				isConnected.setText("Username and pass word not correct");
-				
-				
-				
-				
-		}
-		} catch (SQLException e) 
-		{
-			System.out.println("erreur dans login methode");
+			else {	isConnected.setText("Username and pass word not correct");			}} 
+		catch (SQLException e) 
+		{	System.out.println("erreur dans login methode");
 			isConnected.setText("Username and pass word not correct");
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-			
-		} 
-		//ta3 la fenetre 
+			} 
+		//fenetre
 		catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
