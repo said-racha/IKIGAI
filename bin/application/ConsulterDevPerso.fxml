@@ -27,29 +27,27 @@
             </Button>
             <Pane layoutX="115.0" layoutY="20.0" prefHeight="636.0" prefWidth="906.0" style="-fx-background-color: white; -fx-background-radius: 30; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.4), 10, 0.1, 0.0, 0.0);">
                <children>
-                  <TextArea fx:id="consulterDevPersoTextA" editable="false" layoutX="181.0" layoutY="305.0" prefHeight="192.0" prefWidth="521.0" style="-fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.4), 10, 0.1, 0.0, 0.0);">
+                  <TextArea fx:id="consulterDevPersoTextA" editable="false" layoutX="166.0" layoutY="318.0" prefHeight="185.0" prefWidth="575.0" style="-fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.4), 10, 0.1, 0.0, 0.0);">
                      <font>
-                        <Font name="Courier New" size="12.0" />
+                        <Font name="Bell MT Bold" size="16.0" />
                      </font>
                   </TextArea>
-                  <Label layoutX="270.0" layoutY="199.0" prefHeight="72.0" prefWidth="324.0" text="The challenge of the day" textFill="#7f00ff">
+                  <Label layoutX="272.0" layoutY="202.0" prefHeight="72.0" prefWidth="324.0" text="The challenge of the day" textFill="#7f00ff">
                      <font>
                         <Font name="Georgia" size="28.0" />
                      </font>
                   </Label>
-                  <ImageView fitHeight="213.0" fitWidth="336.0" layoutX="261.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="213.0" fitWidth="336.0" layoutX="263.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../img/undraw_target_kriv.png" />
                      </image>
                   </ImageView>
-                  <Button fx:id="validerBtn" layoutX="414.0" layoutY="538.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="49.0" style="-fx-background-color: white;" textFill="WHITE">
-                     <graphic>
-                        <ImageView fitHeight="43.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../img/verified.png" />
-                           </image>
-                        </ImageView>
-                     </graphic></Button>
+                  <Button fx:id="validerBtn" layoutX="414.0" layoutY="538.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="49.0" style="-fx-background-color: white;" textFill="WHITE" />
+                  <ImageView fitHeight="43.0" fitWidth="49.0" layoutX="190.0" layoutY="330.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/personal-development.png" />
+                     </image>
+                  </ImageView>
                </children>
             </Pane>
             <ImageView fitHeight="25.0" fitWidth="78.0" layoutX="14.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">

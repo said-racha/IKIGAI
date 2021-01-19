@@ -1,7 +1,10 @@
 package application;
 
 import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
 
+import classes.Educative;
 import javafx.animation.Interpolator;
 import javafx.animation.KeyFrame;
 import javafx.animation.KeyValue;
@@ -9,15 +12,32 @@ import javafx.animation.Timeline;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.TextArea;
 import javafx.scene.layout.AnchorPane;
 import javafx.util.Duration;
 
-public class EducativeController {
+public class EducativeController implements Initializable{
     @FXML
     private Button home;
+    @FXML
+    private TextArea consulterEducative;
+
+    
+    private int nbrJour;
+    
+    @Override
+	public void initialize(URL location, ResourceBundle resources) {
+		
+    	nbrJour=3; //a remplacer par user.getNbrJour();
+    	consulterEducative.setText("\n\t\t"+Educative.getContenuEducatif(nbrJour));
+		
+	}
+    
+    
 
     @FXML
     void home(ActionEvent event) throws IOException {
@@ -43,4 +63,5 @@ public class EducativeController {
 
     }
 
+	
 }
