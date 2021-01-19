@@ -17,7 +17,7 @@ public class DbConnection {
 	private static final String SQCONN="jdbc:sqlite:IKIGAI.sqlite";
 	private static Connection connection=null;
 	
-	//cette methode nous permet d'obtenir une connection a la base de donnée
+	//cette methode nous permet d'obtenir une connection a la base de donnï¿½e
 	public static Connection getConnection() throws SQLException {
 		
 		try {
@@ -34,7 +34,7 @@ public class DbConnection {
 	}
 	
 	
-	//cette methode est pour connecter connection a notre base de donnée
+	//cette methode est pour connecter connection a notre base de donnï¿½e
 	public static void dbConnect() {
 		
 		try {
@@ -42,19 +42,19 @@ public class DbConnection {
 			connection=DbConnection.getConnection();
 		
 		} catch (SQLException e) {
-			System.out.println("Vous avez un probleme avec DbConnection/ dbConnect :Erreur de connection avec la base de donnée");
+			System.out.println("Vous avez un probleme avec DbConnection/ dbConnect :Erreur de connection avec la base de donnï¿½e");
 			e.printStackTrace();
 		}
 		
 		if(connection==null)
 		{
-			System.out.println("Vous avez un probleme avec DbConnection/ dbConnect :Erreur de connection avec la base de donnée");
+			System.out.println("Vous avez un probleme avec DbConnection/ dbConnect :Erreur de connection avec la base de donnï¿½e");
 			System.exit(1);
 		}
 	}
 	
 	
-	//cette methode sert a fermer la connection à la base de donnée
+	//cette methode sert a fermer la connection ï¿½ la base de donnï¿½e
 	public static void dbDisconnect() throws SQLException{
 		try {
 			
@@ -91,7 +91,7 @@ public class DbConnection {
 		}		
 	}
 	
-	//cette methode est pour recuperer les données de notre base de donnée
+	//cette methode est pour recuperer les donnï¿½es de notre base de donnï¿½e
 	public static ResultSet dbExecute(String sqlQuery)throws ClassNotFoundException, SQLException{
 		Statement stmt=null;
 		ResultSet rs=null; 
@@ -101,8 +101,8 @@ public class DbConnection {
 			dbConnect();
 			stmt=connection.createStatement();
 			rs= stmt.executeQuery(sqlQuery);
-			crs=new CachedRowSetImpl(); //permet de stocker des données provenant d'une base de données en mémoire 
-			crs.populate(rs);//remplir l'objet des données lancés par le rs, ca m'evite de passer par un preparedStatement, j'execute le toue en une ligne de code
+			crs=new CachedRowSetImpl(); //permet de stocker des donnï¿½es provenant d'une base de donnï¿½es en mï¿½moire 
+			crs.populate(rs);//remplir l'objet des donnï¿½es lancï¿½s par le rs, ca m'evite de passer par un preparedStatement, j'execute le toue en une ligne de code
 			
 			
 		}catch (SQLException e) {
