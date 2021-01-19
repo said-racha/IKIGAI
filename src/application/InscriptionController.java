@@ -42,8 +42,6 @@ public class InscriptionController {
     private TextField emailTextF;
 
 
-    @FXML
-    private TextField sexeTextF;
 
     @FXML
     private Button signUpBtn;
@@ -83,7 +81,7 @@ public class InscriptionController {
 		timeline.play();
     }
     
-    
+    int numseq=2;
 	
 	public void AjouterUserBtn() throws Exception {
 		Inscription i = new Inscription();
@@ -100,9 +98,9 @@ public class InscriptionController {
 					System.out.println(dateDeb);
 					//si le user n'existe pas on l'ajoute
 					if(i.chercherUser(emailTextF.getText())==0){
-					
-						i.AjouterInformations(1, nameTextF.getText(), emailTextF.getText(), mdpTextF.getText(),  confirmMdpTextF.getText(),dateDeb, skillTextF.getText());
-					
+					System.out.println("email nexiste pas");
+						i.AjouterInformations(numseq, nameTextF.getText(), emailTextF.getText(), mdpTextF.getText(),  confirmMdpTextF.getText(),dateDeb, skillTextF.getText());
+					numseq++;
 					}else {
 						//sinon on affiche une erreur
 						Confirmation.setText("Cet utilisateur existe deja");

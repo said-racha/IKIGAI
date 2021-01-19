@@ -18,16 +18,15 @@
    <children>
       <Pane layoutX="11.0" layoutY="8.0" prefHeight="389.0" prefWidth="627.0" style="-fx-background-color: white; -fx-background-radius: 20; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.4), 10, 0.1, 0.0, 0.0);">
          <children>
-            <TextField fx:id="nameTextF" layoutX="69.0" layoutY="86.0" prefHeight="25.0" prefWidth="229.0" promptText="Full Name" style="-fx-background-color: #FFEFFF; -fx-background-radius: 40; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.4), 10, 0.1, 0.0, 0.0);" styleClass="textfield" />
+            <TextField fx:id="nameTextF" layoutX="69.0" layoutY="105.0" prefHeight="25.0" prefWidth="229.0" promptText="Full Name" style="-fx-background-color: #FFEFFF; -fx-background-radius: 40; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.4), 10, 0.1, 0.0, 0.0);" styleClass="textfield" />
             <TextField fx:id="skillTextF" layoutX="69.0" layoutY="307.0" prefHeight="25.0" prefWidth="229.0" promptText="Skill You Want To Learn" style="-fx-background-color: #FFEFFF; -fx-background-radius: 20; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.4), 10, 0.1, 0.0, 0.0);" styleClass="textfield" />
-            <TextField fx:id="password" layoutX="69.0" layoutY="125.0" prefHeight="25.0" prefWidth="229.0" promptText="Password" style="-fx-background-color: #FFEFFF; -fx-background-radius: 20; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.4), 10, 0.1, 0.0, 0.0);" styleClass="textfield" />
-            <TextField fx:id="sexeTextF" layoutX="69.0" layoutY="272.0" prefHeight="25.0" prefWidth="229.0" promptText="Sexe" style="-fx-background-color: #FFEFFF; -fx-background-radius: 20; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.4), 10, 0.1, 0.0, 0.0);" styleClass="textfield" />
+            <TextField fx:id="password" layoutX="69.0" layoutY="144.0" prefHeight="25.0" prefWidth="229.0" promptText="Password" style="-fx-background-color: #FFEFFF; -fx-background-radius: 20; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.4), 10, 0.1, 0.0, 0.0);" styleClass="textfield" />
             <Button fx:id="signUpBtn" layoutX="93.0" layoutY="344.0" mnemonicParsing="false" onAction="#ModifUserBtn" opacity="0.57" prefHeight="28.0" prefWidth="154.0" style="-fx-background-color: #7F00FF; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.4), 10, 0.1, 0.0, 0.0); -fx-background-radius: 20;" text="Confirm" textFill="WHITE">
                <font>
                   <Font size="14.0" />
                </font>
             </Button>
-            <TextField fx:id="confpass" layoutX="69.0" layoutY="167.0" prefHeight="25.0" prefWidth="229.0" promptText="Confirm Password" style="-fx-background-color: #FFEFFF; -fx-background-radius: 20; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.4), 10, 0.1, 0.0, 0.0);" styleClass="textfield" />
+            <TextField fx:id="confpass" layoutX="69.0" layoutY="186.0" prefHeight="25.0" prefWidth="229.0" promptText="Confirm Password" style="-fx-background-color: #FFEFFF; -fx-background-radius: 20; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.4), 10, 0.1, 0.0, 0.0);" styleClass="textfield" />
             <ImageView fitHeight="256.0" fitWidth="342.0" layoutX="312.0" layoutY="86.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../img/designer_.png" />
@@ -53,8 +52,8 @@
                   <Font name="Georgia" size="13.0" />
                </font>
             </Label>
-            <TextField fx:id="email" layoutX="69.0" layoutY="205.0" prefHeight="25.0" prefWidth="229.0" promptText="Old Email" style="-fx-background-color: #FFEFFF; -fx-background-radius: 20; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.4), 10, 0.1, 0.0, 0.0);" styleClass="textfield" />
-            <TextField fx:id="nouveauemail" layoutX="69.0" layoutY="238.0" prefHeight="25.0" prefWidth="229.0" promptText="New Email " style="-fx-background-color: #FFEFFF; -fx-background-radius: 20; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.4), 10, 0.1, 0.0, 0.0);" styleClass="textfield" />
+            <TextField fx:id="email" layoutX="69.0" layoutY="224.0" prefHeight="25.0" prefWidth="229.0" promptText="Old Email" style="-fx-background-color: #FFEFFF; -fx-background-radius: 20; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.4), 10, 0.1, 0.0, 0.0);" styleClass="textfield" />
+            <TextField fx:id="nouveauemail" layoutX="69.0" layoutY="262.0" prefHeight="25.0" prefWidth="229.0" promptText="New Email " style="-fx-background-color: #FFEFFF; -fx-background-radius: 20; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.4), 10, 0.1, 0.0, 0.0);" styleClass="textfield" />
          </children>
       </Pane>
       <Button fx:id="backBtn" alignment="CENTER" contentDisplay="TOP" layoutX="647.0" layoutY="16.0" mnemonicParsing="false" onAction="#Back" prefHeight="18.0" prefWidth="26.0" style="-fx-background-color: #7f00ff;" text="Back" textFill="WHITE">

@@ -21,15 +21,15 @@ public class Inscription {
 			DbConnection db = new DbConnection();
 			String query="INSERT INTO User (idfU,fullName, email , mdp , dateDeb, skill) VALUES (?, ?   ,?   ,?  ,?   , ?)";
 			   try (PreparedStatement pr = this.connection.prepareStatement(query)) {
-		            pr.setLong(1, idfU);
+		            pr.setInt(1, idfU);
 		            pr.setString(2, fullName);
 		            pr.setString(3, email);
 		            pr.setString(4, mdp);
 		            pr.setString(5, dateDeb);
-		    
+		    pr.setString(6, skill);
 		            pr.executeUpdate();
 		        } catch (SQLException e) {
-		            System.out.println("Vous avez un probleme dans la classe user ajouter user");
+		            System.out.println("Vous avez un probleme dans la classe Inscription/ ajouter user");
 		        }
 		}
 		//Methode Permettant de modifier les informations
