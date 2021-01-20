@@ -2,9 +2,11 @@ package application;
 
 import java.io.IOException;
 import java.net.URL;
+import java.sql.SQLException;
 import java.util.ResourceBundle;
 
 import classes.Educative;
+import classes.User;
 import javafx.animation.Interpolator;
 import javafx.animation.KeyFrame;
 import javafx.animation.KeyValue;
@@ -31,10 +33,27 @@ public class EducativeController implements Initializable{
     
     @Override
 	public void initialize(URL location, ResourceBundle resources) {
+    	
+    	User CurrentUser= new User();	
+   	 	LoginModel Model  = new LoginModel();
+   	 	
 		
-    	nbrJour=3; //a remplacer par user.getNbrJour();
-    	consulterEducative.setText("\n\t\t"+Educative.getContenuEducatif(nbrJour));
+    	try {
+    		
+    		if(CurrentUser.isDataBaseConnected()) {
+    					
+    		 CurrentUser = Model.getInfoUser(LoginController.email, LoginController.password,  CurrentUser);
+ 			//Ceci nous permet d'avoir les informations de l'utilisateur courrant
+    		
+    		nbrJour=CurrentUser.getNbJour(CurrentUser.getIdUser().getValue().intValue());
+    		consulterEducative.setText("\n\t\t"+Educative.getContenuEducatif(nbrJour));
+    		}
+    		
+		} catch (Exception e) {
 		
+			e.printStackTrace();
+		} 
+    	
 	}
     
     
