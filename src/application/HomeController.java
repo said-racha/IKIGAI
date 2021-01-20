@@ -2,8 +2,13 @@ package application;
 
 import java.io.IOException;
 import java.net.URL;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ResourceBundle;
 
+import DbUtil.DbConnection;
+import classes.Educative;
+import classes.User;
 import javafx.animation.Interpolator;
 import javafx.animation.KeyFrame;
 import javafx.animation.KeyValue;
@@ -27,9 +32,19 @@ public class HomeController implements Initializable{
 
     @FXML
     private Label nom;
-	
+    
+    @FXML
+    private Label nbrJourLabel;
+    
+    @FXML
+    private Label challengeSLabel;
+    
+    @FXML
+    private Label citationLabel;
+    
     @FXML
     private Button addtask;
+    
 	@FXML
     private Button pp;
 
@@ -58,20 +73,66 @@ public class HomeController implements Initializable{
     @FXML
     private Button signout;
     
-    
+    private int nbrJour=0;
+    private String Fullname="";
+    private String challengeS="";
+    private String citation="";
     
     public void initialize(URL location, ResourceBundle resources) {
 		//si la base de données est connectéé
-	LoginModel LoginModel= new LoginModel();
-	LoginController LoginController = new LoginController();
-		if(LoginModel.isDataBaseConnected()) {
-			//initialiser le nom de l'utilisateur
-			nom.setText(LoginController.nom);
-		}
+    	User CurrentUser= new User();	
+   	 	LoginModel Model  = new LoginModel();
+   	 	
 		
+    	try {
+    		
+    		if(CurrentUser.isDataBaseConnected()) {
+    					
+    		 CurrentUser = Model.getInfoUser(LoginController.email, LoginController.password,  CurrentUser);
+ 			//Ceci nous permet d'avoir les informations de l'utilisateur courrant
+    		
+    		Fullname =CurrentUser.getFullName();
+    		nbrJour=CurrentUser.getNbJour(CurrentUser.getIdUser().getValue().intValue());
+    		challengeS=CurrentUser.getSessionSkill();
+    		citation= HomeController.getCitationDuJour(nbrJour);
+    		
+    		}
+    		
+		} catch (Exception e) {
 		
+			e.printStackTrace();
+		} 
+		
+    	nom.setText(String.valueOf(Fullname));
+    	nbrJourLabel.setText(String.valueOf(nbrJour));
+    	challengeSLabel.setText(challengeS);
+    	citationLabel.setText(citation);
 	}
 
+    
+    public static String getCitationDuJour (int nbrJour) {
+		String sql= "select * from CitationDuJour where nbrJour ="+nbrJour;
+		
+		try {
+			
+			ResultSet rs= DbConnection.dbExecute(sql);
+			
+			if (rs.next())
+					return rs.getString("citation");
+			
+			
+		} catch (ClassNotFoundException e) {
+			System.out.println("Vous avez un probleme avec l'interface Home methode getCitationDuJour");
+			e.printStackTrace();
+		} catch (SQLException e) {
+			System.out.println("Vous avez un probleme avec l'interface Home methode getCitationDuJour");
+			e.printStackTrace();
+		}
+		
+		return "";
+	}
+    
+    
    //TO CHANGE 
     @FXML
     void sport(ActionEvent event) throws IOException  {
