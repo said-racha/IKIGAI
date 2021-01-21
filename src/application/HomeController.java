@@ -94,7 +94,7 @@ public class HomeController implements Initializable{
     		Fullname =CurrentUser.getFullName();
     		nbrJour=CurrentUser.getNbJour(CurrentUser.getIdUser().getValue().intValue());
     		challengeS=CurrentUser.getSessionSkill();
-    		citation= HomeController.getCitationDuJour(nbrJour);
+    		citation= HomeModel.getCitationDuJour(nbrJour);
     		
     		}
     		
@@ -109,29 +109,6 @@ public class HomeController implements Initializable{
     	citationLabel.setText(citation);
 	}
 
-    
-    public static String getCitationDuJour (int nbrJour) {
-		String sql= "select * from CitationDuJour where nbrJour ="+nbrJour;
-		
-		try {
-			
-			ResultSet rs= DbConnection.dbExecute(sql);
-			
-			if (rs.next())
-					return rs.getString("citation");
-			
-			
-		} catch (ClassNotFoundException e) {
-			System.out.println("Vous avez un probleme avec l'interface Home methode getCitationDuJour");
-			e.printStackTrace();
-		} catch (SQLException e) {
-			System.out.println("Vous avez un probleme avec l'interface Home methode getCitationDuJour");
-			e.printStackTrace();
-		}
-		
-		return "";
-	}
-    
     
    //TO CHANGE 
     @FXML
