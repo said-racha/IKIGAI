@@ -83,7 +83,7 @@
                      <font>
                         <Font size="17.0" />
                      </font></Label>
-                  <Label alignment="CENTER" layoutX="94.0" layoutY="17.0" prefHeight="58.0" prefWidth="58.0" style="-fx-font-size: 24;" styleClass="TextFont" text="1000" textFill="#f4b43c">
+                  <Label fx:id="nbrCoinsLabel" alignment="CENTER" layoutX="94.0" layoutY="17.0" prefHeight="58.0" prefWidth="58.0" style="-fx-font-size: 24;" styleClass="TextFont" text="1000" textFill="#f4b43c">
                      <font>
                         <Font size="17.0" />
                      </font>

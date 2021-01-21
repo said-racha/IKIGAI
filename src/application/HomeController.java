@@ -1,14 +1,12 @@
 package application;
 
 import java.io.IOException;
+
 import java.net.URL;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
-
-import org.controlsfx.control.textfield.TextFields;
-import org.controlsfx.control.textfield.AutoCompletionBinding;
 
 import DbUtil.DbConnection;
 import classes.Educative;
@@ -48,6 +46,9 @@ public class HomeController implements Initializable{
     
     @FXML
     private Label citationLabel;
+    
+    @FXML
+    private Label nbrCoinsLabel;
     
     @FXML
     private Button addtask;
@@ -90,8 +91,7 @@ public class HomeController implements Initializable{
     private String Fullname="";
     private String challengeS="";
     private String citation="";
-    
-    //private AutoCompletionBinding<String> autoCompletionBinding;///////////////////////////A SUPPRIMER/////////////////////////
+    private int idfDate=0;
     
     public void initialize(URL location, ResourceBundle resources) {
 		//si la base de donnÃ©es est connectÃ©Ã©
@@ -108,9 +108,10 @@ public class HomeController implements Initializable{
     		
     		idfU=CurrentUser.getIdUser().getValue().intValue();
     		Fullname =CurrentUser.getFullName();
-    		nbrJour=CurrentUser.getNbJour(CurrentUser.getIdUser().getValue().intValue());
+    		nbrJour=8;//CurrentUser.getNbJour(CurrentUser.getIdUser().getValue().intValue());
     		challengeS=CurrentUser.getSessionSkill();
     		citation= HomeModel.getCitationDuJour(nbrJour);
+    		idfDate=Integer.valueOf(String.valueOf(idfU)+String.valueOf(nbrJour));
     		
     		}
     		
@@ -123,12 +124,12 @@ public class HomeController implements Initializable{
     	nbrJourLabel.setText(String.valueOf(nbrJour));
     	challengeSLabel.setText(challengeS);
     	citationLabel.setText(citation);
+    	nbrCoinsLabel.setText(String.valueOf(HomeModel.getNbrCoinsActuel(idfDate)));
     	
     	
     	//remplissage des textfields
     	
     		//Pour que le textField enregistre la val dès qu'on clique sur entrer
-    		//autoCompletionBinding= TextFields.bindAutoCompletion(day, new ArrayList());/////////A SUPPRIMER M3a SON JAR FILE///////////////////////
     		
     		if(HomeModel.challengeJIsEditable(idfU, nbrJour,  day.getText()))
     		{
@@ -165,6 +166,12 @@ public class HomeController implements Initializable{
     @FXML
     void sport(ActionEvent event) throws IOException  {
     	
+    	//augementer le nbr de coins etant donne qu'il a conulte  la rubrique
+    	if (HomeModel.getConsulteRubrique(2, idfDate)== null) //c'est la premiere fois de la journée qu'il conuslte la rubrique
+    	{
+    		HomeModel.setConsulteRubrique(2, idfDate);
+    	}
+    	
     	Parent root =FXMLLoader.load(getClass().getResource("Sport.fxml"));
            
     	   Scene scene = sport.getScene();
@@ -187,6 +194,12 @@ public class HomeController implements Initializable{
     //stressHelp
     @FXML
     void relaxion(ActionEvent event) throws IOException {
+    	
+    	if (HomeModel.getConsulteRubrique(3, idfDate) == null)//c'est la premiere fois de la journée qu'il conuslte la rubrique
+    	{
+    		HomeModel.setConsulteRubrique(3, idfDate);
+    	}
+    	
     	Parent root =FXMLLoader.load(getClass().getResource("StressHelpRelaxation.fxml"));
 
         
@@ -210,6 +223,13 @@ public class HomeController implements Initializable{
 
     @FXML
     void temoignage(ActionEvent event) throws IOException {
+    	
+    	//augementer le nbr de coins etant donne qu'il a conulte  la rubrique
+    	if (HomeModel.getConsulteRubrique(4, idfDate)== null) //c'est la premiere fois de la journée qu'il conuslte la rubrique
+    	{
+    		HomeModel.setConsulteRubrique(4, idfDate);
+    	}
+    	
     	Parent root =FXMLLoader.load(getClass().getResource("StressHelpTemoignage.fxml"));
 
         
@@ -245,6 +265,13 @@ public class HomeController implements Initializable{
     //devPerso
     @FXML
     void dev(ActionEvent event) throws IOException {
+    	
+    	//augementer le nbr de coins etant donne qu'il a conulte  la rubrique
+    	if (HomeModel.getConsulteRubrique(5, idfDate)== null) //c'est la premiere fois de la journée qu'il conuslte la rubrique
+    	{
+    		HomeModel.setConsulteRubrique(5, idfDate);
+    	}
+    	
     	Parent root =FXMLLoader.load(getClass().getResource("ConsulterDevPerso.fxml"));
         
   	   Scene scene = sport.getScene();
@@ -289,6 +316,13 @@ public class HomeController implements Initializable{
     //educatiton
     @FXML
     void ed(ActionEvent event) throws IOException {
+    	
+    	//augementer le nbr de coins etant donne qu'il a conulte  la rubrique
+    	if (HomeModel.getConsulteRubrique(1, idfDate)== null) //c'est la premiere fois de la journée qu'il conuslte la rubrique
+    	{
+    		HomeModel.setConsulteRubrique(1, idfDate);
+    	}
+    	
     	Parent root =FXMLLoader.load(getClass().getResource("Educative.fxml"));
         
   	   Scene scene = sport.getScene();
@@ -311,6 +345,13 @@ public class HomeController implements Initializable{
     //PointsPositifs
     @FXML
     void pp(ActionEvent event) throws IOException {
+    	
+    	//augementer le nbr de coins etant donne qu'il a conulte  la rubrique
+    	if (HomeModel.getConsulteRubrique(7, idfDate)== null) //c'est la premiere fois de la journée qu'il conuslte la rubrique
+    	{
+    		HomeModel.setConsulteRubrique(7, idfDate);
+    	}
+    	
     	Parent root =FXMLLoader.load(getClass().getResource("PointPos.fxml"));
         
  	   Scene scene = sport.getScene();
@@ -332,6 +373,13 @@ public class HomeController implements Initializable{
 
     @FXML
     void appris(ActionEvent event) throws IOException {
+    	
+    	//augementer le nbr de coins etant donne qu'il a conulte  la rubrique
+    	if (HomeModel.getConsulteRubrique(6, idfDate)== null) //c'est la premiere fois de la journée qu'il conuslte la rubrique
+    	{
+    		HomeModel.setConsulteRubrique(6, idfDate);
+    	}
+    	
     	Parent root =FXMLLoader.load(getClass().getResource("InfoApprises.fxml"));
         
   	   Scene scene = sport.getScene();

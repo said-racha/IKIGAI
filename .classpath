@@ -5,6 +5,5 @@
 	<classpathentry kind="con" path="org.eclipse.fx.ide.jdt.core.JAVAFX_CONTAINER"/>
 	<classpathentry kind="lib" path="com.sun.rowset.jar"/>
 	<classpathentry kind="lib" path="sqlite-jdbc-3.32.3.2.jar"/>
-	<classpathentry kind="lib" path="controlsfx-8.40.14/controlsfx-8.40.14.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
