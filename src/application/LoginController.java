@@ -92,6 +92,7 @@ public class LoginController implements Initializable{
     static String nom=" ";
     static String email=" ";
     static String password=" ";
+   static  User Currentuser = new User();
 
 	//qui verifie le mdp et le user name 
 	public void Login(ActionEvent event) {
@@ -103,10 +104,12 @@ public class LoginController implements Initializable{
 			
 			
 			{
-				//On crée un nouveau user
-				User user = new User();
-				//on remplis les informations user
-				loginModel.getInfoUser(emailTextF.getText(), passwordTextF.getText(), user);
+				//Static user to use in other classes
+				 Currentuser =	loginModel.getInfoUser(emailTextF.getText(), passwordTextF.getText(),  Currentuser);
+			
+				 //on remplis les informations user
+				 User user= new User();
+			user=	loginModel.getInfoUser(emailTextF.getText(), passwordTextF.getText(), user);
 				//On informe le user que c'est correct 
 				isConnected.setText("Nom d'utilisateur et Mot de passe correct");
 	//avoir le nom, mot de passe, email de l'utilistauer pour pouvoir le passer a la classe Home
