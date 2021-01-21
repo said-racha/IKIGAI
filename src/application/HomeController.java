@@ -4,7 +4,11 @@ import java.io.IOException;
 import java.net.URL;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
+
+import org.controlsfx.control.textfield.TextFields;
+import org.controlsfx.control.textfield.AutoCompletionBinding;
 
 import DbUtil.DbConnection;
 import classes.Educative;
@@ -14,6 +18,7 @@ import javafx.animation.KeyFrame;
 import javafx.animation.KeyValue;
 import javafx.animation.Timeline;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -23,6 +28,8 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.MenuButton;
+import javafx.scene.control.TextField;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
@@ -68,15 +75,23 @@ public class HomeController implements Initializable{
 
     @FXML
     private Button appris;
-    
 
     @FXML
     private Button signout;
     
+    @FXML
+    private TextField day;
+
+    @FXML
+    private TextField week;
+    
+    private int idfU=0;
     private int nbrJour=0;
     private String Fullname="";
     private String challengeS="";
     private String citation="";
+    
+    //private AutoCompletionBinding<String> autoCompletionBinding;///////////////////////////A SUPPRIMER/////////////////////////
     
     public void initialize(URL location, ResourceBundle resources) {
 		//si la base de données est connectéé
@@ -91,6 +106,7 @@ public class HomeController implements Initializable{
     		 CurrentUser = Model.getInfoUser(LoginController.email, LoginController.password,  CurrentUser);
  			//Ceci nous permet d'avoir les informations de l'utilisateur courrant
     		
+    		idfU=CurrentUser.getIdUser().getValue().intValue();
     		Fullname =CurrentUser.getFullName();
     		nbrJour=CurrentUser.getNbJour(CurrentUser.getIdUser().getValue().intValue());
     		challengeS=CurrentUser.getSessionSkill();
@@ -102,11 +118,46 @@ public class HomeController implements Initializable{
 		
 			e.printStackTrace();
 		} 
-		
+		//affichages des labels
     	nom.setText(String.valueOf(Fullname));
     	nbrJourLabel.setText(String.valueOf(nbrJour));
     	challengeSLabel.setText(challengeS);
     	citationLabel.setText(citation);
+    	
+    	
+    	//remplissage des textfields
+    	
+    		//Pour que le textField enregistre la val d�s qu'on clique sur entrer
+    		//autoCompletionBinding= TextFields.bindAutoCompletion(day, new ArrayList());/////////A SUPPRIMER M3a SON JAR FILE///////////////////////
+    		
+    		if(HomeModel.challengeJIsEditable(idfU, nbrJour,  day.getText()))
+    		{
+    			day.setOnKeyPressed(new EventHandler<KeyEvent>() {
+    		
+
+				@Override
+				public void handle(KeyEvent ke) {
+					
+					switch(ke.getCode()) {
+					case ENTER:
+						
+						HomeModel.setChallengeDay(idfU, nbrJour, day.getText());
+						day.setEditable(false);
+						
+						break;
+					default:
+						break;
+					}
+				}
+				
+    		});
+    		}
+    		else 
+    		{
+    			day.setText(HomeModel.getChallengeDay(idfU, nbrJour));
+    			day.setEditable(false);
+    		}
+    	
 	}
 
     
