@@ -81,8 +81,7 @@ public class InscriptionController {
 		timeline.play();
     }
     
-    int numseq=2;
-	
+
 	public void AjouterUserBtn() throws Exception {
 		Inscription i = new Inscription();
 
@@ -95,12 +94,12 @@ public class InscriptionController {
 					 DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd ");  
 					   LocalDateTime now = LocalDateTime.now();  
 					   String dateDeb= dtf.format(now); 	
-					System.out.println(dateDeb);
-					//si le user n'existe pas on l'ajoute
+					
+					
 					if(i.chercherUser(emailTextF.getText())==0){
-					System.out.println("email nexiste pas");
-						i.AjouterInformations(numseq, nameTextF.getText(), emailTextF.getText(), mdpTextF.getText(),  confirmMdpTextF.getText(),dateDeb, skillTextF.getText());
-					numseq++;
+					
+						i.AjouterInformations( nameTextF.getText(), emailTextF.getText(), mdpTextF.getText(),  confirmMdpTextF.getText(),dateDeb, skillTextF.getText());
+				        i.AjouterCoinsInit();
 					}else {
 						//sinon on affiche une erreur
 						Confirmation.setText("Cet utilisateur existe deja");

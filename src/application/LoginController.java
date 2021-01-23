@@ -58,9 +58,8 @@ public class LoginController implements Initializable{
     @Override
 	public void initialize(URL location, ResourceBundle resources) {
     	
-    	if(this.loginModel.isDataBaseConnected())
-			System.out.println("connexion reussi a la bdd");
-		else
+    	if(!this.loginModel.isDataBaseConnected())
+			
 			System.out.println("echec de la connexion a la bdd");
 
 	}
@@ -92,9 +91,10 @@ public class LoginController implements Initializable{
     static String nom=" ";
     static String email=" ";
     static String password=" ";
+   static  User Currentuser = new User();
 
 	//qui verifie le mdp et le user name 
-	public void Login(ActionEvent event) {
+	public void Login(ActionEvent event) throws Exception {
 		try {
 			
 			
@@ -103,18 +103,64 @@ public class LoginController implements Initializable{
 			
 			
 			{
-				//On crée un nouveau user
-				User user = new User();
-				//on remplis les informations user
-				loginModel.getInfoUser(emailTextF.getText(), passwordTextF.getText(), user);
+				
+				
+				
+				
+				
+				//Static user to use in other classes
+				 Currentuser =	loginModel.getInfoUser(emailTextF.getText(), passwordTextF.getText(),  Currentuser);
+				//==================================VERIFIER SI LE USER A DEPASSER 15J====================================
+
+				 if(Currentuser.isDataBaseConnected()) {
+					 if(Currentuser.getNbJour(Currentuser.getIdUser().get())>=15){
+							isConnected.setText("Votre session a pris fin, nous félicitons d'avoir suivi la totalité du programme!");
+							Currentuser.AjouterFinSession(Currentuser.getIdUser().get());
+							return;
+					 }
+				 }
+				 
+			//==================================RECUPERER INFOS USER=====================================
+ 
+				
+				 User user= new User();
+		       	user=	loginModel.getInfoUser(emailTextF.getText(), passwordTextF.getText(), user);
 				//On informe le user que c'est correct 
 				isConnected.setText("Nom d'utilisateur et Mot de passe correct");
-	//avoir le nom, mot de passe, email de l'utilistauer pour pouvoir le passer a la classe Home
+	
+				
+				//avoir le nom, mot de passe, email de l'utilistauer pour pouvoir le passer a la classe Home
 				password =passwordTextF.getText();
 				email =emailTextF.getText();
 				nom = loginModel.GetName(emailTextF.getText(), passwordTextF.getText());
+			//==================================Ajout dans la table connexion=====================================
+				int NbJour;
 				
-				//Ouvrir le Menu Principal
+				if(Currentuser.isDataBaseConnected()) {
+			 NbJour=Currentuser.getNbJour(Currentuser.getIdUser().get());
+			
+	
+				//Si c'est la premiere connexion du user dans la journée
+				if(!Currentuser.chercherConnexionUser(Currentuser.getIdUser().get())) {
+					NbJour++;
+					 //========================Coins Update==============================================================
+		
+						 Currentuser.AjouterCoinsUSerInit(Currentuser.getIdUser().get(),NbJour );
+					}
+				 Currentuser.AjouterConnexion(Currentuser.getIdUser().get(), NbJour);
+				
+					
+	
+				
+				
+				}
+				
+				
+			
+				
+				
+				
+				//===========================Ouvrir le Menu Principal======================
 				Parent root =FXMLLoader.load(getClass().getResource("Home.fxml"));
 			    Scene scene = new Scene(root);
 			    Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
