@@ -50,7 +50,7 @@ public class AddTAskController implements Initializable{
  			//Ceci nous permet d'avoir les informations de l'utilisateur courrant
     		
     		idfU=CurrentUser.getIdUser().getValue().intValue();
-    		nbrJour=8;//CurrentUser.getNbJour(CurrentUser.getIdUser().getValue().intValue());
+    		nbrJour=CurrentUser.getNbJour(CurrentUser.getIdUser().getValue().intValue());
     		idfDate=Integer.valueOf(String.valueOf(idfU)+String.valueOf(nbrJour));
     		//recupere le nombre de tasks q'uil a deja entre pour pouvoir par la suite en ajouter un a la fin de la liste
     		if (HomeModel.getNbrTasksAjouter(idfDate) != -1)
