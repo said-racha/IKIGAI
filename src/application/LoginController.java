@@ -125,17 +125,24 @@ public class LoginController implements Initializable{
 				password =passwordTextF.getText();
 				email =emailTextF.getText();
 				nom = loginModel.GetName(emailTextF.getText(), passwordTextF.getText());
-			
+			//==================================Ajout dans la table connexion=====================================
 				
 				
 				if(Currentuser.isDataBaseConnected()) {
+				int NbJour=Currentuser.getNbJour(Currentuser.getIdUser().get());
+		System.out.println(NbJour);
+				//Si c'est la premiere connexion du user dans la journée
+				if(!Currentuser.chercherConnexionUser(Currentuser.getIdUser().get())) {
+					NbJour++;
+				}
+				 Currentuser.AjouterConnexion(Currentuser.getIdUser().get(), NbJour);
+				}
 				
-					//Ajouter la connexion du user
-				 Currentuser.AjouterConnexion(Currentuser.getIdUser().get(), Currentuser.getNbJour(Currentuser.getIdUser().get()));}
-			
 				
 				
-				//Ouvrir le Menu Principal
+				
+				
+				//===========================Ouvrir le Menu Principal======================
 				Parent root =FXMLLoader.load(getClass().getResource("Home.fxml"));
 			    Scene scene = new Scene(root);
 			    Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();

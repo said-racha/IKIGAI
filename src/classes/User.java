@@ -1,5 +1,6 @@
 package classes;
 
+import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -288,6 +289,51 @@ public class User {
 				//	rst.close();
 				}
 	}
+	  //=======================================CHERCHER SI LE USER SEST CONNECT2 DANS CE JOUR ============================*/
+  //Pour voir si on incremente nbjour ou pas
+	
+	public boolean chercherConnexionUser(int idU) throws  Exception{
+        PreparedStatement pr=null;
+        ResultSet rs=null;
 
+        String sql="select * from Connexion where dateSys= ? and idfU=?";//On utilise le numero de telephone du patient car c'est la seul donnée de la table qui est obligatoirement unique
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd ");  
+		   LocalDateTime now = LocalDateTime.now();  
+		   String dateSys= dtf.format(now); 	
+        try{
+            pr=this.connection.prepareStatement(sql);
+            pr.setString(1,dateSys);
+            pr.setInt(2,idU);
+
+            rs = pr.executeQuery();
+
+
+            if (rs.next()){
+//si il existe on retourne true
+            return true;
+            }
+            else{
+
+                return false;// sinon on retourne false
+            }
+        }catch (SQLException e)
+        {
+
+            System.out.println("Vous avez un probleme dans la classe User /chercherConnexionUser");
+            return false;
+        }
+        catch (Exception e) {
+        	System.out.println(e.getMessage());
+        	return false;
+		
+		}
+        finally {
+            assert pr != null;
+            pr.close();
+            assert rs!= null;
+            rs.close();
+        }
+
+    }
 
 }
