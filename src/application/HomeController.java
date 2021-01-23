@@ -108,7 +108,7 @@ public class HomeController implements Initializable{
     		
     		idfU=CurrentUser.getIdUser().getValue().intValue();
     		Fullname =CurrentUser.getFullName();
-    		nbrJour=8;//CurrentUser.getNbJour(CurrentUser.getIdUser().getValue().intValue());
+    		nbrJour=CurrentUser.getNbJour(CurrentUser.getIdUser().getValue().intValue());
     		challengeS=CurrentUser.getSessionSkill();
     		citation= HomeModel.getCitationDuJour(nbrJour);
     		idfDate=Integer.valueOf(String.valueOf(idfU)+String.valueOf(nbrJour));

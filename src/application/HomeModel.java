@@ -176,10 +176,53 @@ public class HomeModel {
 		return nbrCoinsActuel;
 	}
     
+//-------------------------------------------Tasks----------------------------------------- 
+    
+    //ajouter un task a la bdd
+    public static void setOneTask (int idfDate,int numSeq, String task) {
+
+    	String sql ="insert into Tasks(idfDate,numSeq,task) values('"+idfDate+"' ,'"+numSeq+"','"+task+"')" ;
+       
+        try {
+			DbConnection.dbExcecuteQuery(sql);
+        } catch (ClassNotFoundException e) {
+    		System.out.println("Vous avez un probleme avec la classe HomeModel methode setOneTask");
+    		e.printStackTrace();
+    	} catch (SQLException e) {
+    		System.out.println("Vous avez un probleme avec la classe HomeModel methode setOneTask");
+    		e.printStackTrace();
+    	}
+
+        
+	}
     
     
-    
-    
+    //compter le nbr de tasks ajouter
+    public static int getNbrTasksAjouter (int idfDate) {
+		
+    	int numSeq=0;
+    	
+    	String sql= "select numSeq from Tasks where idfDate ="+idfDate;
+		
+		try {
+			
+			ResultSet rs= DbConnection.dbExecute(sql);
+			
+			while (rs.next())
+				numSeq= Integer.valueOf(rs.getString("numSeq"));
+			
+			return numSeq;
+			
+		} catch (ClassNotFoundException e) {
+			System.out.println("Vous avez un probleme avec la classe HomeModel methode getNbrTasksAjouter");
+			e.printStackTrace();
+		} catch (SQLException e) {
+			System.out.println("Vous avez un probleme avec la classe HomeModel methode getNbrTasksAjouter");
+			e.printStackTrace();
+		}
+		
+		return -1;//erreur
+    }
     
    
 }
