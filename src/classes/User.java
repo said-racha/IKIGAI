@@ -341,5 +341,49 @@ public class User {
         }
 
     }
+	
+	
+	  //=======================================METTRE COINS A 60 CHAQUE NOUVEAU JOUR ============================*/
+
+	public void AjouterCoinsUSerInit(int idfU,int nbjour) {
+			DbConnection db = new DbConnection();
+			String query="INSERT INTO DateCoins (idfDate ,nbrCoinsJour,idfU,nbrJour ) VALUES (?, ?   ,?,? )";
+			   try (PreparedStatement pr = this.connection.prepareStatement(query)) {
+		        
+			    int	idfDate = Integer.parseInt(String.valueOf(idfU)+ String.valueOf( nbjour));  
+
+			  pr.setInt(1, idfDate );
+				   //valeure intial des coins
+			 pr.setInt(2, 60);  
+		    pr.setInt(3,idfU);
+		  
+		        pr.setInt(4, nbjour);
+		
+		            pr.executeUpdate();
+		        } catch (SQLException e) {
+		            System.out.println("Vous avez un probleme dans la classe User/  AjouterConnexion");
+		        }
+		}
+
+	  //=======================================AJOUTER DANS FIN SESSION ============================*/
+		public void AjouterFinSession(int idfU) {
+			DbConnection db = new DbConnection();
+			String query="INSERT INTO FinSession (idfU ,dateFin ) VALUES (?, ?   )";
+			   try (PreparedStatement pr = this.connection.prepareStatement(query)) {
+				   DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd ");  
+				   LocalDateTime now = LocalDateTime.now();  
+				   String dateFin= dtf.format(now); 	
+				  
+
+			  pr.setInt(1, idfU );
+				 
+			 pr.setString(2, dateFin);  
+		 
+		            pr.executeUpdate();
+		        } catch (SQLException e) {
+		            System.out.println("Vous avez un probleme dans la classe User/   AjouterFinSession");
+		        }
+		}
+
 
 }

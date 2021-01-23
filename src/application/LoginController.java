@@ -111,10 +111,19 @@ public class LoginController implements Initializable{
 				
 				//Static user to use in other classes
 				 Currentuser =	loginModel.getInfoUser(emailTextF.getText(), passwordTextF.getText(),  Currentuser);
-			
-			
+				//==================================VERIFIER SI LE USER A DEPASSER 15J====================================
+
+				 if(Currentuser.isDataBaseConnected()) {
+					 if(Currentuser.getNbJour(Currentuser.getIdUser().get())>=15){
+							isConnected.setText("Votre session a pris fin, nous félicitons d'avoir suivi la totalité du programme!");
+							Currentuser.AjouterFinSession(Currentuser.getIdUser().get());
+							return;
+					 }
+				 }
 				 
-				 //on remplis les informations user
+			//==================================RECUPERER INFOS USER=====================================
+ 
+				
 				 User user= new User();
 		       	user=	loginModel.getInfoUser(emailTextF.getText(), passwordTextF.getText(), user);
 				//On informe le user que c'est correct 
@@ -126,19 +135,28 @@ public class LoginController implements Initializable{
 				email =emailTextF.getText();
 				nom = loginModel.GetName(emailTextF.getText(), passwordTextF.getText());
 			//==================================Ajout dans la table connexion=====================================
-				
+				int NbJour;
 				
 				if(Currentuser.isDataBaseConnected()) {
-				int NbJour=Currentuser.getNbJour(Currentuser.getIdUser().get());
+				 NbJour=Currentuser.getNbJour(Currentuser.getIdUser().get());
 		System.out.println(NbJour);
 				//Si c'est la premiere connexion du user dans la journée
 				if(!Currentuser.chercherConnexionUser(Currentuser.getIdUser().get())) {
 					NbJour++;
-				}
+					 //========================Coins Update==============================================================
+		
+						 Currentuser.AjouterCoinsUSerInit(Currentuser.getIdUser().get(),NbJour );
+					}
 				 Currentuser.AjouterConnexion(Currentuser.getIdUser().get(), NbJour);
+				
+					
+	
+				
+				
 				}
 				
 				
+			
 				
 				
 				
