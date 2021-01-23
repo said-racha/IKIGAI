@@ -102,10 +102,9 @@ public class ProgresController implements Initializable {
 	    }
 	    
 
-		User CurrentUser= new User();
 		
 	 LoginModel Model  = new LoginModel();
-	
+	LoginController lc = new LoginController();
 	  		public void   ChargerProgres(ActionEvent event) throws Exception{
 	  			XYChart.Series series = new XYChart.Series<Number,Number>();
 	  		
@@ -113,12 +112,14 @@ public class ProgresController implements Initializable {
 	  				try {
 	  					
 	  				
-	  					if(CurrentUser.isDataBaseConnected()) {
-	  			  			 CurrentUser = Model.getInfoUser(LoginController.email, LoginController.password,  CurrentUser);
+	  					if(lc.Currentuser.isDataBaseConnected()) {
+	  						lc.Currentuser = Model.getInfoUser(LoginController.email, LoginController.password,  lc.Currentuser);
 	  			  			//Ceci nous permet d'avoir les informations de l'utilisateur courrant
 	  			  			
-	  					if(CurrentUser. ProgresUser(series, barChart,CurrentUser.getIdUser().getValue().intValue())) {
-	  						 //Pour povoir le cliquer qu'une seule fois
+	  					if(lc.Currentuser. ProgresUser(series, barChart,lc.Currentuser.getIdUser().getValue().intValue())) {
+	  						
+	  						
+	  						//Pour povoir le cliquer qu'une seule fois
 	  						ChargerStat.setDisable(true);
 	  					} }else {
 	  						System.out.println("Il ya un probeleme dans ProgresController/ChargerProgres/Apel Progres User");
