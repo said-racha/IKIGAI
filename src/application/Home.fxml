@@ -25,7 +25,7 @@
             <Label fx:id="citationLabel" alignment="CENTER" layoutX="8.0" layoutY="623.0" prefHeight="15.0" prefWidth="932.0" styleClass="TextFont" />
             <Pane layoutX="20.0" layoutY="44.0" prefHeight="159.0" prefWidth="910.0" style="-fx-background-color: #C2BDF9; -fx-background-radius: 5; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.4), 10, 0.1, 0.0, 0.0);">
                <children>
-                  <Label layoutX="151.0" layoutY="25.0" prefHeight="41.0" prefWidth="135.0" style="-fx-font-size: 30;" styleClass="TextFont" text="Welcome" textFill="#010734">
+                  <Label layoutX="119.0" layoutY="23.0" prefHeight="41.0" prefWidth="135.0" style="-fx-font-size: 30;" styleClass="TextFont" text="Welcome" textFill="#010734">
                      <font>
                         <Font name="Arial" size="20.0" />
                      </font>
@@ -40,12 +40,12 @@
                         <Image url="@../img/undraw_welcoming_xvuq%202.png" />
                      </image>
                   </ImageView>
-                  <Label alignment="CENTER" layoutX="80.0" layoutY="64.0" prefHeight="41.0" prefWidth="367.0" style="-fx-font-size: 30;" styleClass="TextFont" text="It's nice to see you !" textFill="#010734">
+                  <Label alignment="CENTER" layoutX="120.0" layoutY="64.0" prefHeight="41.0" prefWidth="307.0" style="-fx-font-size: 25;" styleClass="TextFont" text="It's nice to see you !" textFill="#010734">
                      <font>
                         <Font name="Arial" size="20.0" />
                      </font>
                   </Label>
-                  <Label fx:id="nom" layoutX="282.0" layoutY="25.0" prefHeight="41.0" prefWidth="317.0" style="-fx-font-size: 30;" styleClass="TextFont" textFill="#010734">
+                  <Label fx:id="nom" layoutX="250.0" layoutY="23.0" prefHeight="41.0" prefWidth="297.0" style="-fx-font-size: 30;" styleClass="TextFont" textFill="#010734">
                      <font>
                         <Font name="Arial" size="20.0" />
                      </font>

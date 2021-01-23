@@ -154,7 +154,7 @@ public class HomeModel {
     
     public static int getNbrCoinsActuel (int idfDate) {
 		
-    	int nbrCoinsActuel=100; //initialises a 100 psk le simple fait de se connecter a l'application lui offre 10 coins
+    	int nbrCoinsActuel=60; //initialises a 60 psk le simple fait de se connecter a l'application lui offre 10 coins
     	int nbrCoinsPourChaqueConsultationDeRub=200;
     	int nbrRubConsultes=0;
     	
