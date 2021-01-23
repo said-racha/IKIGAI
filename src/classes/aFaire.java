@@ -15,8 +15,8 @@ public class aFaire  extends RubriqueEcrite  {
 		return task;
 	}
 
-	public void setTaskProperty(StringProperty task) {
-		this.task = task;
+	public void setTaskProperty(String task) {
+		this.task.set(task);
 	}
 	
 	public String getTask() {

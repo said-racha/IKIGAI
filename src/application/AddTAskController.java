@@ -78,7 +78,6 @@ public class AddTAskController implements Initializable{
 					HomeModel.setOneTask(idfDate, numSeq, addtask.getText());
 				    addtask.setText("");
 					
-					
 					break;
 				default:
 					break;

@@ -1,6 +1,7 @@
 package application;
 
 import java.io.IOException;
+
 import java.net.URL;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -9,10 +10,13 @@ import java.util.ResourceBundle;
 import DbUtil.DbConnection;
 import classes.Educative;
 import classes.User;
+import classes.aFaire;
 import javafx.animation.Interpolator;
 import javafx.animation.KeyFrame;
 import javafx.animation.KeyValue;
 import javafx.animation.Timeline;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -27,6 +31,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 import javafx.util.Duration;
+
 
 public class HomeModel {
 
@@ -222,6 +227,41 @@ public class HomeModel {
 		}
 		
 		return -1;//erreur
+    }
+    
+    
+    //Remplir la table tasks de home
+    public static ObservableList<aFaire> getTasks(int idfDate) throws ClassNotFoundException,SQLException{
+
+
+        String sql ="select task from Tasks where idfDate = "+idfDate;
+        ObservableList<aFaire> liste_Tasks=null;
+        aFaire task;
+
+        try {
+            ResultSet rsSet = DbConnection.dbExecute(sql);//faire appel à la fonction du package DbUtil, celle ci me retourne un ResultSet ayant executer la commande sql et deja connecter à la bdd
+
+            liste_Tasks = FXCollections.observableArrayList();
+           
+
+            //parcourir toute la table tasks de la bdd ( tt ses données sont enregistrée dans le rsSet grace a la commande precedement executée
+            while(rsSet.next())
+            {
+            	task=new aFaire();
+
+                //affecter a notre objet task la donnée recolter par le ResultSet
+            	task.setTaskProperty(rsSet.getString("task"));
+            	
+            	//ajouter l'abjet a la liste
+            	liste_Tasks.add(task);
+            }
+
+        } catch (SQLException e) {
+            System.out.println("Vous avez un probleme avec la classe HomeModel methode getTasks");
+            e.printStackTrace();
+        }
+
+        return liste_Tasks;
     }
     
    

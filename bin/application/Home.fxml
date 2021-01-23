@@ -57,13 +57,13 @@
                   </Label>
                </children>
             </Pane>
-            <Label layoutX="68.0" layoutY="237.0" prefHeight="41.0" prefWidth="145.0" style="-fx-font-size: 19;" styleClass="TextFont" text="Today's Tasks" textFill="#aa5cc4e3">
+            <Label layoutX="135.0" layoutY="238.0" prefHeight="41.0" prefWidth="121.0" style="-fx-font-size: 19;" styleClass="TextFont" text="Today's Tasks" textFill="#aa5cc4e3">
                <font>
                   <Font name="Arial" size="20.0" />
                </font>
             </Label>
             <Line endX="177.0" layoutX="152.0" layoutY="280.0" opacity="0.46" startX="-90.0" stroke="#810794" />
-            <Button fx:id="addtask" layoutX="288.0" layoutY="243.0" mnemonicParsing="false" onAction="#addtask" opacity="0.6" prefHeight="22.0" prefWidth="33.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 5;">
+            <Button fx:id="addtask" layoutX="290.0" layoutY="243.0" mnemonicParsing="false" onAction="#addtask" opacity="0.6" prefHeight="22.0" prefWidth="33.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 5;">
                <graphic>
                   <ImageView fitHeight="23.0" fitWidth="44.0" nodeOrientation="RIGHT_TO_LEFT" opacity="0.55" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -128,12 +128,21 @@
                   </Label>
                </children>
             </Pane>
-            <TableView layoutX="62.0" layoutY="297.0" prefHeight="270.0" prefWidth="268.0">
+            <TableView fx:id="tasksTable" layoutX="62.0" layoutY="297.0" prefHeight="270.0" prefWidth="268.0">
               <columns>
-                <TableColumn prefWidth="191.0" text="C1" />
-                <TableColumn prefWidth="75.0" text="C2" />
+                <TableColumn fx:id="tasksTableCol" prefWidth="224.0" text="Tasks" />
+                <TableColumn fx:id="doneTableCol" prefWidth="42.0" text="Done" />
               </columns>
             </TableView>
+            <Button layoutX="62.0" layoutY="247.0" mnemonicParsing="false" onAction="#RefreshTableTasks" opacity="0.6" prefHeight="24.0" prefWidth="24.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 5;">
+               <graphic>
+                  <ImageView fitHeight="17.0" fitWidth="17.0" nodeOrientation="RIGHT_TO_LEFT" opacity="0.55" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/refresh-buttons.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
          </children></Pane>
       <GridPane layoutX="-16.0" layoutY="88.0" prefHeight="351.0" prefWidth="207.0">
         <columnConstraints>

@@ -11,10 +11,12 @@ import java.util.ResourceBundle;
 import DbUtil.DbConnection;
 import classes.Educative;
 import classes.User;
+import classes.aFaire;
 import javafx.animation.Interpolator;
 import javafx.animation.KeyFrame;
 import javafx.animation.KeyValue;
 import javafx.animation.Timeline;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -26,6 +28,8 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.MenuButton;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.AnchorPane;
@@ -86,6 +90,15 @@ public class HomeController implements Initializable{
     @FXML
     private TextField week;
     
+    @FXML
+    private TableView tasksTable;
+
+    @FXML
+    private TableColumn<aFaire, String> tasksTableCol;
+
+    @FXML
+    private TableColumn<aFaire, String> doneTableCol; //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+    
     private int idfU=0;
     private int nbrJour=0;
     private String Fullname="";
@@ -108,7 +121,7 @@ public class HomeController implements Initializable{
     		
     		idfU=CurrentUser.getIdUser().getValue().intValue();
     		Fullname =CurrentUser.getFullName();
-    		nbrJour=CurrentUser.getNbJour(CurrentUser.getIdUser().getValue().intValue());
+    		nbrJour=8;//CurrentUser.getNbJour(CurrentUser.getIdUser().getValue().intValue());
     		challengeS=CurrentUser.getSessionSkill();
     		citation= HomeModel.getCitationDuJour(nbrJour);
     		idfDate=Integer.valueOf(String.valueOf(idfU)+String.valueOf(nbrJour));
@@ -119,7 +132,7 @@ public class HomeController implements Initializable{
 		
 			e.printStackTrace();
 		} 
-		//affichages des labels
+		//---------------------------------affichages des labels--------------------------------------
     	nom.setText(String.valueOf(Fullname));
     	nbrJourLabel.setText(String.valueOf(nbrJour));
     	challengeSLabel.setText(challengeS);
@@ -127,7 +140,7 @@ public class HomeController implements Initializable{
     	nbrCoinsLabel.setText(String.valueOf(HomeModel.getNbrCoinsActuel(idfDate)));
     	
     	
-    	//remplissage des textfields
+    	//---------------------------------remplissage des textfields---------------------------------
     	
     		//Pour que le textField enregistre la val dès qu'on clique sur entrer
     		
@@ -158,9 +171,36 @@ public class HomeController implements Initializable{
     			day.setText(HomeModel.getChallengeDay(idfU, nbrJour));
     			day.setEditable(false);
     		}
+    		
+    		
+    		//---------------------------------Remplissage de la Table Tasks---------------------------------
+    		RefreshTableTasks();
+
     	
 	}
 
+    @FXML
+    public void RefreshTableTasks()
+    {
+    	tasksTable.setItems(null);//initialiser la table
+    	
+    	tasksTableCol.setCellValueFactory(cellData-> cellData.getValue().getTaskProperty());
+		ObservableList<aFaire> liste_Tasks=null;
+		try {
+			liste_Tasks = HomeModel.getTasks(idfDate);
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		tasksTable.setItems(liste_Tasks);
+		
+    }
+    
+    
     
    //TO CHANGE 
     @FXML
