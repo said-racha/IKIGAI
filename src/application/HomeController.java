@@ -31,6 +31,7 @@ import javafx.scene.control.MenuButton;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
@@ -96,8 +97,6 @@ public class HomeController implements Initializable{
     @FXML
     private TableColumn<aFaire, String> tasksTableCol;
 
-    @FXML
-    private TableColumn<aFaire, String> doneTableCol; //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
     
     private int idfU=0;
     private int nbrJour=0;
@@ -133,7 +132,7 @@ public class HomeController implements Initializable{
 			e.printStackTrace();
 		} 
 		//---------------------------------affichages des labels--------------------------------------
-    	nom.setText(String.valueOf(Fullname));
+    	nom.setText(String.valueOf(Fullname));  
     	nbrJourLabel.setText(String.valueOf(nbrJour));
     	challengeSLabel.setText(challengeS);
     	citationLabel.setText(citation);
@@ -185,9 +184,12 @@ public class HomeController implements Initializable{
     	tasksTable.setItems(null);//initialiser la table
     	
     	tasksTableCol.setCellValueFactory(cellData-> cellData.getValue().getTaskProperty());
+    	
 		ObservableList<aFaire> liste_Tasks=null;
 		try {
+			
 			liste_Tasks = HomeModel.getTasks(idfDate);
+			
 		} catch (ClassNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
