@@ -1,0 +1,33 @@
+/*Table View de Home */
+
+.table-view{
+	
+	/*-fx-background-radius: 35;*/ 
+	-fx-background-color :white;
+	-fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 10, 0.4, 0.0, 0.0);
+	
+	
+}
+
+.table-view .column-header-background{
+	
+	-fx-background-color :  transparent  ;
+	-fx-background-insets: 0 0 30 0; /*reduire un maximum l'en-tete de page*/
+	-fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 10, 0.3, 0.0, 0.0);
+	
+	
+}
+
+
+
+.table-view .column-header, .table-view .filler{
+	
+	-fx-size :1; /*reduire un maximum l'en-tete de page*/
+	-fx-background-color: transparent ;
+	
+}
+
+.table-view .column-header .label {
+	-fx-text-fill: white;
+	
+}
