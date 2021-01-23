@@ -25,9 +25,11 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableColumn.CellEditEvent;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.control.cell.TextFieldTableCell;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
@@ -63,10 +65,9 @@ public class PointPosController implements Initializable {
           
         /*==========================================================================================*/
 
-          //Update the table to allow for the first and last name fields
-          //to be editable
+         //RendreLatableEditable
           PosTable.setEditable(true);
-       //   PointPositif.setCellFactory(PointPositifTextField.forTableColumn());
+       PointPositif.setCellFactory(TextFieldTableCell.forTableColumn());
        
           
           //This will allow the table to select multiple rows at once
@@ -164,6 +165,16 @@ public class PointPosController implements Initializable {
       
       }
  
+      //====================================Rendre la table editable==========================
+      /**
+       * This method will allow the user to double click on a cell and update
+       * the first name of the person
+       */
+      public void changePointPos(CellEditEvent edittedCell)
+      {
+          PointsPositifs pointSelected =  PosTable.getSelectionModel().getSelectedItem();
+          pointSelected.setPointPos(edittedCell.getNewValue().toString());
+      }
       
       
       

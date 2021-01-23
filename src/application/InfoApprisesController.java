@@ -24,7 +24,9 @@ import javafx.scene.control.ListView;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
+import javafx.scene.control.TableColumn.CellEditEvent;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.control.cell.TextFieldTableCell;
 import javafx.scene.layout.AnchorPane;
 import javafx.util.Duration;
 
@@ -111,11 +113,10 @@ public class InfoApprisesController implements Initializable{
         //Update the table to allow for the first and last name fields
         //to be editable
        InfoTable.setEditable(true);
-     //   PointPositif.setCellFactory(PointPositifTextField.forTableColumn());
+       InfoApp.setCellFactory(TextFieldTableCell.forTableColumn());
      
         
-        //This will allow the table to select multiple rows at once
-     //  
+     
 		
 	}
 
@@ -227,7 +228,17 @@ public class InfoApprisesController implements Initializable{
     }
 
 
-
+  //====================================Rendre la table editable==========================
+    /**
+     * This method will allow the user to double click on a cell and update
+     * the first name of the person
+     */
+    public void changeInfo(CellEditEvent edittedCell)
+    {
+        InfoApprises infoSelected =  InfoTable.getSelectionModel().getSelectedItem();
+        infoSelected.setInfoApprise(edittedCell.getNewValue().toString());
+    }
+    
 
 	
 
