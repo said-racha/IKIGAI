@@ -230,12 +230,16 @@ public class User {
 					pst = connection.prepareStatement(query);
 					pst.setInt(1, idfU);
 					int	cpt=this.getNbJour(idfU); //pour avoir le nombre de jour du user
+				System.out.println("compteur"+cpt);
 					pst.setInt(2, cpt);
 					rst = pst.executeQuery();
 				String cptString;
 					//if it is returning any result or not 
 						if(rst!=null)
 						{
+							System.out.println("rst null");
+							
+							
 							if(rst.next()) {
 								
 
@@ -244,8 +248,10 @@ public class User {
 			//Transormer le nombre  de jour en chaine de caractere pour l'utiliser dans le graphe
 							cptString=String.valueOf(cpt);
 							rst = pst.executeQuery();
-						
+							System.out.println("compteur >0"+cpt);
+							System.out.println(rst.getInt("nbrCoinsJour"));
 								series.getData().add(new XYChart.Data(cptString,rst.getInt("nbrCoinsJour")));
+								
 								cpt = cpt -1; 
 							}
 						
