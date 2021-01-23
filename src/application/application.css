@@ -63,6 +63,19 @@
 }
 
 
+
+.passwordfield{
+	-fx-background-radius: 40;
+-fx-background-color :  #FFEFFF;
+	-fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 10, 0.3, 0.0, 0.0); 
+}
+
+.passwordfield:focused{
+-fx-background-radius: 40;
+-fx-background-color : #7F00FF;
+	-fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 10, 0.3, 0.0, 0.0);
+}
+
 .button{
 	-fx-background-color: #7F00FF;
 }

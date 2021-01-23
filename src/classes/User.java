@@ -95,11 +95,10 @@ public class User {
     }
     
     //****=============FONCTION QUI PERMET DE MODIFIER UN USER DANS LA BDD========================
-    public void ModifierUSR(String fullName, String Oldmail,String Email, String mdp, String skill) {
+    public boolean ModifierUSR(String fullName, String Oldmail,String Email, String mdp, String skill) {
 
         String query ="UPDATE USER SET fullName = ?, email = ? , mdp = ?,skill  =? WHERE email = ? ";
 
-        
         try (PreparedStatement pr = this.connection.prepareStatement(query)) {
             pr.setString(1,  fullName);
             //Nouveau email
@@ -108,12 +107,16 @@ public class User {
             pr.setString(4, skill);
             pr.setString(5, Oldmail);
             
+            
        
             
-            pr.executeUpdate();
-            //les seuls valeurs a modifier dans un RDV sont la date et l'heure
+        pr.executeUpdate();
+        return true;
+     
+       
         } catch (SQLException e) {
             System.out.println("Vous avez un probleme dans la classe User Modifier User");
+        return false;
         }
 
     }
