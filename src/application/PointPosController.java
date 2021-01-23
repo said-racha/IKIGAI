@@ -64,11 +64,11 @@ public class PointPosController implements Initializable {
    
           
         /*==========================================================================================*/
-
+/*
          //RendreLatableEditable
           PosTable.setEditable(true);
        PointPositif.setCellFactory(TextFieldTableCell.forTableColumn());
-       
+       */
           
           //This will allow the table to select multiple rows at once
        //   PosTable.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
@@ -114,7 +114,7 @@ public class PointPosController implements Initializable {
           	this.AddPoints(PointPos.ChercherPointPositif(idPoinsPos));
         	numSeq++;
         	idPoinsPos = Integer.parseInt(String.valueOf(idfDate)+String.valueOf(numSeq));
-        	System.out.println("Depuis AFFICHER POINTS"+idPoinsPos);	}
+        		}
         	}}//CUrrent user is deb connected
     	}//try
     	catch (SQLException e)
@@ -137,7 +137,7 @@ public class PointPosController implements Initializable {
         	//Si l'insertion est vraie
     	
         	if( PointPos.Insertion(idPoinsPos, PointPositifTextField.getText())) {	
-    		System.out.println("if d'insertion marche");
+    	
     		PointPos.setIdfPointsPos(idPoinsPos);
     	    PointPos.setPointPos(PointPositifTextField.getText());
     	//Ajouter a la table

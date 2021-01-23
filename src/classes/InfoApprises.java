@@ -81,7 +81,7 @@ public class InfoApprises  extends RubriqueEcrite {
 			            pr.setInt(1, id);
 			            pr.setString(2, Info);
 			           rst= pr.executeUpdate();
-			            if(rst!=-1) System.out.println("Info inserer");
+			         
 			            return true;
 			    
 				   
@@ -105,7 +105,7 @@ public class InfoApprises  extends RubriqueEcrite {
 		            pr.setInt(1,idinfoApprise);
 		            rs = pr.executeQuery();
 		            if (rs.next()){
-		            	System.out.println("rs next");
+		            	
 		            	p.setidfInfoApprise(idinfoApprise);
 		            	p.setInfoApprise(rs.getString("infoApprise"));
 		                return p;// dans le cas ou le point existe dans la BDD on retourne son vrai
@@ -128,7 +128,29 @@ public class InfoApprises  extends RubriqueEcrite {
 		        }
 
 		    }
+		    //****=============FONCTION QUI PERMET DE MODIFIER LINFO========================
+		    public boolean ModifierInfo(String NouvelleInfo,int IdInfo) {
 
+		        String query ="UPDATE  RubriqueInfoApprises SET infoApprise = ? WHERE idfInfoApprise = ? ";
+
+		        try (PreparedStatement pr = this.connection.prepareStatement(query)) {
+		            pr.setString(1, NouvelleInfo);
+		          pr.setInt(2, IdInfo);
+		            System.out.println(IdInfo);
+		            
+		       
+		            
+		        pr.executeUpdate();
+		        return true;
+		     
+		       
+		        } catch (SQLException e) {
+		            System.out.println("Vous avez un probleme dans la classe Infoapp/ModifierInfo");
+		        return false;
+		        }
+
+		    }
+		    
 
 
 

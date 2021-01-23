@@ -54,7 +54,7 @@ public class InfoApprisesController implements Initializable{
     
 
     @FXML
-    private TableColumn<InfoApprises, String> InfoApp;
+    private TableColumn<InfoApprises, String> InfoAppT;
     
     public ObservableList<InfoApprises>  infos = FXCollections.observableArrayList();
     
@@ -93,7 +93,7 @@ public class InfoApprisesController implements Initializable{
     @Override
 	public void initialize(URL location, ResourceBundle resources) {
 		//set up the columns in the table
-    	InfoApp.setCellValueFactory(new PropertyValueFactory<InfoApprises,String>("infoApprise"));
+    	InfoAppT.setCellValueFactory(new PropertyValueFactory<InfoApprises,String>("infoApprise"));
     /*==========================================================================================*/
         try {
       	  //Charger les information apprises de ce jour si ils existent
@@ -109,12 +109,12 @@ public class InfoApprisesController implements Initializable{
  
         
       /*==========================================================================================*/
-
+/*
         //Update the table to allow for the first and last name fields
         //to be editable
        InfoTable.setEditable(true);
-       InfoApp.setCellFactory(TextFieldTableCell.forTableColumn());
-     
+       InfoAppT.setCellFactory(TextFieldTableCell.forTableColumn());
+     */
         
      
 		
@@ -157,14 +157,14 @@ public class InfoApprisesController implements Initializable{
 	
   	InfoApprises  InfoApp= new InfoApprises();//Creer l'objet   
  
-  	System.out.println("Obet info app cr&e sans errer");
+  
   	//Si il est connecté a la base de données
       if( InfoApp.isDataBaseConnected()) {   
 //Pour pouvoir afficher au user ses informations apprise de cjour
       	while( InfoApp.ChercherInfoApprise(idInfoApp)!=null) {	
  
         	this.Addinfos(InfoApp.ChercherInfoApprise(idInfoApp));
-        	System.out.println("Linfo apprise est " +InfoApp.ChercherInfoApprise(idInfoApp).getInfoApprise());
+        	
         	numSeq++;
       	idInfoApp = Integer.parseInt(String.valueOf(idfDate)+String.valueOf(numSeq));
    	}
@@ -187,8 +187,8 @@ public class InfoApprisesController implements Initializable{
     
     }
 
-    
-  
+	InfoApprises InfoAppr = new InfoApprises();//C
+
     /*================================Nouvelle Information Apprise=======================*/
     public void NouveauInfoAppBtn(ActionEvent event) throws Exception {
   	try {
@@ -196,15 +196,16 @@ public class InfoApprisesController implements Initializable{
   	if(LC.Currentuser.isDataBaseConnected()) {
   	int Iduser =LC.Currentuser.getIdUser().get();
   	int NbrJourU =LC.Currentuser.getNbJour(Iduser);
-  	InfoApprises  InfoApp= new InfoApprises();//Creer l'objet   
+  	//Creer l'objet   
      
-  	if(InfoApp.isDataBaseConnected()) {
+  	if(InfoAppr.isDataBaseConnected()) {
       	//Si l'insertion est vraie
-      	if(InfoApp.Insertion(idInfoApp, InfoAppTextField.getText())) {	
-  		 InfoApp.setidfInfoApprise(idInfoApp);
-  		 InfoApp.setInfoApprise(InfoAppTextField.getText());
+      	if(InfoAppr.Insertion(idInfoApp, InfoAppTextField.getText())) {	
+  	
+      		InfoAppr.setidfInfoApprise(idInfoApp);
+  		 InfoAppr.setInfoApprise(InfoAppTextField.getText());
   	//Ajouter a la table
-  	   infos.add( InfoApp);
+  	   infos.add( InfoAppr);
   	   this.AfficherInfoApprisesCeJour();
   	 InfoTable.setItems(infos);
   	   
@@ -235,9 +236,16 @@ public class InfoApprisesController implements Initializable{
      */
     public void changeInfo(CellEditEvent edittedCell)
     {
+    	
+    	
         InfoApprises infoSelected =  InfoTable.getSelectionModel().getSelectedItem();
         infoSelected.setInfoApprise(edittedCell.getNewValue().toString());
-    }
+     	
+       
+          }//db connected 
+     	
+      	
+    
     
 
 	

@@ -58,9 +58,8 @@ public class LoginController implements Initializable{
     @Override
 	public void initialize(URL location, ResourceBundle resources) {
     	
-    	if(this.loginModel.isDataBaseConnected())
-			System.out.println("connexion reussi a la bdd");
-		else
+    	if(!this.loginModel.isDataBaseConnected())
+			
 			System.out.println("echec de la connexion a la bdd");
 
 	}
@@ -138,8 +137,9 @@ public class LoginController implements Initializable{
 				int NbJour;
 				
 				if(Currentuser.isDataBaseConnected()) {
-				 NbJour=Currentuser.getNbJour(Currentuser.getIdUser().get());
-		System.out.println(NbJour);
+			 NbJour=Currentuser.getNbJour(Currentuser.getIdUser().get());
+			
+	
 				//Si c'est la premiere connexion du user dans la journée
 				if(!Currentuser.chercherConnexionUser(Currentuser.getIdUser().get())) {
 					NbJour++;

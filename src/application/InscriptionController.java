@@ -97,7 +97,7 @@ public class InscriptionController {
 					
 					
 					if(i.chercherUser(emailTextF.getText())==0){
-					System.out.println("email nexiste pas");
+					
 						i.AjouterInformations( nameTextF.getText(), emailTextF.getText(), mdpTextF.getText(),  confirmMdpTextF.getText(),dateDeb, skillTextF.getText());
 				        i.AjouterCoinsInit();
 					}else {

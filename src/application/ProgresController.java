@@ -118,7 +118,7 @@ public class ProgresController implements Initializable {
 	  			  			
 	  					if(lc.Currentuser. ProgresUser(series, barChart,lc.Currentuser.getIdUser().getValue().intValue())) {
 	  						
-	  						System.out.println(lc.Currentuser.getIdUser().getValue().intValue());
+	  						
 	  						//Pour povoir le cliquer qu'une seule fois
 	  						ChargerStat.setDisable(true);
 	  					} }else {

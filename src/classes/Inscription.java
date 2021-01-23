@@ -44,8 +44,7 @@ public class Inscription {
 				
 				   
 				   idfU =numseq  ;
-				 System.out.println(idfU);
-				   
+			
 				   pr.setInt(1, idfU);
 		            pr.setString(2, fullName);
 		            pr.setString(3, email);

@@ -60,7 +60,7 @@
                   <Button fx:id="confirm" layoutX="408.0" layoutY="574.0" mnemonicParsing="false" onAction="#NouveauInfoAppBtn" opacity="0.0" prefHeight="30.0" prefWidth="41.0" style="-fx-background-color: #fff;" text="Button" textFill="TRANSPARENT" />
                   <TableView fx:id="InfoTable" layoutX="193.0" layoutY="301.0" prefHeight="200.0" prefWidth="502.0">
                     <columns>
-                      <TableColumn fx:id="InfoApp" onEditCancel="#NouveauInfoAppBtn" prefWidth="501.0" text="Today, you have learned that :" />
+                      <TableColumn fx:id="InfoAppT" prefWidth="501.0" text="Today, you have learned that :" />
                     </columns>
                   </TableView>
                </children>
