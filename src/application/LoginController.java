@@ -95,7 +95,7 @@ public class LoginController implements Initializable{
    static  User Currentuser = new User();
 
 	//qui verifie le mdp et le user name 
-	public void Login(ActionEvent event) {
+	public void Login(ActionEvent event) throws Exception {
 		try {
 			
 			
@@ -104,18 +104,36 @@ public class LoginController implements Initializable{
 			
 			
 			{
+				
+				
+				
+				
+				
 				//Static user to use in other classes
 				 Currentuser =	loginModel.getInfoUser(emailTextF.getText(), passwordTextF.getText(),  Currentuser);
 			
+			
+				 
 				 //on remplis les informations user
 				 User user= new User();
-			user=	loginModel.getInfoUser(emailTextF.getText(), passwordTextF.getText(), user);
+		       	user=	loginModel.getInfoUser(emailTextF.getText(), passwordTextF.getText(), user);
 				//On informe le user que c'est correct 
 				isConnected.setText("Nom d'utilisateur et Mot de passe correct");
-	//avoir le nom, mot de passe, email de l'utilistauer pour pouvoir le passer a la classe Home
+	
+				
+				//avoir le nom, mot de passe, email de l'utilistauer pour pouvoir le passer a la classe Home
 				password =passwordTextF.getText();
 				email =emailTextF.getText();
 				nom = loginModel.GetName(emailTextF.getText(), passwordTextF.getText());
+			
+				
+				
+				if(Currentuser.isDataBaseConnected()) {
+				
+					//Ajouter la connexion du user
+				 Currentuser.AjouterConnexion(Currentuser.getIdUser().get(), Currentuser.getNbJour(Currentuser.getIdUser().get()));}
+			
+				
 				
 				//Ouvrir le Menu Principal
 				Parent root =FXMLLoader.load(getClass().getResource("Home.fxml"));

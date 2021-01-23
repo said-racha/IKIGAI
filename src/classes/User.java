@@ -4,6 +4,8 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.Date;
 
 import DbUtil.DbConnection;
@@ -192,8 +194,26 @@ public class User {
         }
     }
 
-	
+  //=======================================AJOUTER CONNEXION USER============================*/
+  		public void AjouterConnexion(int idfU,int nbJour) {
+  			DbConnection db = new DbConnection();
+  			String query="INSERT INTO Connexion (dateSys,nbrJour,idfU) VALUES (?, ?   ,? )";
+  			   try (PreparedStatement pr = this.connection.prepareStatement(query)) {
+  		           
+  		          DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd ");  
+				   LocalDateTime now = LocalDateTime.now();  
+				   String dateSys= dtf.format(now); 	
+  		          pr.setString(1, dateSys);
+  		    pr.setInt(2, nbJour);
+  		        pr.setInt(3, idfU);
+  		
+  		            pr.executeUpdate();
+  		        } catch (SQLException e) {
+  		            System.out.println("Vous avez un probleme dans la classe User/  AjouterConnexion");
+  		        }
+  		}
 
+  	    //****=============FONCTION QUI PERMET DE MANIPULER LES STATS DU USER========================
 
 	public boolean    ProgresUser(XYChart.Series series, BarChart<String,Number> Barchart,int idfU) throws Exception {
 	
