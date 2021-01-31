@@ -137,7 +137,7 @@ public class HomeController implements Initializable{
     	challengeSLabel.setText(challengeS);
     	citationLabel.setText(citation);
     	nbrCoinsLabel.setText(String.valueOf(HomeModel.getNbrCoinsActuel(idfDate)));
-    	
+    	HomeModel.UpdateCoins(idfDate,HomeModel.getNbrCoinsActuel(idfDate));
     	
     	//---------------------------------remplissage des textfields---------------------------------
     	

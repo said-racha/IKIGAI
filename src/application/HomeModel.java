@@ -3,6 +3,8 @@ package application;
 import java.io.IOException;
 
 import java.net.URL;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
@@ -181,6 +183,28 @@ public class HomeModel {
 		return nbrCoinsActuel;
 	}
     
+    
+ //-------------------------------------------updateCoins f dateCoins-----------------------------------------    
+   
+   
+  
+    public static void UpdateCoins (int idfDate,int nbrCoinsJour) {
+
+    	String sql ="UPDATE DateCoins SET nbrCoinsJour ='"+nbrCoinsJour+"' where idfDate = '"+idfDate+"'";
+       
+        try {
+        	
+			DbConnection.dbExcecuteQuery(sql);
+        } catch (ClassNotFoundException e) {
+    		System.out.println("Vous avez un probleme avec la classe HomeModel methode UpdateCoins");
+    		e.printStackTrace();
+    	} catch (SQLException e) {
+    		System.out.println("Vous avez un probleme avec la classe HomeModel methode UpdateCoins");
+    		e.printStackTrace();
+    	}
+
+        
+	}
 //-------------------------------------------Tasks----------------------------------------- 
     
     //ajouter un task a la bdd
