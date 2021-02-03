@@ -7,11 +7,26 @@ import java.sql.SQLException;
 import DbUtil.DbConnection;
 
 public class RubriqueEcrite extends Rubrique{
+	protected String contenuRub;
 
+	public RubriqueEcrite(String contenuRub) {
+		this.contenuRub = contenuRub;
+	}
+
+	public RubriqueEcrite() {
+	}
+
+	public String getContenuRub() {
+		return contenuRub;
+	}
+
+	public void setContenuRub(String contenuRub) {
+		this.contenuRub = contenuRub;
+	}
 	
-			public boolean Insertion(int id,String Contenue) {
-				return true;
-			
-			}
+
+public boolean Inseretion() {
+	return true;
+}
 		    
 }
