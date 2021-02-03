@@ -37,7 +37,7 @@
                 <TableColumn fx:id="PointPositif" prefWidth="504.00006103515625" text="Good things that happened to you today " />
               </columns>
             </TableView>
-            <TextField fx:id="PointPositifTextField" alignment="CENTER" layoutX="197.0" layoutY="526.0" prefHeight="27.0" prefWidth="505.0" promptText="Your Positive Thoughts Here ! :)" style="-fx-background-radius: 0; -fx-background-color: #FFF; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 10, 0.3, 0.0, 0.0);">
+            <TextField fx:id="PointPositifTextField" alignment="CENTER" layoutX="197.0" layoutY="525.0" prefHeight="27.0" prefWidth="505.0" promptText="Your Positive Thoughts Here ! :)" style="-fx-background-radius: 0; -fx-background-color: #FFF; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 10, 0.3, 0.0, 0.0);">
                <font>
                   <Font name="Georgia" size="13.0" />
                </font>
