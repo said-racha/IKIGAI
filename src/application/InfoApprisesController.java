@@ -99,7 +99,7 @@ public class InfoApprisesController implements Initializable{
       	  //Charger les information apprises de ce jour si ils existent
 			this.AfficherInfoApprisesCeJour();
 			InfoTable.setItems(infos);
-			InfoTable.refresh();
+	 
 		
 		}
         catch (Exception e) {
@@ -196,6 +196,8 @@ public class InfoApprisesController implements Initializable{
   	if(LC.Currentuser.isDataBaseConnected()) {
   	int Iduser =LC.Currentuser.getIdUser().get();
   	int NbrJourU =LC.Currentuser.getNbJour(Iduser);
+
+	InfoApprises InfoAppr = new InfoApprises();
   	//Creer l'objet   
      
   	if(InfoAppr.isDataBaseConnected()) {
@@ -205,9 +207,10 @@ public class InfoApprisesController implements Initializable{
       		InfoAppr.setidfInfoApprise(idInfoApp);
   		 InfoAppr.setInfoApprise(InfoAppTextField.getText());
   	//Ajouter a la table
-  	   infos.add( InfoAppr);
-  	   this.AfficherInfoApprisesCeJour();
+  	   infos.add(InfoAppr);
+  	 this.AfficherInfoApprisesCeJour();
   	 InfoTable.setItems(infos);
+  	
   	   
   	    }   
       }//db connected
@@ -229,21 +232,6 @@ public class InfoApprisesController implements Initializable{
     }
 
 
-  //====================================Rendre la table editable==========================
-    /**
-     * This method will allow the user to double click on a cell and update
-     * the first name of the person
-     */
-    public void changeInfo(CellEditEvent edittedCell)
-    {
-    	
-    	
-        InfoApprises infoSelected =  InfoTable.getSelectionModel().getSelectedItem();
-        infoSelected.setInfoApprise(edittedCell.getNewValue().toString());
-     	
-       
-          }//db connected 
-     	
       	
     
     

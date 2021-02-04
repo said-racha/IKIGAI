@@ -13,7 +13,7 @@
          <children>
             <Label layoutX="342.0" layoutY="222.0" prefHeight="41.0" prefWidth="227.0" text="Positive Thoughts " textFill="#7f00ff">
                <font>
-                  <Font name="Georgia Italic" size="27.0" />
+                  <Font name="Georgia" size="27.0" />
                </font>
             </Label>
             <ImageView fitHeight="213.0" fitWidth="279.0" layoutX="283.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
