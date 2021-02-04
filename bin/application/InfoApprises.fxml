@@ -47,17 +47,17 @@
                         <Font name="Georgia" size="13.0" />
                      </font>
                   </TextField>
-                  <ImageView fitHeight="54.0" fitWidth="56.0" layoutX="398.0" layoutY="565.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="54.0" fitWidth="56.0" layoutX="402.0" layoutY="584.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../img/undraw_processing_thoughts_d8ha.png" />
                      </image>
                   </ImageView>
-                  <ImageView fitHeight="43.0" fitWidth="39.0" layoutX="411.0" layoutY="570.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="43.0" fitWidth="39.0" layoutX="414.0" layoutY="586.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../img/verified.png" />
                      </image>
                   </ImageView>
-                  <Button fx:id="confirm" layoutX="408.0" layoutY="574.0" mnemonicParsing="false" onAction="#NouveauInfoAppBtn" opacity="0.0" prefHeight="30.0" prefWidth="41.0" style="-fx-background-color: #fff;" text="Button" textFill="TRANSPARENT" />
+                  <Button fx:id="confirm" layoutX="414.0" layoutY="586.0" mnemonicParsing="false" onAction="#NouveauInfoAppBtn" opacity="0.0" prefHeight="30.0" prefWidth="41.0" style="-fx-background-color: #fff;" text="Button" textFill="TRANSPARENT" />
                   <TableView fx:id="InfoTable" layoutX="193.0" layoutY="301.0" prefHeight="200.0" prefWidth="502.0">
                     <columns>
                       <TableColumn fx:id="InfoAppT" prefWidth="501.0" text="Today, you have learned that :" />
