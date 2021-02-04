@@ -42,7 +42,7 @@
                         <Image url="@../img/undraw_book_lover_mkck.png" />
                      </image>
                   </ImageView>
-                  <TextField fx:id="InfoAppTextField" alignment="CENTER" layoutX="197.0" layoutY="525.0" prefHeight="27.0" prefWidth="505.0" promptText="Your new information here :)" style="-fx-background-radius: 0; -fx-background-color: #FFF; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 10, 0.3, 0.0, 0.0);">
+                  <TextField fx:id="InfoAppTextField" alignment="CENTER" layoutX="192.0" layoutY="507.0" prefHeight="27.0" prefWidth="505.0" promptText="Your new information here :)" style="-fx-background-radius: 0; -fx-background-color: #FFF; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 10, 0.3, 0.0, 0.0);">
                      <font>
                         <Font name="Georgia" size="13.0" />
                      </font>

@@ -234,8 +234,8 @@ public class User {
 					
 					
 				int	cpt=this.getNbJour(idfU); //pour avoir le nombre de jour du user
-			
-					pst.setInt(2, cpt);
+			int cpt2 =1;
+					pst.setInt(2, cpt2);
 					rst = pst.executeQuery(); 
 					
 				String cptString;
@@ -248,17 +248,18 @@ public class User {
 							if(rst.next()) {			
 								
 				//Pour avoir le nombre de jour du User, a mettre sur la barre des X
-						while(cpt>0){
+						for(int i=0;i<cpt;i++) {
 			//Transormer le nombre  de jour en chaine de caractere pour l'utiliser dans le graphe
-							cptString=String.valueOf(cpt);
+							cptString=String.valueOf(cpt2);
 							
 							
 								series.getData().add(new XYChart.Data(cptString,rst.getInt("nbrCoinsJour")));
-								cpt = cpt -1; 
-								pst.setInt(2, cpt);
+								
+								cpt2=cpt2+1;
+								pst.setInt(2, cpt2);
 								rst = pst.executeQuery();
 								
-							}
+						}
 						
 						
 						
