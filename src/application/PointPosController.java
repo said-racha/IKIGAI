@@ -63,15 +63,7 @@ public class PointPosController implements Initializable {
 		}
    
           
-        /*==========================================================================================*/
-/*
-         //RendreLatableEditable
-          PosTable.setEditable(true);
-       PointPositif.setCellFactory(TextFieldTableCell.forTableColumn());
-       */
-          
-          //This will allow the table to select multiple rows at once
-       //   PosTable.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
+
       }
         
 	

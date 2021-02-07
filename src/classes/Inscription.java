@@ -95,7 +95,7 @@ public class Inscription {
   		
   		            pr.executeUpdate();
   		        } catch (SQLException e) {
-  		            System.out.println("Vous avez un probleme dans la classe User/  AjouterConnexion");
+  		            System.out.println("Vous avez un probleme dans la classe Inscription/  AjouterCoinsInit");
   		        }
   		}
 

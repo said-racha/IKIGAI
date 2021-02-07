@@ -130,7 +130,7 @@ public class User {
     public  int getNbJour(int idUser) throws Exception{
         PreparedStatement pr=null;
         ResultSet rs=null;
-        String sql="select nbrJour from  Connexion where  idfU  = ?  ";
+        String sql="SELECT COUNT(*) as nbrJour  FROM DateCoins where  idfU= ?";
         int nbJour =0;
 
         try{
@@ -141,13 +141,13 @@ public class User {
           
          if(rs.next())
             {
-        	 nbJour= rs.getInt("nbrJour");
+        	 nbJour= rs.getInt("nbrJour")-1;
         	 
             }
             return (nbJour);//reccuperer le nombre de coins
         }catch (SQLException e)
         {
-            System.out.println("Vous avez un probleme dans la classe Secretaire getNumSeq");
+            System.out.println("Vous avez un probleme dans la classe User GetNbJour");
             return 0;
         }
         finally {
@@ -183,7 +183,7 @@ public class User {
             return (nbcoins);//reccuperer le nombre de coins
         }catch (SQLException e)
         {
-            System.out.println("Vous avez un probleme dans la classe Secretaire getNumSeq");
+            System.out.println("Vous avez un probleme dans la classe User getNbCoins");
             return 0;
         }
         finally {
@@ -230,10 +230,14 @@ public class User {
 					
 					pst = connection.prepareStatement(query);
 					pst.setInt(1, idfU);
-					int	cpt=this.getNbJour(idfU); //pour avoir le nombre de jour du user
-			
-					pst.setInt(2, cpt);
-					rst = pst.executeQuery();
+					
+					
+					
+				int	cpt=this.getNbJour(idfU); //pour avoir le nombre de jour du user
+			int cpt2 =1;
+					pst.setInt(2, cpt2);
+					rst = pst.executeQuery(); 
+					
 				String cptString;
 					//if it is returning any result or not 
 						if(rst!=null)
@@ -241,19 +245,21 @@ public class User {
 							
 							
 							
-							if(rst.next()) {
+							if(rst.next()) {			
 								
-
 				//Pour avoir le nombre de jour du User, a mettre sur la barre des X
-						while(cpt>0){
+						for(int i=0;i<cpt;i++) {
 			//Transormer le nombre  de jour en chaine de caractere pour l'utiliser dans le graphe
-							cptString=String.valueOf(cpt);
-							rst = pst.executeQuery();
+							cptString=String.valueOf(cpt2);
+							
 							
 								series.getData().add(new XYChart.Data(cptString,rst.getInt("nbrCoinsJour")));
 								
-								cpt = cpt -1; 
-							}
+								cpt2=cpt2+1;
+								pst.setInt(2, cpt2);
+								rst = pst.executeQuery();
+								
+						}
 						
 						
 						
@@ -303,9 +309,13 @@ public class User {
         ResultSet rs=null;
 
         String sql="select * from Connexion where dateSys= ? and idfU=?";//On utilise le numero de telephone du patient car c'est la seul donnée de la table qui est obligatoirement unique
+       
+        
+        
+        
         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd ");  
 		   LocalDateTime now = LocalDateTime.now();  
-		   String dateSys= dtf.format(now); 	
+		   String dateSys= dtf.format(now);
         try{
             pr=this.connection.prepareStatement(sql);
             pr.setString(1,dateSys);
@@ -361,7 +371,7 @@ public class User {
 		
 		            pr.executeUpdate();
 		        } catch (SQLException e) {
-		            System.out.println("Vous avez un probleme dans la classe User/  AjouterConnexion");
+		            System.out.println("Vous avez un probleme dans la classe User/ AJouterCoinsInit");
 		        }
 		}
 

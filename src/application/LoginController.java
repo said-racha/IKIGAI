@@ -139,10 +139,11 @@ public class LoginController implements Initializable{
 				if(Currentuser.isDataBaseConnected()) {
 			 NbJour=Currentuser.getNbJour(Currentuser.getIdUser().get());
 			
-	
+	System.out.println(NbJour);
 				//Si c'est la premiere connexion du user dans la journée
 				if(!Currentuser.chercherConnexionUser(Currentuser.getIdUser().get())) {
 					NbJour++;
+					System.out.println(NbJour);
 					 //========================Coins Update==============================================================
 		
 						 Currentuser.AjouterCoinsUSerInit(Currentuser.getIdUser().get(),NbJour );
