@@ -41,18 +41,6 @@
             </Label>
          </children>
       </Pane>
-      <Button fx:id="helpBtn" contentDisplay="TOP" layoutX="640.0" layoutY="347.0" mnemonicParsing="false" style="-fx-background-color: #7f00ff;" text="Help" textFill="WHITE">
-         <font>
-            <Font name="System Bold" size="10.0" />
-         </font>
-         <graphic>
-            <ImageView fitHeight="25.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../img/information%20blanc.png" />
-               </image>
-            </ImageView>
-         </graphic>
-      </Button>
       <Button fx:id="backBtn" alignment="CENTER" contentDisplay="TOP" layoutX="640.0" layoutY="11.0" mnemonicParsing="false" onAction="#Back" prefHeight="18.0" prefWidth="26.0" style="-fx-background-color: #7f00ff;" text="Back" textFill="WHITE">
          <font>
             <Font name="System Bold" size="10.0" />
