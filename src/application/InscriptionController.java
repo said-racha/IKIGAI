@@ -94,7 +94,10 @@ public class InscriptionController {
 					 DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd ");  
 					   LocalDateTime now = LocalDateTime.now();  
 					   String dateDeb= dtf.format(now); 	
-					
+					 //================================si les cases obligatoires sont vides, afficher une erreur===========
+						if(emailTextF.getText().isEmpty() || mdpTextF.getText().isEmpty()  || confirmMdpTextF.getText().isEmpty() ) {
+							Confirmation.setText("Veuillez remplire les champs obligatoires");
+						}else {
 					
 					if(i.chercherUser(emailTextF.getText())==0){
 					
@@ -103,7 +106,7 @@ public class InscriptionController {
 					}else {
 						//sinon on affiche une erreur
 						Confirmation.setText("Cet utilisateur existe deja");
-					}
+					} }
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
