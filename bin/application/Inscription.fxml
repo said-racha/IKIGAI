@@ -34,6 +34,21 @@
                   <Font name="Georgia" size="13.0" />
                </font>
             </Label>
+            <Label layoutX="278.0" layoutY="138.0" text="*" textFill="#ee0000">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="278.0" layoutY="214.0" text="*" textFill="#ee0000">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="278.0" layoutY="175.0" text="*" textFill="#ee0000">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
          </children>
       </Pane>
       <Button fx:id="backBtn" alignment="CENTER" contentDisplay="TOP" layoutX="640.0" layoutY="11.0" mnemonicParsing="false" onAction="#Back" prefHeight="18.0" prefWidth="26.0" style="-fx-background-color: #7f00ff;" text="Back" textFill="WHITE">
