@@ -98,8 +98,14 @@ public class ModifController implements Initializable{
 					else {
 						//================================si le user decide e ne pas changer son email, on le met a l'ancien, pour pouvoir garder l'ancien dans la base de données==========
 if(nouveauemail.getText().isEmpty()) {	nouveauemail.setText(email.getText());	}
-					u.ModifierUSR(nameTextF.getText(), email.getText(), nouveauemail.getText(), password.getText(), skillTextF.getText());
-					Confirmation.setText("Modification reusi");}
+
+u.setEmail(nameTextF.getText());	
+			u.setFullName(nameTextF.getText());
+			u.setPassword(password.getText());	LoginController.password=password.getText();
+			u.setSessionSkill(skillTextF.getText());
+		LoginController.email=nouveauemail.getText();
+u.ModifierUSR(nameTextF.getText(), email.getText(), nouveauemail.getText(), password.getText(), skillTextF.getText());
+				Confirmation.setText("Modification reusi");}
 			
 				} catch (Exception e) {
 					e.printStackTrace();

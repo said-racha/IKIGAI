@@ -160,13 +160,15 @@ public class LoginModel {
 					rs_M= pr_M.executeQuery();
 			
 			if(rs_M!= null) {
+				
 			user.setIdUser(rs_M.getInt("idfU"));
 			user.setEmail(email);
+			user.setPassword(pass);
 			user.setFullName(rs_M.getString("fullName"));
 			user.setSessionSkill(rs_M.getString("skill"));
 			return user;
 			} else {
-				System.out.println("Vous avez un probleme avec le resultSet   dans la classe LoginModel / getInfoUSer");
+				System.out.println("Ce user n'existe pas");
 			}	
 		} catch (SQLException e) {
 			System.out.println("Vous avez un probleme dans la classe LoginModel / getInfoUSer");

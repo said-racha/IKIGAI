@@ -40,6 +40,7 @@ public class User {
 		   super();
 	        idUser=new SimpleIntegerProperty();
 	        FullName= new SimpleStringProperty();
+	        Password = new SimpleStringProperty();
 	        Email = new SimpleStringProperty();
 	        SessionSkill = new SimpleStringProperty();
 	       
