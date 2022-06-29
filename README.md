@@ -1,5 +1,5 @@
 # IKIGAI
 
-IKIGAI is a desktop app developed in a university project during the pandemic. Its main goal is to occupy the people during the pandemic and help them get a better experience. 
+IKIGAI is a desktop app developed as part of a university project during the COVID-19 pandemic. Its main purpose is to keep people entertained during these circumstances and to help them cope better with the lockdown.
 <br>
 Click on this link: https://youtu.be/RaEUrZdw36g to get an overview.
